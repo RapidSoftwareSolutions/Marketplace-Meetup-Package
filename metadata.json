@@ -1,0 +1,3354 @@
+{
+  "package": "Meetup",
+  "tagline": "Meetup Package",
+  "image": "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/8/f/1/d/highres_454596637.jpeg",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Meetup-Package",
+  "description": "The Meetup API provides simple RESTful HTTP and streaming interfaces for extending your community using the Meetup platform from your own apps.",
+  "blocks": [
+    {
+      "name": "getCategories",
+      "description": "Returns a list of Meetup group categories",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Parameter for requesting optional response properties"
+        }
+      ]
+    },
+    {
+      "name": "getDashboard",
+      "description": "A dashboard of aggregated Meetup information for the authorized member",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        }
+      ]
+    },
+    {
+      "name": "getTopicCategories",
+      "description": "Returns a list of Meetup topic categories",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Parameter for requesting optional response properties"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required."
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required."
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required."
+        }
+      ]
+    },
+    {
+      "name": "getTopics",
+      "description": "API method for accessing meetup topics",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Return topics a target member is subscribed to"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Return topics that match the specified name (e.g. 'Digital Photography', 'Classical Music')"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Return topics for this topic urlkey"
+        },
+        {
+          "name": "search",
+          "type": "String",
+          "info": "Return topics related to a list of search terms [separate search keywords with +'s]"
+        }
+      ]
+    },
+    {
+      "name": "getStreamOpenEvents",
+      "description": "Searches for recent and upcoming public events hosted by Meetup groups. Its search window  is the past one month through the next three months, and is subject to change. Open Events is optimized to search for current events by location, category, topic, or text, and only lists Meetups that have **3 or more RSVPs**. The number or results returned with each request is not guaranteed to be the same as the page size due to secondary filtering. If you're looking for a particular event or events within a particular group, use the standard [Events](/meetup_api/docs/2/events/) method.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "andText",
+          "type": "String",
+          "info": "Changes the interpretation of the \"text\" field from OR'd terms to AND'd terms"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Required: A valid latitude, limits the returned group events to those within radius miles"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Required: A valid US zip code, limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "Required: A valid country code"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Return events in the specified topic or topics specified by commas. This is the topic \"urlkey\" returned by the Topics method. If all supplied topics are unknown, a 400 error response is returned with the code \"badtopic\"."
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "Required: A valid city"
+        },
+        {
+          "name": "limitedEvents",
+          "type": "String",
+          "info": "Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false."
+        },
+        {
+          "name": "textFormat",
+          "type": "String",
+          "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\""
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "Required: If searching in a country with states, a valid 2 character state code"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Required: Events that contain the given term or terms somewhere in their content. The terms are OR'd by default. Separate terms with \" AND \" for events that have combined terms. To have terms automatically AND'd, set the \"and_text\" to true"
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "info": "Required: Return events in the specified category or categories specified by commas. This is the category id returned by the Categories method."
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Required: A valid longitude, limits the returned group events to those within radius miles"
+        },
+        {
+          "name": "time",
+          "type": "String",
+          "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius, in miles for geographic requests, default 25.0 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Status may be \"upcoming\", \"past\" or both separated by a comma. The default is \"upcoming\" only"
+        }
+      ]
+    },
+    {
+      "name": "getConcierge",
+      "description": "Recommends upcoming meetups for the authorized member in a given location and in thier groups",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "A valid US zip code, limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "A valid country code"
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "A valid city"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "A valid longitude, limits the returned group events to those within radius miles"
+        },
+        {
+          "name": "textFormat",
+          "type": "String",
+          "info": "Format of the description text, \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\""
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Comma delimited list of category ids to limit recommendations to"
+        },
+        {
+          "name": "pageToken",
+          "type": "String",
+          "info": "An opaque string used to page through results. This can be found appended to the 'next' link in the meta section of the response."
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "If searching in a country with states, a valid 2 character state code"
+        },
+        {
+          "name": "time",
+          "type": "String",
+          "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value"
+        },
+        {
+          "name": "topicId",
+          "type": "String",
+          "info": "Comma delimited list of topics to help inform recommendation"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius, in miles for geographic requests, defaults to the member's preferred radius or 0.5 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        },
+        {
+          "name": "withFriends",
+          "type": "String",
+          "info": "Boolean parameter. When set to true, events hosted by groups you have friends in will be recommended"
+        },
+        {
+          "name": "selfGroups",
+          "type": "String",
+          "info": "set to \"include\" or \"exclude\" groups the authorized member belongs to. The default is \"include\". This includes groups in locations that may differ than the provided location"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "A valid latitude, limits the returned group events to those within radius miles"
+        }
+      ]
+    },
+    {
+      "name": "getGroups",
+      "description": "Fetch information about Meetup Groups.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "groupnum",
+          "type": "String",
+          "info": "Return the group with this topic and number"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Return the group with this topic and number"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Required: A valid US zip code, limits the returned groups to those within radius miles."
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "A valid latitude and longitude, limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Required: A valid latitude and longitude, limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: one or more separated by commas, includes no slashes"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Only return groups in the specified topic [one topic allowed]"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: one or more separated by commas"
+        },
+        {
+          "name": "organizerId",
+          "type": "String",
+          "info": "Required: one or more organizer IDs, separated by commas"
+        },
+        {
+          "name": "domain",
+          "type": "String",
+          "info": "Required: one or more custom group domains, separated by commas"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Required: one or more separated by commas, for groups this member belongs to"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius, in miles for geographic requests, default 25 -- maximum 100"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "optional result fields, separated by commas."
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Required: Only return groups in the specified category. [one category allowed]"
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "A valid country code, city and for the US, State. limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "A valid country code, city and for the US, State. limits the returned groups to those within radius miles"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "Required: A valid country code, city and for the US, State. limits the returned groups to those within radius miles"
+        }
+      ]
+    },
+    {
+      "name": "getEvents",
+      "description": "Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "rsvp",
+          "type": "String",
+          "info": "Required: Filters events by the currently authenticated member's RSVP status. May be a comma delimited list of \"yes\", \"no\", \"waitlist\", \"maybe\" or \"none\""
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Path to group from meetup.com, no slashes"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: Multiple ids may be separated with commas"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Multiple ids may be separated with commas"
+        },
+        {
+          "name": "limitedEvents",
+          "type": "String",
+          "info": "Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false."
+        },
+        {
+          "name": "textFormat",
+          "type": "String",
+          "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\""
+        },
+        {
+          "name": "groupDomain",
+          "type": "String",
+          "info": "Required: Group custom domain"
+        },
+        {
+          "name": "venueId",
+          "type": "String",
+          "info": "Required: Multiple ids may be separated with commas"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Required: Single member id, to find events in this member's groups"
+        },
+        {
+          "name": "time",
+          "type": "String",
+          "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Status may be \"upcoming\", \"past\", \"proposed\", \"suggested\", \"cancelled\", \"draft\" or multiple separated by a comma. The default is \"upcoming\", which includes Meetups that are happening now according to their **duration**. Meetups that are \"proposed\" or \"suggested\" do not have a date assigned; the former are listed on the site as <i>official</i> while the latter appear as <i>in the making</i>. Drafts are only visible to organizers of groups hosting the events."
+        }
+      ]
+    },
+    {
+      "name": "postEvent",
+      "description": "",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "rsvpLimit",
+          "type": "String",
+          "info": "Total number of RSVPs available for the event"
+        },
+        {
+          "name": "rsvpOpen",
+          "type": "String",
+          "info": "Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format."
+        },
+        {
+          "name": "venueVisibility",
+          "type": "String",
+          "info": "Controls the visibility of the event venue for non members of the hosting group. May be one of \"public\" or \"members\""
+        },
+        {
+          "name": "hosts",
+          "type": "String",
+          "info": "Up to 5 comma-separated valid member ids to be hosts for the event. If hosts is not provided, the authorized member is the default host"
+        },
+        {
+          "name": "addNewQuestions",
+          "type": "JSON",
+          "info": "Those with permission may include up to 6 survey questions for the event with each being up to 250 characters. See the parameter notes section for more information"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: URL name of the Group hosting the event"
+        },
+        {
+          "name": "why",
+          "type": "String",
+          "info": "We should do this because... May not be longer than 250 characters."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "Longer description of the event, in HTML. May not be longer than 50000 characters."
+        },
+        {
+          "name": "howToFindUs",
+          "type": "String",
+          "info": "The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Group hosting the event"
+        },
+        {
+          "name": "rsvpClose",
+          "type": "String",
+          "info": "Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format."
+        },
+        {
+          "name": "duration",
+          "type": "String",
+          "info": "Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Required: Name of the event. May not be longer than 80 characters."
+        },
+        {
+          "name": "guestLimit",
+          "type": "String",
+          "info": "Number of guests members may include in their RSVP, 0 or more"
+        },
+        {
+          "name": "simpleHtmlDescription",
+          "type": "String",
+          "info": "Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters."
+        },
+        {
+          "name": "time",
+          "type": "String",
+          "info": "Event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format."
+        },
+        {
+          "name": "venueId",
+          "type": "String",
+          "info": "Numeric identifier of a venue"
+        },
+        {
+          "name": "publishStatus",
+          "type": "String",
+          "info": "If you are an organizer of the group, you may set this to \"draft\" to save the event as a draft. Doing so will require a status=draft filter on /2/event queries."
+        }
+      ]
+    },
+    {
+      "name": "editEvent",
+      "description": "Update an existing Meetup",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Updates to the venue's latitude and longitude. When present, both must be provided"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Updates to the venue's latitude and longitude. When present, both must be provided"
+        },
+        {
+          "name": "rsvpLimit",
+          "type": "String",
+          "info": "Total number of RSVPs available for the event. To remove this limit, set this to 0"
+        },
+        {
+          "name": "rsvpOpen",
+          "type": "String",
+          "info": "Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format."
+        },
+        {
+          "name": "venueVisibility",
+          "type": "String",
+          "info": "Controls the visibility of venue. May be one of \"public\" or \"members\""
+        },
+        {
+          "name": "hosts",
+          "type": "String",
+          "info": "Up to 5 valid member ids to be hosts for the event."
+        },
+        {
+          "name": "addNewQuestions",
+          "type": "JSON",
+          "info": "Those with permission may include up to 6 survey questions with each being up to 250 characters, including edited questions, for the event. See the parameter notes section for more information"
+        },
+        {
+          "name": "why",
+          "type": "String",
+          "info": "We should do this because... May not be longer than 250 characters."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "Longer description of the event, in HTML. May not be longer than 50000 characters."
+        },
+        {
+          "name": "howToFindUs",
+          "type": "String",
+          "info": "The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member"
+        },
+        {
+          "name": "rsvpClose",
+          "type": "String",
+          "info": "Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format. To unset rsvp_close, set this to 0"
+        },
+        {
+          "name": "announce",
+          "type": "String",
+          "info": "Organizers and hosts may set this to true to announce a Meetup."
+        },
+        {
+          "name": "duration",
+          "type": "String",
+          "info": "Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group to hold the event"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Event name. May not be longer than 80 characters."
+        },
+        {
+          "name": "guestLimit",
+          "type": "String",
+          "info": "number of guests members may include in their RSVP, 0 or more"
+        },
+        {
+          "name": "simpleHtmlDescription",
+          "type": "String",
+          "info": "Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters."
+        },
+        {
+          "name": "time",
+          "type": "String",
+          "info": "event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format."
+        },
+        {
+          "name": "editQuestions",
+          "type": "JSON",
+          "info": "Those with permission may include up to 6 survey questions with each being up to 250 characters, including new questions. To delete a question submit this parameter with an empty value"
+        },
+        {
+          "name": "venueId",
+          "type": "String",
+          "info": "Numeric identifier of a venue. To unset the event's venue, set this to 0"
+        },
+        {
+          "name": "publishStatus",
+          "type": "String",
+          "info": "If you are an organizer of the group, you may set this to \"draft\" or \"published\". Setting state to \"draft\" will require a status=draft filter on /2/event queries."
+        }
+      ]
+    },
+    {
+      "name": "deleteEvent",
+      "description": "Deletes a specified meetup",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getCities",
+      "description": "Returns Meetup cities. This method supports search by latitude/longitude/radius, by country/state, by query term/zip, or a combination of all of these. Location-only searches by lat and lon return all cities within a radius of the provided coordinates. Searches with a query return up to 10 cities matching the term, and can be sorted by size or distance to a given coordinate. 'smart' ordering can be used to return the match(es) with the highest member_count, unless a smaller size match exists nearby the given coordinates. Query searches are supported for country but not country and state",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "A valid country code"
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search term and/or zip to look for (if this is specified, max result size limited to 10)"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Longitude to search"
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "A valid state code for the given country, if the country has states"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "When searching by lat/lon only, specify a radius to search (default 50 miles)"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Latitude to search"
+        }
+      ]
+    },
+    {
+      "name": "getMembers",
+      "description": "API method for accessing members of Meetup Groups",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "groupnum",
+          "type": "String",
+          "info": "Return members for the group with given topic and number"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Return members for the group with given topic and number"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Return members for the group with the given custom URL path"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Required: Return the member with this ID"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Return members in groups with these ID numbers, separated by commas"
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "info": "Required: Match users by the external services they've linked to their member account, specified as \"servicename:identifier\". For example, \"service=twitter:@MeetupAPI\" finds any member account that lists @MeetupAPI as its Twitter name (none, currently). You can query against several at a time by separating them with commas. Facebook identifiers should be provided as numeric values"
+        }
+      ]
+    },
+    {
+      "name": "getSingleMember",
+      "description": "Retrieve a single member",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separate list of optional fields"
+        }
+      ]
+    },
+    {
+      "name": "editSignleMember",
+      "description": "Edit the authorized member's attributes",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "birthday",
+          "type": "String",
+          "info": "Day you were born. Format should be in the form of yyyy or mmddyyyy. A value of -1 indicates that birthday data should be cleared."
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Valid zip code for city"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "Valid country code for your location"
+        },
+        {
+          "name": "hometown",
+          "type": "String",
+          "info": "Hometown of member. Can not be longer than 64 characters"
+        },
+        {
+          "name": "removeTopics",
+          "type": "String",
+          "info": "Comma-delimited list of topic ids to remove from your alert list"
+        },
+        {
+          "name": "gender",
+          "type": "String",
+          "info": "Your gender (used for better recommendations). Value may be one of other, none, female, male"
+        },
+        {
+          "name": "photoId",
+          "type": "String",
+          "info": "A valid photo_id from the member's photos to set as the main profile photo. A value of 0 will unset the current photo"
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "City name for your location"
+        },
+        {
+          "name": "topicsPrivacy",
+          "type": "String",
+          "info": "Controls the visibility of the member's topics. May be one of visible, hidden"
+        },
+        {
+          "name": "facebookPrivacy",
+          "type": "String",
+          "info": "Controls the visibility of the member's facebook connection. May be one of visible, hidden. If the member has not connected their Facebook account, attempts to set this preference will do nothing."
+        },
+        {
+          "name": "bio",
+          "type": "String",
+          "info": "Free form text passage about you. must be less than 250 characters"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "longitude of city"
+        },
+        {
+          "name": "groupsPrivacy",
+          "type": "String",
+          "info": "Controls the visibility of the member's groups. May be one of visible, hidden"
+        },
+        {
+          "name": "addTopics",
+          "type": "String",
+          "info": "Comma-delimited list of topics ids to add to your alert list"
+        },
+        {
+          "name": "syncPhoto",
+          "type": "String",
+          "info": "When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "The name of the current member"
+        },
+        {
+          "name": "bioPrivacy",
+          "type": "String",
+          "info": "Controls the visibility of the member's bio. May be one of visible, hidden"
+        },
+        {
+          "name": "photosPrivacy",
+          "type": "String",
+          "info": "Controls the visibility of the member's photos. May be one of visible, hidden"
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Language preference used on the site. Valid values are en-us, en-au, de-de, es, es-es, fr-fr, it-it, pt-br, ja-jp, ko-kr, nl-nl, en_us, en_au, de_de, es, es_es, fr_fr, it_it, pt_br, ja_jp, ko_kr, nl_nl, en, en, de, es, es, fr, it, pt, ja, ko, nl"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "radius, in miles to search for city given a lat and lon. default 25.0, max 100.0"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "latitude of city"
+        },
+        {
+          "name": "messagingPref",
+          "type": "String",
+          "info": "This specifies the member's preference for being contacted from members on the site. Possible values are \"orgs_only\" meaning only group organizers can contact you, \"groups_only\" meaning only members of your group can contact you, or \"all_members\" meaning all members may contact you."
+        },
+        {
+          "name": "cityId",
+          "type": "String",
+          "info": "Valid city id from /2/cities method"
+        }
+      ]
+    },
+    {
+      "name": "getProfiles",
+      "description": "This method returns member *profiles* associated with a particular group. Meetup members have separate profiles for each group they join.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "groupnum",
+          "type": "String",
+          "info": "Group identification by topic, deprecated"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Group identification by topic, deprecated"
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "info": "if \"leads\", only profiles for members of the leadership team are included"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Return profiles for the group with the given custom URL path"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Required: Return the profiles for members with these IDs, separated by commas"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma delimited list of optional response properties. A value of \"membership_dues\" will populate membership dues for the authorized user or members of the groups the authorized user organizes"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Return profiles in the group with this ID"
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Status filter for members. Only organizers may see pending. Request must also contain a `group_id` or `group_urlname`. Status may be one of active, pending"
+        }
+      ]
+    },
+    {
+      "name": "postProfile",
+      "description": "This method allows an authenticated member to join a group by creating a profile",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "siteName",
+          "type": "String",
+          "info": "Name of member's site. Max length is 32"
+        },
+        {
+          "name": "photoId",
+          "type": "String",
+          "info": "photo_id of the photo to use for this profile"
+        },
+        {
+          "name": "siteUrl",
+          "type": "String",
+          "info": "Link to member's site. Max length is 80"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Urlname of group to join"
+        },
+        {
+          "name": "intro",
+          "type": "String",
+          "info": "Provides a Member an opportunity to tell the group about themselves"
+        },
+        {
+          "name": "newPhoto",
+          "type": "String",
+          "info": "file upload for a new member photo"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Id of group to join"
+        },
+        {
+          "name": "provideAnswer",
+          "type": "JSON",
+          "info": "Answers to questions from groups API join_info question fields"
+        }
+      ]
+    },
+    {
+      "name": "editProfile",
+      "description": "Update a member's group profile",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "gid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "mid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "siteName",
+          "type": "String",
+          "info": "Name of member's site. Max length is 32"
+        },
+        {
+          "name": "addRole",
+          "type": "String",
+          "info": "Allows those with permission to assign one of the following roles: coorganizer, event_organizer, assistant_organizer"
+        },
+        {
+          "name": "photoId",
+          "type": "String",
+          "info": "photo_id of the photo to use for this profile. set to 0 to unset the current photo"
+        },
+        {
+          "name": "siteUrl",
+          "type": "String",
+          "info": "Link to member's site. Max length is 80"
+        },
+        {
+          "name": "intro",
+          "type": "String",
+          "info": "Provides a Member an opportunity to tell the group about themselves"
+        },
+        {
+          "name": "newPhoto",
+          "type": "String",
+          "info": "file upload for a new member photo"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "An organizer-defined member title."
+        },
+        {
+          "name": "removeRole",
+          "type": "String",
+          "info": "Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer"
+        },
+        {
+          "name": "provideAnswer",
+          "type": "JSON",
+          "info": "Answers to questions from groups API join_info question fields"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProfile",
+      "description": "Retrieves a single group profile",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "gid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "mid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        }
+      ]
+    },
+    {
+      "name": "deleteProfile",
+      "description": "Deletes a member's group profile",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "gid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "mid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "exitComment",
+          "type": "String",
+          "info": "Optional message to the organizer when leaving"
+        }
+      ]
+    },
+    {
+      "name": "deletePhoto",
+      "description": "Deletes a specified event photo",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "deleteMemberPhoto",
+      "description": "Delete the specified member photo",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getGroupComments",
+      "description": "API method for accessing meetup group comments",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "groupnum",
+          "type": "String",
+          "info": "Return comments for the group with given topic and number"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "info": "Required: Return comments for the group with given topic and number"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Return comments in groups with these ID numbers [separated by commas]"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Return comments for the group with this custom URL path"
+        }
+      ]
+    },
+    {
+      "name": "getEventComments",
+      "description": "This method returns messages that appear under \"Talk about this Meetup\". To post messages, see the corresponding write method.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "commentId",
+          "type": "String",
+          "info": "Required: Return comments for a given set of comment IDs, separated by commas"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Required: Return comments for the given member_ids, separated by commas"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Optionally accepts the value \"member_photo\" or \"notifications\""
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Return comments in groups with these ID numbers, separated by commas"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: Return comments on these events, separated by commas."
+        }
+      ]
+    },
+    {
+      "name": "postEventComment",
+      "description": "This method posts messages that appear under \"Talk about this Meetup\".",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "info": "Required: The comment text"
+        },
+        {
+          "name": "inReplyTo",
+          "type": "String",
+          "info": "Required: If this comment is a reply, the ID of the comment being replied to"
+        },
+        {
+          "name": "notifications",
+          "type": "String",
+          "info": "Notification control for authorized member on this comment thread. \"on\" will result in notifications being sent. \"off\" will opt the member out of notifications for this comment thread. Defaults to \"on\" unless the member previous opted out of notifications on the thread."
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: The event related to this comment."
+        }
+      ]
+    },
+    {
+      "name": "getSingleEventComment",
+      "description": "Retrieve a single event comment or reply",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separate list of optional fields"
+        }
+      ]
+    },
+    {
+      "name": "deleteEventComment",
+      "description": "Delete a single event comment or reply",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separate list of optional fields"
+        }
+      ]
+    },
+    {
+      "name": "postEventCommentFlag",
+      "description": "This method creates a spam report for comment content",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "commentId",
+          "type": "String",
+          "info": "Required: The id of the comment"
+        },
+        {
+          "name": "reason",
+          "type": "String",
+          "info": "Reason for flagging the comment. May be one of inappropriate, spam"
+        }
+      ]
+    },
+    {
+      "name": "deleteEventCommentSubscribe",
+      "description": "Unsubscribe to notifications for updates to a given comment thread",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "postEventCommentSubscribe",
+      "description": "Subscribe to notifications on updates to a given comment thread",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "postEventCommentLike",
+      "description": "Like a given Event comment",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "deleteEventCommentLike",
+      "description": "Unlike a given Event comment",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getEventCommentLikes",
+      "description": "Api for listing likes of a given event comment",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "commentId",
+          "type": "String",
+          "info": "Required: Return likes for a given comment_id"
+        }
+      ]
+    },
+    {
+      "name": "getPhotoComments",
+      "description": "This method returns comments on meetup photos. To post messages, see the corresponding write method",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Return comments for the given member_ids, separated by commas. The member ids must match up with one of the provided photo ids"
+        },
+        {
+          "name": "photoId",
+          "type": "String",
+          "info": "Required: Return comments on these photos, separated by commas"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        }
+      ]
+    },
+    {
+      "name": "postPhotoComment",
+      "description": "This method posts comments that appear below photos",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "photoId",
+          "type": "String",
+          "info": "Required: The photo related to this comment."
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "info": "Required: The comment text"
+        }
+      ]
+    },
+    {
+      "name": "getEventRatings",
+      "description": "API method for accessing Meetup comments",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "The ID of a member to filter ratings on"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: The ID of the event to fetch ratings data for"
+        }
+      ]
+    },
+    {
+      "name": "postEventRating",
+      "description": "This method allows members to posts rating for an event after it's occurred. Only permitted for members who rsvp'd \"yes\" or \"maybe\" to the event",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "attendeeCount",
+          "type": "String",
+          "info": "DEPRECATED: The number of attendees for the event (organizers/assistant organizers/co-organizers/event organizers/event hosts only)"
+        },
+        {
+          "name": "rating",
+          "type": "String",
+          "info": "Required: The member's rating (either 1, 2, 3, 4, or 5)"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: The ID of the event to fetch ratings data for"
+        }
+      ]
+    },
+    {
+      "name": "getPhotoAlbums",
+      "description": "This method returns photo albums associated with Meetup groups. To create albums, see the corresponding write method.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "photoAlbumId",
+          "type": "String",
+          "info": "Required: Return albums with these IDs, separated by commas"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Return albums in groups with these ID, separated by commas"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: Return photo albums for these event ids, separated by commas"
+        }
+      ]
+    },
+    {
+      "name": "postPhotoAlbum",
+      "description": "This method creates photo albums within a Meetup group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Group to create the album in"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Required:  Title of the new album"
+        }
+      ]
+    },
+    {
+      "name": "getOpenVenues",
+      "description": "Searches for public venues within a given geo space. To search for specific venues that your group has used, use the [Venues](/meetup_api/docs/2/venues) method",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Required: A valid latitude, limits the returned venues to those within radius miles"
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "Required: For the US, a valid 2 character state code"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Required: Venues that contain the given term or terms somewhere in their content. Separate terms with \" AND \" for venues that have combined terms. Append a trailing * to treat this as a prefix search"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Required: A valid US zip code, limits the returned venues to those within radius miles"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "Required: A valid country code."
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Required: A valid longitude, limits the returned venues to those within radius miles"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Returns venues with location relative to the group associated with this urlname"
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "Required: A valid city"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius, in miles for geographic requests, default 25.0 -- maximum 100.0"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        }
+      ]
+    },
+    {
+      "name": "getVenues",
+      "description": "Search for Meetup venues by one of your groups, events, or venue identifiers. For a full text search on public venues use [OpenVenues](/meetup_api/docs/2/open_venues).",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "venueId",
+          "type": "String",
+          "info": "Required: multiple ids may be separated with commas"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: multiple ids may be separated with commas"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: path to group from meetup.com, no slashes"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: multiple ids may be separated with commas"
+        }
+      ]
+    },
+    {
+      "name": "getRSVPs",
+      "description": "Query for Event RSVPs by event",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Parameter for requesting optional response properties, set to other_services for a list of third party services"
+        },
+        {
+          "name": "rsvp",
+          "type": "String",
+          "info": "Filters response on RSVP status. \"yes\" if member RSVP'd yes otherwise \"no\""
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: Multiple alphanumeric ids may be separated with commas"
+        }
+      ]
+    },
+    {
+      "name": "postRSVP",
+      "description": "Creates or updates an existing RSVP",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "rsvp",
+          "type": "String",
+          "info": "Required: The RSVP setting - value must be either \"yes\", \"no\" or \"waitlist\""
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": " Organizers and event hosts may RSVP on behalf of a member by specifying an ID here. As when editing RSVPs on the site, organizers may enter a \"yes\" for a member even if the event requires payment."
+        },
+        {
+          "name": "comments",
+          "type": "String",
+          "info": "A comment to post along with the RSVP"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: The event that you are RSVP'ing to"
+        },
+        {
+          "name": "guests",
+          "type": "String",
+          "info": "Number of guests also coming to the event."
+        },
+        {
+          "name": "optToPay",
+          "type": "String",
+          "info": "For events with fees, the authorized member may opt to pay as part of the RSVP request. This may be set to true or false"
+        },
+        {
+          "name": "provideAnswer",
+          "type": "JSON",
+          "info": "Answers to event survey questions. Answers may not be longer than 250 characters. Organizers and hosts my not edit or create answers on behalf of members"
+        },
+        {
+          "name": "agreeToRefund",
+          "type": "String",
+          "info": "For events with fees, the authorized member must agree to the event's refund policy. This must be set to either true or false"
+        }
+      ]
+    },
+    {
+      "name": "getSingleRSVP",
+      "description": "Retrieve a single RSVP",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output"
+        }
+      ]
+    },
+    {
+      "name": "postGroupPhoto",
+      "description": "Uploads a new Meetup Group photo. To change other Group settings use the [Group Edit](/meetup_api/docs/:urlname/#edit) endpoint",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "await",
+          "type": "String",
+          "info": "If true, this ensures a response will not be returned until the upload is accessible"
+        },
+        {
+          "name": "main",
+          "type": "String",
+          "info": "Set to 'true' to have this photo become the group's main photo. Set it to 'false' otherwise. Defaults to true"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Required: Group ID for the target group. This may be used as an alternative to group_urlname"
+        },
+        {
+          "name": "photo",
+          "type": "String",
+          "info": "Required: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Required: Group urlname. This may be used as an alternative to group_id"
+        }
+      ]
+    },
+    {
+      "name": "postMemberPhoto",
+      "description": "Uploads a photo to be associated with a Member",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "await",
+          "type": "String",
+          "info": "If true, this ensures a response will not be returned until the upload is accessible"
+        },
+        {
+          "name": "main",
+          "type": "String",
+          "info": "Set to \"true\" to have this photo become the member's main profile photo. Otherwise, it will become the main photo only when none other is selected. If the authenticated member does not already have a main profile photo set it will remain so."
+        },
+        {
+          "name": "syncMatchingPhoto",
+          "type": "String",
+          "info": "When set to true and main is set to true, this will replace all group profile photos matching the current photo with the provided replacement"
+        },
+        {
+          "name": "photo",
+          "type": "String",
+          "info": "Required: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB"
+        },
+        {
+          "name": "syncPhoto",
+          "type": "String",
+          "info": "When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id"
+        }
+      ]
+    },
+    {
+      "name": "postPhoto",
+      "description": "Uploads a photo for a given event",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "await",
+          "type": "String",
+          "info": "If true, this ensures a response will not be returned until the upload is accessible"
+        },
+        {
+          "name": "caption",
+          "type": "String",
+          "info": "Caption for the photo"
+        },
+        {
+          "name": "photoAlbumId",
+          "type": "String",
+          "info": "Required: Identifier of an existing photo album, which may be an event or group album"
+        },
+        {
+          "name": "photo",
+          "type": "String",
+          "info": "Required: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB"
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Required: Identifier of an event. If there is no album for this event, one will be created."
+        }
+      ]
+    },
+    {
+      "name": "getActivity",
+      "description": "API method for retrieving the activity feed for a member's groups",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Returns activity from this member's groups. Must be authenticated as this member"
+        },
+        {
+          "name": "pageStart",
+          "type": "String",
+          "info": "Starting timestamp for item to return."
+        }
+      ]
+    },
+    {
+      "name": "getOEMBed",
+      "description": "oEmbed implementation",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "info": "Required: url of resource to be embedded"
+        },
+        {
+          "name": "maxwidth",
+          "type": "String",
+          "info": "maximum width to display"
+        }
+      ]
+    },
+    {
+      "name": "getRSVPs",
+      "description": "\nThis [long-polling](http://en.wikipedia.org/wiki/Comet_%28programming%29#Script_tag_long_polling) \nstream can be easily consumed using JavaScript in any modern browser. RSVP\nnotifications are received when they happen, or as soon as your script finishes handling its\nlast notification.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Required: Name of a function to be called with an array of RSVP notification objects. If this \nparameter is not supplied, the chunked stream is joined instead."
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Should be supplied for all but the first polling request, so that any missed notifications are can be sent in an immediate response"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Limit notifications to a specific event id. Use alphanumeric ids for repeating events."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        }
+      ]
+    },
+    {
+      "name": "getRSVPs",
+      "description": "\nLive HTTP stream of RSVPs within public Meetup groups. This method uses [chunked \ntransfer encoding](http://en.wikipedia.org/wiki/Chunked_transfer_encoding) \nto maintain a persistent connection with the client. This connection will only be \nterminated for server maintenance or a connection error.\n    ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Return recent RSVP with an mtime greater than the supplied time, in milliseconds since the epoch"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        }
+      ]
+    },
+    {
+      "name": "getStreamOpenEvents",
+      "description": "\nLive HTTP stream of events within public Meetup groups. This method uses [chunked\ntransfer encoding](http://en.wikipedia.org/wiki/Chunked_transfer_encoding)\nto maintain a persistent connection with the client. This connection will only be\nterminated for server maintenance or a connection error.\n      ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Return events with an mtime greater than the supplied time, in milliseconds since the epoch"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        }
+      ]
+    },
+    {
+      "name": "getOpenVenues",
+      "description": "\nLive HTTP stream of the creation and modification of public Meetup venues using\n[chunked encoding](http://en.wikipedia.org/wiki/Chunked_transfer_encoding)\nto maintian a persistent connection with a client. The connection will only be\nterminiated for server maintenance or a connection error. It is suitable for\nlow-level HTTP clients rather than web browsers.\n      ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Return recent open venues with an mtime greater then the supplied time, in milliseconds since the epoch"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        },
+        {
+          "name": "trickle",
+          "type": "String",
+          "info": "When supplied with a request, the Meetup API will push your client the entire Meetup database of public venues in batches of 512"
+        }
+      ]
+    },
+    {
+      "name": "getEventComments",
+      "description": "\nThis [long-polling](http://en.wikipedia.org/wiki/Comet_%28programming%29#Script_tag_long_polling)\nstream can be easily consumed using JavaScript in any modern browser. Event Comment\nnotifications are received when they happen, or as soon as your script finishes handling its\nlast notification.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Required: Name of a function to be called with an array of Event Comment notification objects. If this\nparameter is not supplied, the chunked stream is joined instead."
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Should be supplied for all but the first polling request, so that any missed notifications are can be sent in an immediate response"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Limit notifications to a specific event id. Use alphanumeric ids for repeating events."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        }
+      ]
+    },
+    {
+      "name": "getEventComments",
+      "description": "\nLive HTTP stream of Event Comments  within public meetup groups. This method uses [chunked\ntransfer encoding](http://en.wikipedia.org/wiki/Chunked_transfer_encoding)\nto maintain a persistent connection with the client. This connection will only be\nterminated for server maintenance or a connection error.\n    ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "sinceMtime",
+          "type": "String",
+          "info": "Return recent Event Comments with an mtime greater than the supplied time, in milliseconds since the epoch"
+        },
+        {
+          "name": "sinceCount",
+          "type": "String",
+          "info": "Request that some number of recent messages be sent immediately, if available. May not be specified in the same request as since_mtime."
+        },
+        {
+          "name": "eventId",
+          "type": "String",
+          "info": "Limit notifications to a specific event id. Use alphanumeric ids for repeating events."
+        },
+        {
+          "name": "apiVersion",
+          "type": "String",
+          "info": "2"
+        }
+      ]
+    },
+    {
+      "name": "getStatus",
+      "description": "Returns the current API service status",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        }
+      ]
+    },
+    {
+      "name": "membershipApproval",
+      "description": "Approves one or more requests for group membership",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "member",
+          "type": "String",
+          "info": "Comma-delimited numeric pending member IDs. The maximum allowed is 200"
+        },
+        {
+          "name": "welcomeMessage",
+          "type": "String",
+          "info": "Optional message to send to the members being approved. If not provided, the groups default welcome message will be sent. Max message size is 2000"
+        },
+        {
+          "name": "sendCopy",
+          "type": "String",
+          "info": "Optional boolean value indicating whether or not the org should receive a copy of the message sent to the approved members"
+        }
+      ]
+    },
+    {
+      "name": "getEventAttendance",
+      "description": "Lists attendance records for Meetup events. Limited for use by administrative members.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "filter",
+          "type": "String",
+          "info": "A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member"
+        },
+        {
+          "name": "member",
+          "type": "String",
+          "info": "Raw text used to search for member by name. This may only be applied when the filter parameter is set to 'all'. The provided text must consist of at least 2 characters."
+        }
+      ]
+    },
+    {
+      "name": "takeEventAttendance",
+      "description": "Takes member attendance for an event. Limited for use by administrative members.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "guests",
+          "type": "String",
+          "info": "The number of guests accompanying member. Maximum of 99 is allowed. When providing multiple values in the `member` field, this value is ignored"
+        },
+        {
+          "name": "headcount",
+          "type": "String",
+          "info": "Sets the overall headcount for the event. This may not necessarily correlate with the list of attendees in this group if the event is part of a joint Meetup event. When providing multiple values in the `member` field, this value is ignored"
+        },
+        {
+          "name": "member",
+          "type": "String",
+          "info": "Required: A comma-delimited list of valid ids associated with members RSVP'd to the event"
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Required: An attendance status for the provided members. Must be one of: noshow, absent, attended"
+        }
+      ]
+    },
+    {
+      "name": "getBoards",
+      "description": "Listings of Group discussion boards",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "membershipDecline",
+      "description": "Declines one or more requests for group membership",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "member",
+          "type": "String",
+          "info": "Comma-delimited numeric pending member IDs. The maximum allowed is 200"
+        },
+        {
+          "name": "anon",
+          "type": "String",
+          "info": "Optional Boolean value indicating whether the declining member's email address should be hidden in the resulting response. Default is true."
+        },
+        {
+          "name": "sendCopy",
+          "type": "String",
+          "info": "Optional Boolean value indicating whether or not to send a copy to the member issuing the decline. Default is false"
+        },
+        {
+          "name": "explanation",
+          "type": "String",
+          "info": "Optional explanation to send to the members being declined. Max message size is 2000"
+        },
+        {
+          "name": "ban",
+          "type": "String",
+          "info": "Optional Boolean value indicating whether or not to ban the member in the future. Default is false"
+        }
+      ]
+    },
+    {
+      "name": "getDiscussions",
+      "description": "Listings of group discussions",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "bid",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getSingleDiscussion",
+      "description": "Listing Group discussion posts",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "bid",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "did",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getSelfEvents",
+      "description": "Gets a listing of all scheduled Meetup Events the authenticated member has RSVP'd to\nthat have been announced to the group.\nThis listing is ordered from oldest to most recent by default",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "scroll",
+          "type": "String",
+          "info": "A string representing a scroll target.\n\nSupported values are as follows.\n\n__recent_past__: Scroll to the last RSVP'd Meetup Event that has passed.\n If there is no recent RSVP, this defaults to __next_upcoming__\n\n__next_upcoming__: Scroll to the next upcoming Meetup Event the authenticated member\nRSVP'd to.\n\nAlternatively the server may generate a scroll value used for pagination Link headers.\nClients should treat the contents of those as a transparent string. Its\ncontents are subject to change in the future"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of results to return. Defaults to 200."
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-delimited list of optional fields names which may be appended to the response"
+        },
+        {
+          "name": "rsvp",
+          "type": "String",
+          "info": "Comma-delimited list of RSVP responses.\nValid values are \"waitlist\" or \"yes\". The default is \"yes\""
+        },
+        {
+          "name": "desc",
+          "type": "String",
+          "info": "When true, sorts results in descending order. Defaults to false"
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Comma-delimited list of event statuses.\nValid values are \"past\" or \"upcoming\""
+        }
+      ]
+    },
+    {
+      "name": "getSingleEvent",
+      "description": "Fetches a Meetup Event by group urlname and event_id",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-delimited list of optional fields to append to the response"
+        }
+      ]
+    },
+    {
+      "name": "postEventPayments",
+      "description": "Allows organizers of a group to note payments made by members for an event. This is the 'Mark Paid' feature seen in the RSVP listings on event details pages and affects the 'pay_status' response fields in [2/rsvps](/meetup_api/docs/2/rsvps/#response) for paid events",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "amount",
+          "type": "String",
+          "info": "Required: The monetary amount of money the member submitted"
+        },
+        {
+          "name": "quantity",
+          "type": "String",
+          "info": "The number of payments made. Defaults to 1"
+        },
+        {
+          "name": "member",
+          "type": "String",
+          "info": "Required: Member Id of member who made a payment"
+        },
+        {
+          "name": "paidOn",
+          "type": "String",
+          "info": "The time the payment was made in milliseconds from the epoc. Defaults to now"
+        }
+      ]
+    },
+    {
+      "name": "findGroups",
+      "description": "Text, location, category and friend-based group searches",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Zipcode of location to limit search to"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "A valid two character country code, defaults to US"
+        },
+        {
+          "name": "upcomingEvents",
+          "type": "String",
+          "info": "If true, filters text and category based searches on groups that have upcoming events. Defaults to false"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Approximate longitude"
+        },
+        {
+          "name": "filter",
+          "type": "String",
+          "info": "Determines which groups are returned. If 'all' (default), the text and category parameters are applied. If 'friends', groups your friends are in are returned. The value of this parameter may be one of all, friends"
+        },
+        {
+          "name": "fallbackSuggestions",
+          "type": "String",
+          "info": "boolean indicator of whether or not to return a list of curated suggestions for groups if we can't find groups matching your criteria"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "Raw text location query"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Raw full text search query"
+        },
+        {
+          "name": "topicId",
+          "type": "String",
+          "info": "Comma-delimited list of numeric topic ids"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "info": "Comma-delimited list of numeric category ids"
+        },
+        {
+          "name": "selfGroups",
+          "type": "String",
+          "info": "set to 'include' or 'exclude' Meetups the authorized member belongs to; default is 'include'"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Approximate latitude"
+        }
+      ]
+    },
+    {
+      "name": "getSingleGroup",
+      "description": "Fetches a Meetup group by urlname",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-delimited list of optional fields to append to the response"
+        }
+      ]
+    },
+    {
+      "name": "editGroup",
+      "description": "Allows organizers to edit their Meetup group information. To change group topics, see the [add](/meetup_api/docs/:urlname/topics/#add) and [remove](/meetup_api/docs/:urlname/topics/#remove) topics endpoints. To change group photo use the [Group photo upload](/meetup_api/docs/2/group_photo/#create) endpoint. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "The ZIP code of the city"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "The ISO_3166-1 country code for the country which contains the city"
+        },
+        {
+          "name": "listMode",
+          "type": "String",
+          "info": "Defines policy for who can post to the group mailing list. May be one of 'open' meaning any member can post, 'off' meaning no one can post, 'moderated' meaning messages must be approved, or 'orgs_only' meaning only organizers may post to the list"
+        },
+        {
+          "name": "dryrun",
+          "type": "String",
+          "info": "Boolean parameter that will cause this endpoint to apply all validation rules without actually saving changes in which case the response will only reflect the group's current attributes"
+        },
+        {
+          "name": "gaCode",
+          "type": "String",
+          "info": "Google Analytics code for group"
+        },
+        {
+          "name": "removeTopics",
+          "type": "String",
+          "info": "Comma-delimited list of topic ids to disassociate with group"
+        },
+        {
+          "name": "visibility",
+          "type": "String",
+          "info": "Restricts group visibility for non-members. May be one of 'public', 'public_limited' or 'members'. Note, the 'members' option is only available to groups that already have 'members' visibility"
+        },
+        {
+          "name": "addNewQuestions",
+          "type": "JSON",
+          "info": "A new profile question defined in the order of index provided in the request parameter name"
+        },
+        {
+          "name": "keyPhoto",
+          "type": "String",
+          "info": "Group's primary photo. Must be ID of an existing album photo"
+        },
+        {
+          "name": "photoReq",
+          "type": "String",
+          "info": "Indicates that a member must provide a photo before joining. Expects true or false values"
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "Summary of what the Meetup group is about in simple HTML format"
+        },
+        {
+          "name": "questionsReq",
+          "type": "String",
+          "info": "Indicates that provided questions are required before joining. Expects true or false values"
+        },
+        {
+          "name": "welcomeMessage",
+          "type": "String",
+          "info": "Message sent to members after they join. Can be at most 2000 characters"
+        },
+        {
+          "name": "joinMode",
+          "type": "String",
+          "info": "Controls how member's are let into the group. May be one of 'open' meaning any Meetup member my join, 'closed' meaning group is not currently accepting new members, or 'approval' meaning members must be approved by an organizer. Note, the 'closed' options is only available to groups that already have a 'closed' join_mode"
+        },
+        {
+          "name": "listAddr",
+          "type": "String",
+          "info": "Mailing list prefix. By default this is the group's urlname."
+        },
+        {
+          "name": "addTopics",
+          "type": "String",
+          "info": "Comma-delimited list of topic ids to associate with group"
+        },
+        {
+          "name": "serviceUri",
+          "type": "JSON",
+          "info": "A URI for a social network service. Service must be one of facebook, flickr, linkedin, other, tumblr, twitter"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Display name of the group. Can be at most 60 characters"
+        },
+        {
+          "name": "editQuestions",
+          "type": "JSON",
+          "info": "Edits a current profile question identified by an id in the parameter name. The index updated index should also be encoded in the parameter name. To delete a question, set this to an empty string. Groups that require profile questions must have at least one question"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": "Name used for the groups web address on meetup.com. Must be between 6 and 60 characters"
+        },
+        {
+          "name": "who",
+          "type": "String",
+          "info": "What members of the group will be called. Can be at most 32 characters"
+        }
+      ]
+    },
+    {
+      "name": "postTopics",
+      "description": "Associates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "topicId",
+          "type": "String",
+          "info": "Required: Comma-delimited list of topic ids to associate with group"
+        }
+      ]
+    },
+    {
+      "name": "deleteTopics",
+      "description": "Disassociates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "topicId",
+          "type": "String",
+          "info": "Required: Comma-delimited list of topic ids to disassociate with group"
+        }
+      ]
+    },
+    {
+      "name": "getLocations",
+      "description": "Provides a query interface for finding known locations",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Search for locations based on location longitude.\nMust be provided with \"lat\""
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "The desired number of locations to return in a single set of results.\nDefaults to 200"
+        },
+        {
+          "name": "offset",
+          "type": "String",
+          "info": "The current offset in the paginated set, represented as an incrementing value"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Search for locations based on location latitude.\nMust be provided with \"lon\""
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search for locations based on city name or zip code"
+        }
+      ]
+    },
+    {
+      "name": "getSelfCalendar",
+      "description": "Get a listing of all upcoming Meetup events for the authenticated member",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-delimited list of optional fields names which may be appended to the response"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of results to return in a page. Defaults to 200"
+        }
+      ]
+    },
+    {
+      "name": "getSelfGroups",
+      "description": "Lists the authenticated member's groups in the order of leadership,\nnext upcoming event, then alphabetical order by name",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-delimited list of optional fields to append to the response"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of groups to return in a single page of results.\nBy default, this is 200"
+        }
+      ]
+    },
+    {
+      "name": "getPROGroups",
+      "description": "Name and statistics range search for the meetup groups belonging to Pro organization.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "String: Country"
+        },
+        {
+          "name": "pastRsvpsMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the total number of past RSVPs"
+        },
+        {
+          "name": "pastEventsMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the number of the past events held"
+        },
+        {
+          "name": "memberCountMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the number of members"
+        },
+        {
+          "name": "upcomingEventsMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the number of the upcoming events"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Float: Longitude"
+        },
+        {
+          "name": "lastEventMin",
+          "type": "String",
+          "info": "Milliseconds since epoch: Minumum range of the date that the last meetup happened"
+        },
+        {
+          "name": "repeatRsvpersMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the average number of repeat rsvpers"
+        },
+        {
+          "name": "averageAgeMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the average age of the members"
+        },
+        {
+          "name": "lastEventMax",
+          "type": "String",
+          "info": "Milliseconds since epoch: Maximum range of the date that the last meetup happened"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "String: `global`, `smart`, or search radius in Float"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Float: Latitude"
+        },
+        {
+          "name": "foundedDateMin",
+          "type": "String",
+          "info": "Milliseconds since epoch: Minumum range of the founded dates of the groups"
+        },
+        {
+          "name": "order",
+          "type": "String",
+          "info": "List of String: attributes to sort on"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "String: Zip code"
+        },
+        {
+          "name": "inactiveWithinDays",
+          "type": "String",
+          "info": "Positive Integer: including only those groups that did not have event in the last specified days"
+        },
+        {
+          "name": "offset",
+          "type": "String",
+          "info": "Positive Integer: the page offset"
+        },
+        {
+          "name": "topics",
+          "type": "String",
+          "info": "List of Integers: the ids of topic of the group"
+        },
+        {
+          "name": "upcomingEventsMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the number of the upcoming events"
+        },
+        {
+          "name": "averageAgeMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the average age of the members"
+        },
+        {
+          "name": "proJoinDateMax",
+          "type": "String",
+          "info": "Milliseconds since epoch: Maximum range of the dates the groups joined Pro organization"
+        },
+        {
+          "name": "nextEventMin",
+          "type": "String",
+          "info": "Milliseconds since epoch: Minumum range of the date that the next meetup is scheduled"
+        },
+        {
+          "name": "pastRsvpsMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the total number of past RSVPs"
+        },
+        {
+          "name": "activeWithinDays",
+          "type": "String",
+          "info": "Positive Integer: including only those groups that had event in the last specified days"
+        },
+        {
+          "name": "rsvpsPerEventMin",
+          "type": "String",
+          "info": "Positive Integer: Minumum range of the average number of RSVPs per event"
+        },
+        {
+          "name": "foundedDateMax",
+          "type": "String",
+          "info": "Milliseconds since epoch: Maximum range of the founded dates of the groups"
+        },
+        {
+          "name": "memberCountMin",
+          "type": "String",
+          "info": "Positive Integer: Minimum range of the number of members"
+        },
+        {
+          "name": "pastEventsMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the number of the past events held"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "String: Name of the group looking for"
+        },
+        {
+          "name": "nextEventMax",
+          "type": "String",
+          "info": "Milliseconds since epoch: Maximum range of the date that the next meetup is scheduled"
+        },
+        {
+          "name": "repeatRsvpersMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the average number of repeat rsvpers"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "String: Raw location"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Positive Integer: the size of page window"
+        },
+        {
+          "name": "proJoinDateMin",
+          "type": "String",
+          "info": "Milliseconds since epoch: Minumum range of the dates the groups joined Pro organization"
+        },
+        {
+          "name": "rsvpsPerEventMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum range of the average number of RSVPs per event"
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "info": "List of Integers: the ids of the category of the group"
+        },
+        {
+          "name": "desc",
+          "type": "String",
+          "info": "List of Boolean: whether to sort ascending or decending on each attributes in `order`"
+        }
+      ]
+    },
+    {
+      "name": "getPROMembers",
+      "description": "Name, location, and time based search for the members of the meetups belonging to Pro organization.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "String: Zip code"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "String: Country"
+        },
+        {
+          "name": "eventsAttendedMax",
+          "type": "String",
+          "info": "Positive Integer: Maximum number of attended events"
+        },
+        {
+          "name": "offset",
+          "type": "String",
+          "info": "Positive Integer: the page offset"
+        },
+        {
+          "name": "chapters",
+          "type": "String",
+          "info": "List of Integers: The chapters which the member belongs to"
+        },
+        {
+          "name": "isOrganizer",
+          "type": "String",
+          "info": "Boolean: To limit to only organizers or non-organizers"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Float: Longitude"
+        },
+        {
+          "name": "memberName",
+          "type": "String",
+          "info": "String: Name of the member"
+        },
+        {
+          "name": "activeWithinDays",
+          "type": "String",
+          "info": "Positive Integer: The range of date from the past until today, for the recent activity"
+        },
+        {
+          "name": "joinTimeMin",
+          "type": "String",
+          "info": "Milliseconds since epoch: The oldest time limit for member join"
+        },
+        {
+          "name": "emailReceived",
+          "type": "String",
+          "info": "Integers: The id of a previous emails that the member received"
+        },
+        {
+          "name": "eventsAttendedMin",
+          "type": "String",
+          "info": "Positive Integer: Minimum number of attended events"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "String: Raw location"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Positive Integer: the size of page window"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "String: `global`, `smart`, or search radius in Float"
+        },
+        {
+          "name": "joinTimeMax",
+          "type": "String",
+          "info": "Milliseconds since epoch: The latest time limit for member join"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Float: Latitude"
+        },
+        {
+          "name": "desc",
+          "type": "String",
+          "info": "Boolean: whether to sort ascending or decending"
+        },
+        {
+          "name": "order",
+          "type": "String",
+          "info": "String: attribute to sort on"
+        }
+      ]
+    },
+    {
+      "name": "getNotifications",
+      "description": "Returns all recent Meetup notifications for the authorized member. To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/) endpoint. To get the authenticated Member's current unread count, request it in an [HTTP header](/meetup_api/docs/#meta-headers).",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        }
+      ]
+    },
+    {
+      "name": "setNotificationsRead",
+      "description": "Marks groups of [notifications](/meetup_api/docs/notifications/) as read.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        },
+        {
+          "name": "sinceId",
+          "type": "String",
+          "info": "The id of the newest notification item, typically the first in the list returned by the notifications endpoint"
+        }
+      ]
+    },
+    {
+      "name": "findTopicCategories",
+      "description": "Returns a list high level topic categories",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "An optional approximate longitude to center a request for \"best_topics\""
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "A comma-limited list of optional fields to append to the response"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "An radius (in miles) to center a request for \"best_topics\""
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "An optional approximate latitude to center a request for \"best_topics\""
+        }
+      ]
+    },
+    {
+      "name": "getRecommendedGroupTopics",
+      "description": "Recommends suggestions for group topics based on a text search or other topics",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Target number of recommendations to return. Defaults to 36."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Free form text search"
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Defines a language preference for ordering results. Valid values are en-USen-AUde-DEeses-ESfr-FRit-ITpt-BRja-JPko-KRnl-NLen-aude-dept-bren-uses-esnl-nlit-itfr-frko-krja-jpendefritptjakonl. You may also substitute this with the Accept-Language header"
+        },
+        {
+          "name": "otherTopics",
+          "type": "String",
+          "info": "A comma-delimited list of topic ids to inform recommendations"
+        },
+        {
+          "name": "excludeTopics",
+          "type": "String",
+          "info": "A comma-delimited list of topic ids to exclude from the recommendations"
+        }
+      ]
+    },
+    {
+      "name": "getRecommendedGroups",
+      "description": "Returns groups Meetup finds relevant to you",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Zip code you are searching for recommendations in"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "A valid two character country code, defaults to US"
+        },
+        {
+          "name": "instantJoinOnly",
+          "type": "String",
+          "info": "Recommend only groups without join requirements and that can be joined instantly"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "Raw text location query"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Approximate longitude"
+        },
+        {
+          "name": "topicId",
+          "type": "String",
+          "info": "Comma delimited list of up to 100 topic ids to help inform recommendations"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius"
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Request that additional fields (separated by commas) be included in the output."
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "info": "A valid category id which limits recommended groups to a particular category"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Approximate latitude"
+        }
+      ]
+    },
+    {
+      "name": "postRecommendedGroupsIgnore",
+      "description": "Provides a form of feedback by requesting to remove a group from future recommendations",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "getRecommendedVenues",
+      "description": "Returns venues Meetup finds relevant to you based on location and category. This method does not yet support sorting or pagination.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "zip",
+          "type": "String",
+          "info": "Zip code you are searching for recommendations in"
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "A valid two character country code, defaults to US"
+        },
+        {
+          "name": "usedBetween",
+          "type": "String",
+          "info": "Return venues that have been used within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above)."
+        },
+        {
+          "name": "minGroups",
+          "type": "String",
+          "info": "The minimum number of groups that have hosted events at this venue"
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Comma-delimited list of up to 200 group ids to help inform recommendations"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "Raw text location query"
+        },
+        {
+          "name": "lon",
+          "type": "String",
+          "info": "Approximate longitude"
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Radius in miles. Defaults to member's preferred radius"
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "info": "Comma-delimited list of up to 200 category ids to help inform recommendations"
+        },
+        {
+          "name": "groupUrlname",
+          "type": "String",
+          "info": "Comma-delimited list of up to 200 group urlnames to help inform recommendations"
+        },
+        {
+          "name": "lat",
+          "type": "String",
+          "info": "Approximate latitude"
+        }
+      ]
+    },
+    {
+      "name": "getSimilarGroups",
+      "description": "Renders a list of similar groups",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "urlname",
+          "type": "String",
+          "info": ""
+        }
+      ]
+    },
+    {
+      "name": "findTopics",
+      "description": "Find topics by name",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Required: OAuth2 Access Token"
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Required: The text to topic text search for"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of results to return in a single set of results"
+        }
+      ]
+    }
+  ]
+}
