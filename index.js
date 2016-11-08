@@ -71,7 +71,7 @@ for(let func in apiHash) {
         } catch(e) {
             console.log(e);
             r.callback          = 'error';
-            r.contextWrites[to] = e
+            r.contextWrites[to] = e.message ? e.message : e;
         }
 
         res.status(200).send(r);
