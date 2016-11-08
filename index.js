@@ -69,7 +69,6 @@ for(let func in apiHash) {
             r.callback          = 'success';
             r.contextWrites[to] = response;
         } catch(e) {
-            console.log(e);
             r.callback          = 'error';
             r.contextWrites[to] = e.message ? e.message : e;
         }
