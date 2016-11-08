@@ -306,15 +306,15 @@
     }
   },
   "postRecommendedGroupsIgnore": {
-    "resource": " /recommended/groups/ignores/:urlname",
+    "resource": "https://api.meetup.com/recommended/groups/ignores/:urlname",
     "method": "post"
   },
   "postTopics": {
-    "resource": "/:urlname/topics",
+    "resource": "https://api.meetup.com/:urlname/topics",
     "method": "post"
   },
   "deleteTopics": {
-    "resource": "/:urlname/topics",
+    "resource": "https://api.meetup.com/:urlname/topics",
     "method": "delete"
   },
   "getSimilarGroups": {
@@ -653,20 +653,6 @@
       "return": {
         "type": "object",
         "keys": ["response", "member"]
-      }
-    }
-  },
-  "getStreamOpenEvents": {
-    "resource": "https://stream.meetup.com/2/open_events",
-    "method": "get",
-    "chunked": true,
-    "test": {
-      "params": {
-        "since_mtime": "1294435118533"
-      },
-      "return": {
-        "type": "object",
-        "keys": ["event_url", "id"]
       }
     }
   },

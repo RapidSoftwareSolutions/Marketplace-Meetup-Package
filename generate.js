@@ -3,6 +3,21 @@ const lib  = require("./lib/lib/functions");
 const url  = require('url');
 const path = require("path");
 
+const customArgs = {
+    lon:          'longitude',
+    lat:          'latitude',
+    groupUrlname: 'groupUrlName',
+    groupnum:     'groupNum',
+    gid:          'groupId',
+    mid:          'memberId',
+    optToPay:     'optionToPay',
+    maxwidth:     'maxWidth',
+    headcount:    'headCount',
+    anon:         'anonymous',
+    bid:          'boardId',
+    did:          'discussionId'
+}
+
 const customNames = {
     dashboard:           'getDashboard',
     getDiscussion:       'getSingleDiscussion',
@@ -17,15 +32,15 @@ const customNames = {
 }
 
 const multiFields = {
-    'postEvent|question':     '_addNewQuestions',
-    'editEvent|question':     '_addNewQuestions',
-    'editEvent|questionEdit': '_editQuestions',
-    'postProfile|answer':     '_provideAnswer',
-    'editProfile|answer':     '_provideAnswer',
-    'postRSVP|answer':        '_provideAnswer',
-    'editGroup|question':     '_addNewQuestions',
-    'editGroup|Uri':          '_serviceUri',
-    'editGroup|questionEdit': '_editQuestions'
+    'postEvent|question':     'addNewQuestions',
+    'editEvent|question':     'addNewQuestions',
+    'editEvent|questionedit': 'editQuestions',
+    'postProfile|answer':     'provideAnswer',
+    'editProfile|answer':     'provideAnswer',
+    'postRSVP|answer':        'provideAnswer',
+    'editGroup|question':     'addNewQuestions',
+    'editGroup|uri':          'serviceUri',
+    'editGroup|questionedit': 'editQuestions'
 }
 
 let main = module.exports = function() {
@@ -38,6 +53,10 @@ let main = module.exports = function() {
         metadata   = {
             package: "Meetup", 
             tagline: "Meetup Package",
+            accounts: {
+                domain: 'meetup.com',
+                credentials: [ 'accessToken' ]
+            },
             image: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/8/f/1/d/highres_454596637.jpeg",
             repo: "https://github.com/RapidSoftwareSolutions/Marketplace-Meetup-Package",
             description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces for extending your community using the Meetup platform from your own apps.',
@@ -64,8 +83,9 @@ let main = module.exports = function() {
 
         let key = doc.http_method + doc.path;
 
-        if(nameHash[key])
+        if(nameHash[key] && doc.host !== 'stream') {
             methodName = nameHash[key];
+        }
         else continue;
 
         let { params, path, http_method, desc } = doc,
@@ -79,6 +99,9 @@ let main = module.exports = function() {
         apiBlock.method = http_method;
         apiBlock.res = endpoints[methodName].resource;
         apiBlock.args = [];
+        apiBlock.cargs = [];
+
+        if(endpoints[methodName].multipart_photo) apiBlock.multipartPhoto = true;
 
         metaBlock.args.push({
             name: 'accessToken',
@@ -95,8 +118,10 @@ let main = module.exports = function() {
                 let name = lib.toCamelCase(urlParams[i]);
 
                 apiBlock.args.push('$' + name);
+                apiBlock.cargs.push(customArgs[name] || name);
+
                 metaBlock.args.push({
-                    name,
+                    name: customArgs[name] || name,
                     type: 'String',
                     info: ''
                 })
@@ -111,32 +136,35 @@ let main = module.exports = function() {
             if(_parr.length > 1) parr = _parr;
 
             for (var i = parr.length - 1; i >= 0; i--) {
-                let paramName = lib.toCamelCase(parr[i].replace('*', '$'));
+                let paramName = parr[i],
+                    camelName;
 
                 metaArg = {
-                    name: paramName,
                     type: 'String',
                     info: params[key]
                 }
 
-                if(paramName[0] == '$') metaArg.info = 'Required: ' + metaArg.info;
+                if(paramName[0] == '*') metaArg.info = 'Recomended: ' + metaArg.info;
+
+                paramName = paramName.replace('*', '');
 
                 if(/{/.test(paramName)) {
-                    paramName = paramName.replace(/\{([^)]+)\}/, '');
-                    let key = methodName + '|' + paramName;
+                    paramName = paramName.replace(/\{([^)]+)\}/, '*');
+                    let key = (methodName + '|' + paramName).replace('_', '').replace('_', '').replace('*', '');
 
-                    if(multiFields[key]) paramName = multiFields[key]
-                    else console.log(methodName, paramName);
+                    if(multiFields[key]) camelName = multiFields[key]
+                    else console.log(methodName, key);
 
-                    metaArg.name = paramName;
                     metaArg.type = 'JSON';
+                    apiBlock.multiprop = true;
                 }
 
-                metaArg.name = metaArg.name
-                    .replace('$', '')
-                    .replace('_', '');
+                camelName = camelName || lib.toCamelCase(paramName.replace('$', ''));
+
+                metaArg.name = customArgs[camelName] || camelName;
 
                 apiBlock.args.push(paramName);
+                apiBlock.cargs.push(customArgs[camelName] || camelName);
                 metaBlock.args.push(metaArg);
             }
         }
