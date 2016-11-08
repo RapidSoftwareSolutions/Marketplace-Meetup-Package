@@ -67,11 +67,11 @@ for(let func in apiHash) {
         try {
             response            = yield api.auth({type: 'bearer', token: req.body.args['accessToken']}).request(options);
             r.callback          = 'success';
-            r.contextWrites[to] = JSON.stringify(response)//response;
+            r.contextWrites[to] = response;
         } catch(e) {
             console.log(e);
             r.callback          = 'error';
-            r.contextWrites[to] = e.message ? e.message : JSON.stringify(e);//e
+            r.contextWrites[to] = e
         }
 
         res.status(200).send(r);
