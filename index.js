@@ -58,7 +58,9 @@ for(let func in apiHash) {
         options.method = method;
 
         if(multipartPhoto && opts['photo']) {
-            options.files = [opts['photo']];
+            options.files = {
+                photo: opts['photo']
+            }
         }
 
         let to = req.body.args.to || 'to';
