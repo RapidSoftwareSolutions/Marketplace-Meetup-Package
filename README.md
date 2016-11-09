@@ -3,9 +3,11 @@ The Meetup API provides simple RESTful HTTP and streaming interfaces for extendi
 * Domain: meetup.com
 * Credentials: accessToken
 
+
 ## How to get credentials: 
-0. Item one 
-1. Item two
+The Meetup API provides support for OAuth 2, the superseding specification for OAuth 1, authentication. This protocol requires all client communication with the Meetup servers to use HTTPS. If your application does not, our servers will response with a 400 error and a message asking you to do so.
+
+Read more about [Meetup OAuth2 authenticating](https://www.meetup.com/meetup_api/auth/#oauth2).
 
 ## TOC: 
 * [getCategories](#getCategories)
