@@ -114,9 +114,9 @@ Returns a list of Meetup topic categories
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | fields     | String     | Parameter for requesting optional response properties
-| radius     | String     | Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
-| longitude  | String     | Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
-| latitude   | String     | Use a given lat/lon/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
+| radius     | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
+| longitude  | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
+| latitude   | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
 
 <a name="getTopics"/>
 ## Meetup.getTopics
@@ -986,12 +986,12 @@ Provides a query interface for finding known locations
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | longitude  | String     | Search for locations based on location longitude.
-Must be provided with "lat"
+Must be provided with "latitude"
 | page       | String     | The desired number of locations to return in a single set of results.
 Defaults to 200
 | offset     | String     | The current offset in the paginated set, represented as an incrementing value
 | latitude   | String     | Search for locations based on location latitude.
-Must be provided with "lon"
+Must be provided with "longitude"
 | query      | String     | Search for locations based on city name or zip code
 
 <a name="getSelfCalendar"/>
