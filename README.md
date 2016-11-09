@@ -132,7 +132,7 @@ API method for accessing meetup topics
 
 <a name="getOpenEvents"/>
 ## Meetup.getOpenEvents
-Searches for recent and upcoming public events hosted by Meetup groups. Its search window  is the past one month through the next three months, and is subject to change. Open Events is optimized to search for current events by location, category, topic, or text, and only lists Meetups that have **3 or more RSVPs**. The number or results returned with each request is not guaranteed to be the same as the page size due to secondary filtering. If you're looking for a particular event or events within a particular group, use the standard [Events](/meetup_api/docs/2/events/) method.
+Searches for recent and upcoming public events hosted by Meetup groups. Its search window  is the past one month through the next three months, and is subject to change. Open Events is optimized to search for current events by location, category, topic, or text, and only lists Meetups that have **3 or more RSVPs**. The number or results returned with each request is not guaranteed to be the same as the page size due to secondary filtering. If you're looking for a particular event or events within a particular group, use the standard [Events](https://www.meetup.com/meetup_api/docs/2/events/) method.
 
 | Field        | Type       | Description
 |--------------|------------|----------
@@ -204,7 +204,7 @@ Fetch information about Meetup Groups.
 
 <a name="getEvents"/>
 ## Meetup.getEvents
-Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).
+Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](https://www.meetup.com/meetup_api/docs/2/open_events).
 
 | Field        | Type       | Description
 |--------------|------------|----------
@@ -626,7 +626,7 @@ This method creates photo albums within a Meetup group
 
 <a name="getOpenVenues"/>
 ## Meetup.getOpenVenues
-Searches for public venues within a given geo space. To search for specific venues that your group has used, use the [Venues](/meetup_api/docs/2/venues) method
+Searches for public venues within a given geo space. To search for specific venues that your group has used, use the [Venues](https://www.meetup.com/meetup_api/docs/2/venues) method
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -644,7 +644,7 @@ Searches for public venues within a given geo space. To search for specific venu
 
 <a name="getVenues"/>
 ## Meetup.getVenues
-Search for Meetup venues by one of your groups, events, or venue identifiers. For a full text search on public venues use [OpenVenues](/meetup_api/docs/2/open_venues).
+Search for Meetup venues by one of your groups, events, or venue identifiers. For a full text search on public venues use [OpenVenues](https://www.meetup.com/meetup_api/docs/2/open_venues).
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -694,7 +694,7 @@ Retrieve a single RSVP
 
 <a name="postGroupPhoto"/>
 ## Meetup.postGroupPhoto
-Uploads a new Meetup Group photo. To change other Group settings use the [Group Edit](/meetup_api/docs/:urlname/#edit) endpoint
+Uploads a new Meetup Group photo. To change other Group settings use the [Group Edit](https://www.meetup.com/meetup_api/docs/:urlname/#edit) endpoint
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -884,7 +884,7 @@ Fetches a Meetup Event by group urlname and event_id
 
 <a name="postEventPayments"/>
 ## Meetup.postEventPayments
-Allows organizers of a group to note payments made by members for an event. This is the 'Mark Paid' feature seen in the RSVP listings on event details pages and affects the 'pay_status' response fields in [2/rsvps](/meetup_api/docs/2/rsvps/#response) for paid events
+Allows organizers of a group to note payments made by members for an event. This is the 'Mark Paid' feature seen in the RSVP listings on event details pages and affects the 'pay_status' response fields in [2/rsvps](https://www.meetup.com/meetup_api/docs/2/rsvps/#response) for paid events
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -930,7 +930,7 @@ Fetches a Meetup group by urlname
 
 <a name="editGroup"/>
 ## Meetup.editGroup
-Allows organizers to edit their Meetup group information. To change group topics, see the [add](/meetup_api/docs/:urlname/topics/#add) and [remove](/meetup_api/docs/:urlname/topics/#remove) topics endpoints. To change group photo use the [Group photo upload](/meetup_api/docs/2/group_photo/#create) endpoint. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.
+Allows organizers to edit their Meetup group information. To change group topics, see the [add](https://www.meetup.com/meetup_api/docs/:urlname/topics/#add) and [remove](https://www.meetup.com/meetup_api/docs/:urlname/topics/#remove) topics endpoints. To change group photo use the [Group photo upload](https://www.meetup.com/meetup_api/docs/2/group_photo/#create) endpoint. OAuth authenticated requests require an additional [group_edit](https://www.meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
 | Field          | Type       | Description
 |----------------|------------|----------
@@ -960,7 +960,7 @@ Allows organizers to edit their Meetup group information. To change group topics
 
 <a name="postTopics"/>
 ## Meetup.postTopics
-Associates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.
+Associates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](https://www.meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -970,7 +970,7 @@ Associates topics with a given Meetup group. Limited to organizers of the group.
 
 <a name="deleteTopics"/>
 ## Meetup.deleteTopics
-Disassociates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes) permission.
+Disassociates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](https://www.meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -1092,7 +1092,7 @@ Name, location, and time based search for the members of the meetups belonging t
 
 <a name="getNotifications"/>
 ## Meetup.getNotifications
-Returns all recent Meetup notifications for the authorized member. To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/) endpoint. To get the authenticated Member's current unread count, request it in an [HTTP header](/meetup_api/docs/#meta-headers).
+Returns all recent Meetup notifications for the authorized member. To mark notifications read use [/notifications/read](https://www.meetup.com/meetup_api/docs/notifications/read/) endpoint. To get the authenticated Member's current unread count, request it in an [HTTP header](https://www.meetup.com/meetup_api/docs/#meta-headers).
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -1101,7 +1101,7 @@ Returns all recent Meetup notifications for the authorized member. To mark notif
 
 <a name="setNotificationsRead"/>
 ## Meetup.setNotificationsRead
-Marks groups of [notifications](/meetup_api/docs/notifications/) as read.
+Marks groups of [notifications](https://www.meetup.com/meetup_api/docs/notifications/) as read.
 
 | Field      | Type       | Description
 |------------|------------|----------
