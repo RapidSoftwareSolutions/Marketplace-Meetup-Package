@@ -52,7 +52,7 @@ for(let func in apiHash) {
         opts['$accessToken'] = req.body.args['accessToken'];
 
         method == 'GET' || method == 'DELETE' ? options.query = opts : options.body = opts;
-        options.isRawBody = !(options == 'GET');
+        options.isRawBody = !(method == 'GET' || method == 'DELETE');
         options.parseMultiple = !!(multiprop)
         options.parseUri  = true;
         options.method = method;
