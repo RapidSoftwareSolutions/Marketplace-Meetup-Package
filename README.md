@@ -253,7 +253,7 @@ Method description
 ### addNewQuestions format:
 
 Key: question index
-Value: question text
+fValue: question text
 
 ```json
 {
@@ -1034,7 +1034,7 @@ Value: question text
 
 ### serviceUri format:
 
-Key: service  name
+Key: service name
 Value: uri 
 
 A URI for a social network service. **Service must be one of facebook, flickr, linkedin, other, tumblr, twitter**
