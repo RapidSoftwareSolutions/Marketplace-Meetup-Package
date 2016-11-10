@@ -562,7 +562,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -683,7 +683,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         }
       ]
     },
@@ -786,7 +786,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         },
         {
           "type": "String",
@@ -807,7 +807,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         },
         {
           "type": "String",
@@ -1040,12 +1040,12 @@
         {
           "name": "groupId",
           "type": "String",
-          "info": ""
+          "info": "Required: Group Id"
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": ""
+          "info": "Required: Memeber Id"
         },
         {
           "type": "String",
@@ -1106,12 +1106,12 @@
         {
           "name": "groupId",
           "type": "String",
-          "info": ""
+          "info": "Required: Group Id"
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": ""
+          "info": "Required: Memeber Id"
         },
         {
           "type": "String",
@@ -1132,12 +1132,12 @@
         {
           "name": "groupId",
           "type": "String",
-          "info": ""
+          "info": "Required: Group Id"
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": ""
+          "info": "Required: Memeber Id"
         },
         {
           "type": "String",
@@ -1158,7 +1158,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         }
       ]
     },
@@ -1174,7 +1174,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         }
       ]
     },
@@ -1288,7 +1288,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Valid id."
         },
         {
           "type": "String",
@@ -1309,7 +1309,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -1351,7 +1351,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         }
       ]
     },
@@ -1367,7 +1367,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         }
       ]
     },
@@ -1383,7 +1383,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         }
       ]
     },
@@ -1399,7 +1399,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         }
       ]
     },
@@ -1746,7 +1746,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -1928,7 +1928,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -1959,12 +1959,12 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -1990,12 +1990,12 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -2031,7 +2031,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         }
       ]
     },
@@ -2047,7 +2047,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2088,12 +2088,12 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "boardId",
           "type": "String",
-          "info": ""
+          "info": "Required: Board ID"
         }
       ]
     },
@@ -2109,17 +2109,17 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "boardId",
           "type": "String",
-          "info": ""
+          "info": "Required: Board ID"
         },
         {
           "name": "discussionId",
           "type": "String",
-          "info": ""
+          "info": "Required: Discussion ID"
         }
       ]
     },
@@ -2176,12 +2176,12 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -2202,12 +2202,12 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "name": "id",
           "type": "String",
-          "info": ""
+          "info": "Required: Valid id."
         },
         {
           "type": "String",
@@ -2324,7 +2324,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2345,7 +2345,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2466,7 +2466,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2487,7 +2487,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2586,7 +2586,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -2787,7 +2787,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         },
         {
           "type": "String",
@@ -3063,7 +3063,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         }
       ]
     },
@@ -3145,7 +3145,7 @@
         {
           "name": "urlname",
           "type": "String",
-          "info": ""
+          "info": "Required: Group url name."
         }
       ]
     },
