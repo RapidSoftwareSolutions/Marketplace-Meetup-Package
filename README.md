@@ -252,7 +252,8 @@ Method description
 ### addNewQuestions format:
 
 Key: question index
-fValue: question text
+
+Value: question text
 
 ```json
 {
@@ -418,7 +419,8 @@ This method allows an authenticated member to join a group by creating a profile
 ### provideAnswer format:
 
 Key: question index
-fValue: question text
+
+Value: question text
 
 ```json
 {
@@ -449,7 +451,8 @@ Update a member's group profile
 ### provideAnswer format:
 
 Key: question index
-fValue: question text
+
+Value: question text
 
 ```json
 {
@@ -734,7 +737,8 @@ Creates or updates an existing RSVP
 ### provideAnswer format:
 
 Key: question index
-fValue: question text
+
+Value: question text
 
 ```json
 {
@@ -1022,6 +1026,7 @@ Allows organizers to edit their Meetup group information. To change group topics
 ### addNewQuestions and editQuestions format:
 
 Key: question index
+
 Value: question text
 
 ```json
