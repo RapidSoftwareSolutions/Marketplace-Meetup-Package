@@ -269,7 +269,7 @@ Update an existing Meetup
 | Field                | Type       | Description
 |----------------------|------------|----------
 | accessToken          | credentials| Required: OAuth2 Access Token
-| id                   | String     | Required: Valid id.
+| id                   | String     | Required: Event id.
 | longitude            | String     | Updates to the venue's latitude and longitude. When present, both must be provided
 | latitude             | String     | Updates to the venue's latitude and longitude. When present, both must be provided
 | rsvpLimit            | String     | Total number of RSVPs available for the event. To remove this limit, set this to 0
@@ -311,7 +311,7 @@ Deletes a specified meetup
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Valid id.
+| id         | String     | Required: Event id.
 
 <a name="getCities"/>
 ## Meetup.getCities
@@ -349,7 +349,7 @@ Retrieve a single member
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Valid id.
+| id         | String     | Required: member id.
 | fields     | String     | comma-separate list of optional fields
 
 <a name="editSignleMember"/>
@@ -359,7 +359,7 @@ Edit the authorized member's attributes
 | Field          | Type       | Description
 |----------------|------------|----------
 | accessToken    | credentials| Required: OAuth2 Access Token
-| id             | String     | Valid id.
+| id             | String     | Required: member id.
 | birthday       | String     | Day you were born. Format should be in the form of yyyy or mmddyyyy. A value of -1 indicates that birthday data should be cleared.
 | zip            | String     | Valid zip code for city
 | country        | String     | Valid country code for your location
@@ -490,7 +490,7 @@ Deletes a specified event photo
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Valid id.
+| id         | String     | Required: Photo id
 
 <a name="deleteMemberPhoto"/>
 ## Meetup.deleteMemberPhoto
@@ -499,7 +499,7 @@ Delete the specified member photo
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Valid id.
+| id         | String     | Required: Photo id
 
 <a name="getGroupComments"/>
 ## Meetup.getGroupComments
@@ -545,7 +545,7 @@ Retrieve a single event comment or reply
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Valid id.
+| id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
 <a name="deleteEventComment"/>
@@ -555,7 +555,7 @@ Delete a single event comment or reply
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
 <a name="postEventCommentFlag"/>
@@ -575,7 +575,7 @@ Unsubscribe to notifications for updates to a given comment thread
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Comment id
 
 <a name="postEventCommentSubscribe"/>
 ## Meetup.postEventCommentSubscribe
@@ -584,7 +584,7 @@ Subscribe to notifications on updates to a given comment thread
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Comment id
 
 <a name="postEventCommentLike"/>
 ## Meetup.postEventCommentLike
@@ -593,7 +593,7 @@ Like a given Event comment
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Comment id
 
 <a name="deleteEventCommentLike"/>
 ## Meetup.deleteEventCommentLike
@@ -602,7 +602,7 @@ Unlike a given Event comment
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Required: Comment id
 
 <a name="getEventCommentLikes"/>
 ## Meetup.getEventCommentLikes
@@ -754,7 +754,7 @@ Retrieve a single RSVP
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
-| id         | String     | Required: Valid id.
+| id         | String     | Required: RSVP id
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
 <a name="postGroupPhoto"/>
@@ -844,7 +844,7 @@ Lists attendance records for Meetup events. Limited for use by administrative me
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Event id
 | filter     | String     | A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member
 | member     | String     | Raw text used to search for member by name. This may only be applied when the filter parameter is set to 'all'. The provided text must consist of at least 2 characters.
 
@@ -856,7 +856,7 @@ Takes member attendance for an event. Limited for use by administrative members.
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Event id.
 | guests     | String     | The number of guests accompanying member. Maximum of 99 is allowed. When providing multiple values in the `member` field, this value is ignored
 | headCount  | String     | Sets the overall headcount for the event. This may not necessarily correlate with the list of attendees in this group if the event is part of a joint Meetup event. When providing multiple values in the `member` field, this value is ignored
 | member     | String     | Recomended: A comma-delimited list of valid ids associated with members RSVP'd to the event
@@ -944,7 +944,7 @@ Fetches a Meetup Event by group urlname and event_id
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Event id
 | fields     | String     | A comma-delimited list of optional fields to append to the response
 
 <a name="postEventPayments"/>
@@ -955,7 +955,7 @@ Allows organizers of a group to note payments made by members for an event. This
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
-| id         | String     | Required: Valid id.
+| id         | String     | Required: Event id
 | amount     | String     | Recomended: The monetary amount of money the member submitted
 | quantity   | String     | The number of payments made. Defaults to 1
 | member     | String     | Recomended: Member Id of member who made a payment

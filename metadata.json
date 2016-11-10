@@ -562,7 +562,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
@@ -683,7 +683,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: Event id."
         }
       ]
     },
@@ -786,7 +786,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: member id."
         },
         {
           "type": "String",
@@ -807,7 +807,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: Memeber id"
         },
         {
           "type": "String",
@@ -1158,7 +1158,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: Photo id"
         }
       ]
     },
@@ -1174,7 +1174,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: Photo id"
         }
       ]
     },
@@ -1288,7 +1288,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Valid id."
+          "info": "Required: Comment id"
         },
         {
           "type": "String",
@@ -1309,7 +1309,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
@@ -1351,7 +1351,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         }
       ]
     },
@@ -1367,7 +1367,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Comment id."
         }
       ]
     },
@@ -1383,7 +1383,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Comment id."
         }
       ]
     },
@@ -1399,7 +1399,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Comment id."
         }
       ]
     },
@@ -1746,7 +1746,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: RSVP id."
         },
         {
           "type": "String",
@@ -1964,7 +1964,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
@@ -1995,7 +1995,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
@@ -2181,7 +2181,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
@@ -2207,7 +2207,7 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Valid id."
+          "info": "Required: Event id."
         },
         {
           "type": "String",
