@@ -1,5 +1,5 @@
 {
-  "name": "github",
+  "name": "Meetup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,17 +15,17 @@
     "supertest-as-promised": "^3.1.0"
   },
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha -R spec ./unit.js",
+    "test": "",
     "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RapidSoftwareSolutions/Marketplace-Github-Package.git"
+    "url": "git+https://github.com/RapidSoftwareSolutions/Marketplace-Meetup-Package.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RapidSoftwareSolutions/Marketplace-Github-Package/issues"
+    "url": "https://github.com/RapidSoftwareSolutions/Marketplace-Meetup-Package/issues"
   },
-  "homepage": "https://github.com/RapidSoftwareSolutions/Marketplace-Github-Package#readme"
+  "homepage": "https://github.com/RapidSoftwareSolutions/Marketplace-Meetup-Package#readme"
 }
