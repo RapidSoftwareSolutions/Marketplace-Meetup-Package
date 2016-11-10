@@ -250,6 +250,18 @@ Method description
 | venueId              | String     | Numeric identifier of a venue
 | publishStatus        | String     | If you are an organizer of the group, you may set this to "draft" to save the event as a draft. Doing so will require a status=draft filter on /2/event queries.
 
+### addNewQuestions format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
+
 <a name="editEvent"/>
 ## Meetup.editEvent
 Update an existing Meetup
@@ -279,6 +291,18 @@ Update an existing Meetup
 | editQuestions        | JSON       | Those with permission may include up to 6 survey questions with each being up to 250 characters, including new questions. To delete a question submit this parameter with an empty value
 | venueId              | String     | Numeric identifier of a venue. To unset the event's venue, set this to 0
 | publishStatus        | String     | If you are an organizer of the group, you may set this to "draft" or "published". Setting state to "draft" will require a status=draft filter on /2/event queries.
+
+### addNewQuestions|editQuestions format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
 
 <a name="deleteEvent"/>
 ## Meetup.deleteEvent
@@ -392,6 +416,18 @@ This method allows an authenticated member to join a group by creating a profile
 | groupId      | String     | Recomended: Id of group to join
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
 
+### provideAnswer format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
+
 <a name="editProfile"/>
 ## Meetup.editProfile
 Update a member's group profile
@@ -410,6 +446,18 @@ Update a member's group profile
 | title        | String     | An organizer-defined member title.
 | removeRole   | String     | Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
+
+### provideAnswer format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
 
 <a name="getSingleProfile"/>
 ## Meetup.getSingleProfile
@@ -683,6 +731,18 @@ Creates or updates an existing RSVP
 | optionToPay  | String     | For events with fees, the authorized member may opt to pay as part of the RSVP request. This may be set to true or false
 | provideAnswer| JSON       | Answers to event survey questions. Answers may not be longer than 250 characters. Organizers and hosts my not edit or create answers on behalf of members
 | agreeToRefund| String     | For events with fees, the authorized member must agree to the event's refund policy. This must be set to either true or false
+
+### provideAnswer format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
 
 <a name="getSingleRSVP"/>
 ## Meetup.getSingleRSVP
@@ -959,6 +1019,31 @@ Allows organizers to edit their Meetup group information. To change group topics
 | editQuestions  | JSON       | Edits a current profile question identified by an id in the parameter name. The index updated index should also be encoded in the parameter name. To delete a question, set this to an empty string. Groups that require profile questions must have at least one question
 | urlname        | String     | Name used for the groups web address on meetup.com. Must be between 6 and 60 characters
 | who            | String     | What members of the group will be called. Can be at most 32 characters
+
+### addNewQuestions|editQuestions format:
+
+Key: question index
+Value: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
+
+### serviceUri format:
+
+Key: service  name
+Value: uri 
+
+A URI for a social network service. **Service must be one of facebook, flickr, linkedin, other, tumblr, twitter**
+
+```json
+{
+	"facebook": "http://facebook.com/page",
+}
+```
 
 <a name="postTopics"/>
 ## Meetup.postTopics
