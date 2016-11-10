@@ -415,6 +415,18 @@ This method allows an authenticated member to join a group by creating a profile
 | groupId      | String     | Recomended: Id of group to join
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
 
+### provideAnswer format:
+
+Key: question index
+fValue: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
+
 <a name="editProfile"/>
 ## Meetup.editProfile
 Update a member's group profile
@@ -433,6 +445,18 @@ Update a member's group profile
 | title        | String     | An organizer-defined member title.
 | removeRole   | String     | Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
+
+### provideAnswer format:
+
+Key: question index
+fValue: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
 
 <a name="getSingleProfile"/>
 ## Meetup.getSingleProfile
@@ -706,6 +730,18 @@ Creates or updates an existing RSVP
 | optionToPay  | String     | For events with fees, the authorized member may opt to pay as part of the RSVP request. This may be set to true or false
 | provideAnswer| JSON       | Answers to event survey questions. Answers may not be longer than 250 characters. Organizers and hosts my not edit or create answers on behalf of members
 | agreeToRefund| String     | For events with fees, the authorized member must agree to the event's refund policy. This must be set to either true or false
+
+### provideAnswer format:
+
+Key: question index
+fValue: question text
+
+```json
+{
+	"0": "Test question",
+	"12": "Test question2"
+}
+```
 
 <a name="getSingleRSVP"/>
 ## Meetup.getSingleRSVP
