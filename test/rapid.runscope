@@ -1,0 +1,2851 @@
+{
+  	"name": "Meetup", 
+  	"description": "The Meetup API provides simple RESTful HTTP and streaming interfaces for extending your community using the Meetup platform from your own apps.",
+  	"version": "1.0", 
+  	"steps": [  
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getCategories", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getDashboard", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getTopicCategories", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"name\": \"\",\r\n\t\"topic\": \"\",\r\n\t\"search\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getTopics", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"andText\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"topic\": \"\",\r\n\t\"city\": \"Kiev\",\r\n\t\"limitedEvents\": \"\",\r\n\t\"textFormat\": \"\",\r\n\t\"state\": \"\",\r\n\t\"text\": \"\",\r\n\t\"category\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"time\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"status\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getOpenEvents", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"city\": \"Kiev\",\r\n\t\"longitude\": \"\",\r\n\t\"textFormat\": \"\",\r\n\t\"categoryId\": \"\",\r\n\t\"pageToken\": \"\",\r\n\t\"state\": \"\",\r\n\t\"time\": \"\",\r\n\t\"topicId\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"withFriends\": \"\",\r\n\t\"selfGroups\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getConcierge", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupNum\": \"\",\r\n\t\"topic\": \"\",\r\n\t\"zip\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"topic\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"organizerId\": \"\",\r\n\t\"domain\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"categoryId\": \"\",\r\n\t\"state\": \"\",\r\n\t\"city\": \"Kiev\",\r\n\t\"country\": \"Ukraine\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"rsvp\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"eventId\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"limitedEvents\": \"\",\r\n\t\"textFormat\": \"\",\r\n\t\"groupDomain\": \"\",\r\n\t\"venueId\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"time\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"status\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getEvents", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"rsvpLimit\": \"\",\r\n\t\"rsvpOpen\": \"\",\r\n\t\"venueVisibility\": \"\",\r\n\t\"hosts\": \"\",\r\n\t\"addNewQuestions\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"why\": \"\",\r\n\t\"description\": \"\",\r\n\t\"howToFindUs\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"rsvpClose\": \"\",\r\n\t\"duration\": \"\",\r\n\t\"name\": \"\",\r\n\t\"guestLimit\": \"\",\r\n\t\"simpleHtmlDescription\": \"\",\r\n\t\"time\": \"\",\r\n\t\"venueId\": \"\",\r\n\t\"publishStatus\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEvent", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"rsvpLimit\": \"\",\r\n\t\"rsvpOpen\": \"\",\r\n\t\"venueVisibility\": \"\",\r\n\t\"hosts\": \"\",\r\n\t\"addNewQuestions\": \"\",\r\n\t\"why\": \"\",\r\n\t\"description\": \"\",\r\n\t\"howToFindUs\": \"\",\r\n\t\"rsvpClose\": \"\",\r\n\t\"announce\": \"\",\r\n\t\"duration\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"name\": \"\",\r\n\t\"guestLimit\": \"\",\r\n\t\"simpleHtmlDescription\": \"\",\r\n\t\"time\": \"\",\r\n\t\"editQuestions\": \"\",\r\n\t\"venueId\": \"\",\r\n\t\"publishStatus\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/editEvent", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteEvent", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"query\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"state\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getCities", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupNum\": \"\",\r\n\t\"topic\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"fields\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"service\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getMembers", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"216437561\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleMember", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"216437561\",\r\n\t\"birthday\": \"\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"hometown\": \"\",\r\n\t\"removeTopics\": \"\",\r\n\t\"gender\": \"\",\r\n\t\"photoId\": \"\",\r\n\t\"city\": \"Kiev\",\r\n\t\"topicsPrivacy\": \"\",\r\n\t\"facebookPrivacy\": \"\",\r\n\t\"bio\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"groupsPrivacy\": \"\",\r\n\t\"addTopics\": \"\",\r\n\t\"syncPhoto\": \"\",\r\n\t\"name\": \"\",\r\n\t\"bioPrivacy\": \"\",\r\n\t\"photosPrivacy\": \"\",\r\n\t\"lang\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"messagingPref\": \"\",\r\n\t\"cityId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/editSignleMember", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupNum\": \"\",\r\n\t\"topic\": \"\",\r\n\t\"role\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"fields\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"status\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getProfiles", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"siteName\": \"\",\r\n\t\"photoId\": \"\",\r\n\t\"siteUrl\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"intro\": \"\",\r\n\t\"newPhoto\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"provideAnswer\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postProfile", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupId\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"siteName\": \"\",\r\n\t\"addRole\": \"\",\r\n\t\"photoId\": \"\",\r\n\t\"siteUrl\": \"\",\r\n\t\"intro\": \"\",\r\n\t\"newPhoto\": \"\",\r\n\t\"title\": \"\",\r\n\t\"removeRole\": \"\",\r\n\t\"provideAnswer\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/editProfile", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupId\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleProfile", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupId\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"exitComment\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteProfile", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deletePhoto", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteMemberPhoto", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupNum\": \"\",\r\n\t\"topic\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getGroupComments", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"commentId\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"fields\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getEventComments", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"comment\": \"\",\r\n\t\"inReplyTo\": \"\",\r\n\t\"notifications\": \"\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventComment", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleEventComment", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteEventComment", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"commentId\": \"\",\r\n\t\"reason\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventCommentFlag", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteEventCommentSubscribe", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventCommentSubscribe", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventCommentLike", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteEventCommentLike", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"commentId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getEventCommentLikes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"photoId\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getPhotoComments", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"photoId\": \"\",\r\n\t\"comment\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postPhotoComment", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getEventRatings", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"attendeeCount\": \"\",\r\n\t\"rating\": \"\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventRating", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"photoAlbumId\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getPhotoAlbums", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"groupId\": \"\",\r\n\t\"title\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postPhotoAlbum", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"latitude\": \"\",\r\n\t\"state\": \"\",\r\n\t\"text\": \"\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"longitude\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"city\": \"Kiev\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getOpenVenues", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"venueId\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getVenues", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\",\r\n\t\"rsvp\": \"\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getRSVPs", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"rsvp\": \"\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"comments\": \"\",\r\n\t\"eventId\": \"\",\r\n\t\"guests\": \"\",\r\n\t\"optionToPay\": \"\",\r\n\t\"provideAnswer\": \"\",\r\n\t\"agreeToRefund\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postRSVP", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"id\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleRSVP", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"await\": \"\",\r\n\t\"main\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"photo\": \"https://i.vimeocdn.com/portrait/58832_300x300\",\r\n\t\"groupUrlName\": \"nodeUA\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postGroupPhoto", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"await\": \"\",\r\n\t\"main\": \"\",\r\n\t\"syncMatchingPhoto\": \"\",\r\n\t\"photo\": \"https://i.vimeocdn.com/portrait/58832_300x300\",\r\n\t\"syncPhoto\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postMemberPhoto", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"await\": \"\",\r\n\t\"caption\": \"\",\r\n\t\"photoAlbumId\": \"\",\r\n\t\"photo\": \"https://i.vimeocdn.com/portrait/58832_300x300\",\r\n\t\"eventId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postPhoto", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"memberId\": \"216437561\",\r\n\t\"pageStart\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getActivity", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"url\": \"\",\r\n\t\"maxWidth\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getOEMBed", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getStatus", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"member\": \"\",\r\n\t\"welcomeMessage\": \"\",\r\n\t\"sendCopy\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/membershipApproval", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"id\": \"\",\r\n\t\"filter\": \"\",\r\n\t\"member\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getEventAttendance", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"id\": \"\",\r\n\t\"guests\": \"\",\r\n\t\"headCount\": \"\",\r\n\t\"member\": \"\",\r\n\t\"status\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/takeEventAttendance", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getBoards", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"member\": \"\",\r\n\t\"anonymous\": \"\",\r\n\t\"sendCopy\": \"\",\r\n\t\"explanation\": \"\",\r\n\t\"ban\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/membershipDecline", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"boardId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getDiscussions", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"boardId\": \"\",\r\n\t\"discussionId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleDiscussion", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"scroll\": \"\",\r\n\t\"page\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"rsvp\": \"\",\r\n\t\"desc\": \"\",\r\n\t\"status\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSelfEvents", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"id\": \"\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleEvent", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"id\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"quantity\": \"\",\r\n\t\"member\": \"\",\r\n\t\"paidOn\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postEventPayments", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"upcomingEvents\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"filter\": \"\",\r\n\t\"fallbackSuggestions\": \"\",\r\n\t\"location\": \"\",\r\n\t\"text\": \"\",\r\n\t\"topicId\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"category\": \"\",\r\n\t\"selfGroups\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/findGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSingleGroup", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"listMode\": \"\",\r\n\t\"dryrun\": \"\",\r\n\t\"gaCode\": \"\",\r\n\t\"removeTopics\": \"\",\r\n\t\"visibility\": \"\",\r\n\t\"addNewQuestions\": \"\",\r\n\t\"keyPhoto\": \"\",\r\n\t\"photoReq\": \"\",\r\n\t\"description\": \"\",\r\n\t\"questionsReq\": \"\",\r\n\t\"welcomeMessage\": \"\",\r\n\t\"joinMode\": \"\",\r\n\t\"listAddr\": \"\",\r\n\t\"addTopics\": \"\",\r\n\t\"serviceUri\": \"\",\r\n\t\"name\": \"\",\r\n\t\"editQuestions\": \"\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"who\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/editGroup", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"topicId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postTopics", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"topicId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/deleteTopics", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"longitude\": \"\",\r\n\t\"page\": \"\",\r\n\t\"offset\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"query\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getLocations", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\",\r\n\t\"page\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSelfCalendar", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\",\r\n\t\"page\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSelfGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"pastRsvpsMin\": \"\",\r\n\t\"pastEventsMin\": \"\",\r\n\t\"memberCountMax\": \"\",\r\n\t\"upcomingEventsMin\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"lastEventMin\": \"\",\r\n\t\"repeatRsvpersMin\": \"\",\r\n\t\"averageAgeMin\": \"\",\r\n\t\"lastEventMax\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"foundedDateMin\": \"\",\r\n\t\"order\": \"\",\r\n\t\"zip\": \"\",\r\n\t\"inactiveWithinDays\": \"\",\r\n\t\"offset\": \"\",\r\n\t\"topics\": \"\",\r\n\t\"upcomingEventsMax\": \"\",\r\n\t\"averageAgeMax\": \"\",\r\n\t\"proJoinDateMax\": \"\",\r\n\t\"nextEventMin\": \"\",\r\n\t\"pastRsvpsMax\": \"\",\r\n\t\"activeWithinDays\": \"\",\r\n\t\"rsvpsPerEventMin\": \"\",\r\n\t\"foundedDateMax\": \"\",\r\n\t\"memberCountMin\": \"\",\r\n\t\"pastEventsMax\": \"\",\r\n\t\"name\": \"\",\r\n\t\"nextEventMax\": \"\",\r\n\t\"repeatRsvpersMax\": \"\",\r\n\t\"location\": \"\",\r\n\t\"page\": \"\",\r\n\t\"proJoinDateMin\": \"\",\r\n\t\"rsvpsPerEventMax\": \"\",\r\n\t\"category\": \"\",\r\n\t\"desc\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getPROGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"eventsAttendedMax\": \"\",\r\n\t\"offset\": \"\",\r\n\t\"chapters\": \"\",\r\n\t\"isOrganizer\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"memberName\": \"\",\r\n\t\"activeWithinDays\": \"\",\r\n\t\"joinTimeMin\": \"\",\r\n\t\"emailReceived\": \"\",\r\n\t\"eventsAttendedMin\": \"\",\r\n\t\"location\": \"\",\r\n\t\"page\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"joinTimeMax\": \"\",\r\n\t\"latitude\": \"\",\r\n\t\"desc\": \"\",\r\n\t\"order\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getPROMembers", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getNotifications", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"fields\": \"\",\r\n\t\"sinceId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/setNotificationsRead", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"longitude\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/findTopicCategories", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"page\": \"\",\r\n\t\"text\": \"\",\r\n\t\"lang\": \"\",\r\n\t\"otherTopics\": \"\",\r\n\t\"excludeTopics\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getRecommendedGroupTopics", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"instantJoinOnly\": \"\",\r\n\t\"location\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"topicId\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"category\": \"\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getRecommendedGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/postRecommendedGroupsIgnore", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"zip\": \"\",\r\n\t\"country\": \"Ukraine\",\r\n\t\"usedBetween\": \"\",\r\n\t\"minGroups\": \"\",\r\n\t\"groupId\": \"\",\r\n\t\"location\": \"\",\r\n\t\"longitude\": \"\",\r\n\t\"radius\": \"\",\r\n\t\"category\": \"\",\r\n\t\"groupUrlName\": \"nodeUA\",\r\n\t\"latitude\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getRecommendedVenues", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"urlname\": \"nodeUA\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/getSimilarGroups", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"accessToken\": \"{{token}}\",\r\n\t\"query\": \"\",\r\n\t\"page\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/Meetup/findTopics", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        }
+  	]
+}

@@ -142,7 +142,8 @@
         {
           "type": "String",
           "info": "Recomended: A valid city",
-          "name": "city"
+          "name": "city",
+          "test": "Kiev"
         },
         {
           "type": "String",
@@ -212,13 +213,14 @@
         },
         {
           "type": "String",
-          "info": "A valid country code",
+          "info": "A vgetConciergealid country code",
           "name": "country"
         },
         {
           "type": "String",
           "info": "A valid city",
-          "name": "city"
+          "name": "city",
+          "test": "Kiev"
         },
         {
           "type": "String",
@@ -227,7 +229,7 @@
         },
         {
           "type": "String",
-          "info": "Format of the description text, \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\"",
+          "info": "Format of the description text \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\"",
           "name": "textFormat"
         },
         {
@@ -369,7 +371,8 @@
         {
           "type": "String",
           "info": "A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
-          "name": "city"
+          "name": "city",
+          "test": "Kiev"
         },
         {
           "type": "String",
@@ -395,7 +398,8 @@
         {
           "type": "String",
           "info": "Recomended: Path to group from meetup.com, no slashes",
-          "name": "groupUrlName"
+          "name": "groupUrlName",
+          "info": "nodeUA"
         },
         {
           "type": "String",
@@ -786,7 +790,8 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: member id."
+          "info": "Required: member id.",
+          "test": "216437561"
         },
         {
           "type": "String",
@@ -807,7 +812,8 @@
         {
           "name": "id",
           "type": "String",
-          "info": "Required: Memeber id"
+          "info": "Required: Memeber id",
+          "test": "216437561"
         },
         {
           "type": "String",

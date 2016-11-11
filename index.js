@@ -5,8 +5,8 @@ global.PACKAGE_NAME = "Meetup";
 const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs'),
-    lib             = require('./lib/lib/functions'),
-    API             = require('./lib'),
+    lib             = require('./lib'),
+    API             = require('rapi-js-package'),
     _               = lib.callback;
 
 const PORT          = process.env.PORT || 8080;
