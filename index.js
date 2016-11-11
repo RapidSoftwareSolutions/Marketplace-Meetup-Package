@@ -49,7 +49,7 @@ for(let func in apiHash) {
             opts[args[i]] = req.body.args[cargs[i]];
         }
 
-        opts['$accessToken'] = req.body.args['accessToken'];
+        opts['$access_token'] = req.body.args['accessToken'];
 
         method == 'GET' || method == 'DELETE' ? options.query = opts : options.body = opts;
         options.isRawBody = !(method == 'GET' || method == 'DELETE');
