@@ -6,7 +6,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs'),
     lib             = require('./lib'),
-    API             = require('../package.js'),
+    API             = require('rapi-js-package'),
     _               = lib.callback;
 
 const PORT          = process.env.PORT || 8080;
