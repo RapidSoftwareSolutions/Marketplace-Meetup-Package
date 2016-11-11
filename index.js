@@ -6,7 +6,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs'),
     lib             = require('./lib'),
-    API             = require('../package.js'),
+    API             = require('rapi-js-package'),
     _               = lib.callback;
 
 const PORT          = process.env.PORT || 8080;
@@ -71,6 +71,7 @@ for(let func in apiHash) {
             r.callback          = 'success';
             r.contextWrites[to] = response;
         } catch(e) {
+            console.log(e);
             r.callback          = 'error';
             r.contextWrites[to] = e.message ? e.message : e;
         }
