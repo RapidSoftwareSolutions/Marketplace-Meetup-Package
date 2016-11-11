@@ -468,7 +468,8 @@
       "groupId",
       "provideAnswer"
     ],
-    "multiprop": true
+    "multiprop": true,
+    "multipartPhoto": true
   },
   "editProfile": {
     "method": "POST",
@@ -1546,7 +1547,7 @@
     "method": "GET",
     "res": "https://api.meetup.com/find/topics",
     "args": [
-      "query",
+      "$query",
       "page"
     ],
     "cargs": [

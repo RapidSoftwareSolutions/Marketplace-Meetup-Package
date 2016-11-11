@@ -6,7 +6,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs'),
     lib             = require('./lib'),
-    API             = require('rapi-js-package'),
+    API             = require('../package.js'),
     _               = lib.callback;
 
 const PORT          = process.env.PORT || 8080;
@@ -55,13 +55,18 @@ for(let func in apiHash) {
         options.isRawBody = !(method == 'GET' || method == 'DELETE');
         options.parseMultiple = !!(multiprop)
         options.parseUri  = true;
+        options.debug = true
         options.method = method;
 
-        if(multipartPhoto && opts['photo']) {
-            options.files = {
-                photo: opts['photo']
-            }
+        console.log(opts);
+
+        let upload = opts['photo'] || opts['new_photo'];
+        if(multipartPhoto && upload) {
+            options.files = {};
+            options.files[opts['new_photo'] ? 'new_photo' : 'photo'] = upload;
         }
+
+        console.log(options)
 
         let to = req.body.args.to || 'to';
         let response;
