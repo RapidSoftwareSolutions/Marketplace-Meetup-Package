@@ -55,18 +55,13 @@ for(let func in apiHash) {
         options.isRawBody = !(method == 'GET' || method == 'DELETE');
         options.parseMultiple = !!(multiprop)
         options.parseUri  = true;
-        options.debug = true
         options.method = method;
-
-        console.log(opts);
 
         let upload = opts['photo'] || opts['new_photo'];
         if(multipartPhoto && upload) {
             options.files = {};
             options.files[opts['new_photo'] ? 'new_photo' : 'photo'] = upload;
         }
-
-        console.log(options)
 
         let to = req.body.args.to || 'to';
         let response;
@@ -76,7 +71,6 @@ for(let func in apiHash) {
             r.callback          = 'success';
             r.contextWrites[to] = response;
         } catch(e) {
-            console.log(e);
             r.callback          = 'error';
             r.contextWrites[to] = e.message ? e.message : e;
         }
