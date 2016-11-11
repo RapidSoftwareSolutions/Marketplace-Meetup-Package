@@ -6,7 +6,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs'),
     lib             = require('./lib'),
-    API             = require('rapi-js-package'),
+    API             = require('../package.js'),
     _               = lib.callback;
 
 const PORT          = process.env.PORT || 8080;
@@ -49,12 +49,13 @@ for(let func in apiHash) {
             opts[args[i]] = req.body.args[cargs[i]];
         }
 
-        opts['$access_token'] = req.body.args['accessToken'];
+        opts['$!access_token'] = req.body.args['accessToken'];
 
         method == 'GET' || method == 'DELETE' ? options.query = opts : options.body = opts;
         options.isRawBody = !(method == 'GET' || method == 'DELETE');
-        options.parseMultiple = !!(multiprop)
-        options.parseUri  = true;
+        options.parseMultiple = !!(multiprop);
+        options.hasSkip = true;
+        options.parseUri = true;
         options.method = method;
 
         let upload = opts['photo'] || opts['new_photo'];
