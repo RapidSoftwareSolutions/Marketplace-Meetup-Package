@@ -801,7 +801,7 @@
       ]
     },
     {
-      "name": "editSignleMember",
+      "name": "editSingleMember",
       "description": "Edit the authorized member's attributes",
       "args": [
         {

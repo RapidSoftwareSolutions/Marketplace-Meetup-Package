@@ -25,7 +25,7 @@ const customNames = {
     getEventComment:     'getSingleEventComment',
     getGroup:            'getSingleGroup',
     getMember:           'getSingleMember',
-    editMember:          'editSignleMember',
+    editMember:          'editSingleMember',
     getProfile:          'getSingleProfile',
     getRSVP:             'getSingleRSVP',
     getComments:         'getGroupComments'

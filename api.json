@@ -365,7 +365,7 @@
       "fields"
     ]
   },
-  "editSignleMember": {
+  "editSingleMember": {
     "method": "POST",
     "res": "https://api.meetup.com/2/member/:id",
     "args": [
