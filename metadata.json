@@ -398,8 +398,7 @@
         {
           "type": "String",
           "info": "Recomended: Path to group from meetup.com, no slashes",
-          "name": "groupUrlName",
-          "info": "nodeUA"
+          "name": "groupUrlName"
         },
         {
           "type": "String",
