@@ -529,7 +529,7 @@
   },
   {
    "name": "postEvent",
-   "description": "",
+   "description": "Create new Meetup event",
    "args": [
     {
      "name": "accessToken",
