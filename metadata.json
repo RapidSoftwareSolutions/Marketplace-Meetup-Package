@@ -1192,7 +1192,7 @@
      "name": "intro"
     },
     {
-     "type": "String",
+     "type": "File",
      "info": "file upload for a new member photo",
      "required": false,
      "name": "newPhoto"
@@ -1264,7 +1264,7 @@
      "name": "intro"
     },
     {
-     "type": "String",
+     "type": "File",
      "info": "file upload for a new member photo",
      "required": false,
      "name": "newPhoto"
