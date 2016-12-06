@@ -2164,7 +2164,7 @@
      "name": "photoAlbumId"
     },
     {
-     "type": "String",
+     "type": "File",
      "info": "Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
      "required": false,
      "name": "photo"
