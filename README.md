@@ -8,88 +8,7 @@ The Meetup API provides support for OAuth 2, the superseding specification for O
 
 Read more about [Meetup OAuth2 authenticating](https://www.meetup.com/meetup_api/auth/#oauth2).
 
-## TOC: 
-* [getCategories](#getCategories)
-* [getDashboard](#getDashboard)
-* [getTopicCategories](#getTopicCategories)
-* [getTopics](#getTopics)
-* [getOpenEvents](#getOpenEvents)
-* [getConcierge](#getConcierge)
-* [getGroups](#getGroups)
-* [getEvents](#getEvents)
-* [postEvent](#postEvent)
-* [editEvent](#editEvent)
-* [deleteEvent](#deleteEvent)
-* [getCities](#getCities)
-* [getMembers](#getMembers)
-* [getSingleMember](#getSingleMember)
-* [editSignleMember](#editSignleMember)
-* [getProfiles](#getProfiles)
-* [postProfile](#postProfile)
-* [editProfile](#editProfile)
-* [getSingleProfile](#getSingleProfile)
-* [deleteProfile](#deleteProfile)
-* [deletePhoto](#deletePhoto)
-* [deleteMemberPhoto](#deleteMemberPhoto)
-* [getGroupComments](#getGroupComments)
-* [getEventComments](#getEventComments)
-* [postEventComment](#postEventComment)
-* [getSingleEventComment](#getSingleEventComment)
-* [deleteEventComment](#deleteEventComment)
-* [postEventCommentFlag](#postEventCommentFlag)
-* [deleteEventCommentSubscribe](#deleteEventCommentSubscribe)
-* [postEventCommentSubscribe](#postEventCommentSubscribe)
-* [postEventCommentLike](#postEventCommentLike)
-* [deleteEventCommentLike](#deleteEventCommentLike)
-* [getEventCommentLikes](#getEventCommentLikes)
-* [getPhotoComments](#getPhotoComments)
-* [postPhotoComment](#postPhotoComment)
-* [getEventRatings](#getEventRatings)
-* [postEventRating](#postEventRating)
-* [getPhotoAlbums](#getPhotoAlbums)
-* [postPhotoAlbum](#postPhotoAlbum)
-* [getOpenVenues](#getOpenVenues)
-* [getVenues](#getVenues)
-* [getRSVPs](#getRSVPs)
-* [postRSVP](#postRSVP)
-* [getSingleRSVP](#getSingleRSVP)
-* [postGroupPhoto](#postGroupPhoto)
-* [postMemberPhoto](#postMemberPhoto)
-* [postPhoto](#postPhoto)
-* [getActivity](#getActivity)
-* [getOEMBed](#getOEMBed)
-* [getStatus](#getStatus)
-* [membershipApproval](#membershipApproval)
-* [getEventAttendance](#getEventAttendance)
-* [takeEventAttendance](#takeEventAttendance)
-* [getBoards](#getBoards)
-* [membershipDecline](#membershipDecline)
-* [getDiscussions](#getDiscussions)
-* [getSingleDiscussion](#getSingleDiscussion)
-* [getSelfEvents](#getSelfEvents)
-* [getSingleEvent](#getSingleEvent)
-* [postEventPayments](#postEventPayments)
-* [findGroups](#findGroups)
-* [getSingleGroup](#getSingleGroup)
-* [editGroup](#editGroup)
-* [postTopics](#postTopics)
-* [deleteTopics](#deleteTopics)
-* [getLocations](#getLocations)
-* [getSelfCalendar](#getSelfCalendar)
-* [getSelfGroups](#getSelfGroups)
-* [getPROGroups](#getPROGroups)
-* [getPROMembers](#getPROMembers)
-* [getNotifications](#getNotifications)
-* [setNotificationsRead](#setNotificationsRead)
-* [findTopicCategories](#findTopicCategories)
-* [getRecommendedGroupTopics](#getRecommendedGroupTopics)
-* [getRecommendedGroups](#getRecommendedGroups)
-* [postRecommendedGroupsIgnore](#postRecommendedGroupsIgnore)
-* [getRecommendedVenues](#getRecommendedVenues)
-* [getSimilarGroups](#getSimilarGroups)
-* [findTopics](#findTopics)
- 
-<a name="getCategories"/>
+
 ## Meetup.getCategories
 Returns a list of Meetup group categories
 
@@ -98,7 +17,6 @@ Returns a list of Meetup group categories
 | accessToken| credentials| Required: OAuth2 Access Token
 | fields     | String     | Parameter for requesting optional response properties
 
-<a name="getDashboard"/>
 ## Meetup.getDashboard
 A dashboard of aggregated Meetup information for the authorized member
 
@@ -107,7 +25,6 @@ A dashboard of aggregated Meetup information for the authorized member
 | accessToken| credentials| Required: OAuth2 Access Token
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
-<a name="getTopicCategories"/>
 ## Meetup.getTopicCategories
 Returns a list of Meetup topic categories
 
@@ -119,7 +36,6 @@ Returns a list of Meetup topic categories
 | longitude  | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
 | latitude   | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
 
-<a name="getTopics"/>
 ## Meetup.getTopics
 API method for accessing meetup topics
 
@@ -131,7 +47,6 @@ API method for accessing meetup topics
 | topic      | String     | Return topics for this topic urlkey
 | search     | String     | Return topics related to a list of search terms [separate search keywords with +'s]
 
-<a name="getOpenEvents"/>
 ## Meetup.getOpenEvents
 Searches for recent and upcoming public events hosted by Meetup groups. Its search window  is the past one month through the next three months, and is subject to change. Open Events is optimized to search for current events by location, category, topic, or text, and only lists Meetups that have **3 or more RSVPs**. The number or results returned with each request is not guaranteed to be the same as the page size due to secondary filtering. If you're looking for a particular event or events within a particular group, use the standard [Events](http://meetup.com/meetup_api/docs/2/events/) method.
 
@@ -155,7 +70,6 @@ Searches for recent and upcoming public events hosted by Meetup groups. Its sear
 | fields       | String     | Request that additional fields (separated by commas) be included in the output
 | status       | String     | Status may be "upcoming", "past" or both separated by a comma. The default is "upcoming" only
 
-<a name="getConcierge"/>
 ## Meetup.getConcierge
 Recommends upcoming meetups for the authorized member in a given location and in thier groups
 
@@ -178,7 +92,6 @@ Recommends upcoming meetups for the authorized member in a given location and in
 | selfGroups | String     | set to "include" or "exclude" groups the authorized member belongs to. The default is "include". This includes groups in locations that may differ than the provided location
 | latitude   | String     | A valid latitude, limits the returned group events to those within radius miles
 
-<a name="getGroups"/>
 ## Meetup.getGroups
 Fetch information about Meetup Groups.
 
@@ -203,7 +116,6 @@ Fetch information about Meetup Groups.
 | city        | String     | A valid country code, city and for the US, State. limits the returned groups to those within radius miles
 | country     | String     | Recomended: A valid country code, city and for the US, State. limits the returned groups to those within radius miles
 
-<a name="getEvents"/>
 ## Meetup.getEvents
 Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](http://meetup.com/meetup_api/docs/2/open_events).
 
@@ -223,7 +135,6 @@ Access Meetup events using a group, member, or event id. Events in private group
 | fields       | String     | Request that additional fields (separated by commas) be included in the output
 | status       | String     | Status may be "upcoming", "past", "proposed", "suggested", "cancelled", "draft" or multiple separated by a comma. The default is "upcoming", which includes Meetups that are happening now according to their **duration**. Meetups that are "proposed" or "suggested" do not have a date assigned; the former are listed on the site as <i>official</i> while the latter appear as <i>in the making</i>. Drafts are only visible to organizers of groups hosting the events.
 
-<a name="postEvent"/>
 ## Meetup.postEvent
 Method description
 
@@ -262,7 +173,6 @@ Value: question text
 }
 ```
 
-<a name="editEvent"/>
 ## Meetup.editEvent
 Update an existing Meetup
 
@@ -304,7 +214,6 @@ Value: question text
 }
 ```
 
-<a name="deleteEvent"/>
 ## Meetup.deleteEvent
 Deletes a specified meetup
 
@@ -313,7 +222,6 @@ Deletes a specified meetup
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Event id.
 
-<a name="getCities"/>
 ## Meetup.getCities
 Returns Meetup cities. This method supports search by latitude/longitude/radius, by country/state, by query term/zip, or a combination of all of these. Location-only searches by lat and lon return all cities within a radius of the provided coordinates. Searches with a query return up to 10 cities matching the term, and can be sorted by size or distance to a given coordinate. 'smart' ordering can be used to return the match(es) with the highest member_count, unless a smaller size match exists nearby the given coordinates. Query searches are supported for country but not country and state
 
@@ -327,7 +235,6 @@ Returns Meetup cities. This method supports search by latitude/longitude/radius,
 | radius     | String     | When searching by lat/lon only, specify a radius to search (default 50 miles)
 | latitude   | String     | Latitude to search
 
-<a name="getMembers"/>
 ## Meetup.getMembers
 API method for accessing members of Meetup Groups
 
@@ -342,7 +249,6 @@ API method for accessing members of Meetup Groups
 | groupId     | String     | Recomended: Return members in groups with these ID numbers, separated by commas
 | service     | String     | Recomended: Match users by the external services they've linked to their member account, specified as "servicename:identifier". For example, "service=twitter:@MeetupAPI" finds any member account that lists @MeetupAPI as its Twitter name (none, currently). You can query against several at a time by separating them with commas. Facebook identifiers should be provided as numeric values
 
-<a name="getSingleMember"/>
 ## Meetup.getSingleMember
 Retrieve a single member
 
@@ -352,7 +258,6 @@ Retrieve a single member
 | id         | String     | Required: member id.
 | fields     | String     | comma-separate list of optional fields
 
-<a name="editSignleMember"/>
 ## Meetup.editSignleMember
 Edit the authorized member's attributes
 
@@ -384,7 +289,6 @@ Edit the authorized member's attributes
 | messagingPref  | String     | This specifies the member's preference for being contacted from members on the site. Possible values are "orgs_only" meaning only group organizers can contact you, "groups_only" meaning only members of your group can contact you, or "all_members" meaning all members may contact you.
 | cityId         | String     | Valid city id from /2/cities method
 
-<a name="getProfiles"/>
 ## Meetup.getProfiles
 This method returns member *profiles* associated with a particular group. Meetup members have separate profiles for each group they join.
 
@@ -400,7 +304,6 @@ This method returns member *profiles* associated with a particular group. Meetup
 | groupId     | String     | Recomended: Return profiles in the group with this ID
 | status      | String     | Status filter for members. Only organizers may see pending. Request must also contain a `group_id` or `group_urlname`. Status may be one of active, pending
 
-<a name="postProfile"/>
 ## Meetup.postProfile
 This method allows an authenticated member to join a group by creating a profile
 
@@ -429,7 +332,6 @@ Value: question text
 }
 ```
 
-<a name="editProfile"/>
 ## Meetup.editProfile
 Update a member's group profile
 
@@ -461,7 +363,6 @@ Value: question text
 }
 ```
 
-<a name="getSingleProfile"/>
 ## Meetup.getSingleProfile
 Retrieves a single group profile
 
@@ -472,7 +373,6 @@ Retrieves a single group profile
 | memberId   | String     | Required: Memeber Id
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
-<a name="deleteProfile"/>
 ## Meetup.deleteProfile
 Deletes a member's group profile
 
@@ -483,7 +383,6 @@ Deletes a member's group profile
 | memberId   | String     | Required: Memeber Id
 | exitComment| String     | Optional message to the organizer when leaving
 
-<a name="deletePhoto"/>
 ## Meetup.deletePhoto
 Deletes a specified event photo
 
@@ -492,7 +391,6 @@ Deletes a specified event photo
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Photo id
 
-<a name="deleteMemberPhoto"/>
 ## Meetup.deleteMemberPhoto
 Delete the specified member photo
 
@@ -501,7 +399,6 @@ Delete the specified member photo
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Photo id
 
-<a name="getGroupComments"/>
 ## Meetup.getGroupComments
 API method for accessing meetup group comments
 
@@ -513,7 +410,6 @@ API method for accessing meetup group comments
 | groupId     | String     | Recomended: Return comments in groups with these ID numbers [separated by commas]
 | groupUrlName| String     | Recomended: Return comments for the group with this custom URL path
 
-<a name="getEventComments"/>
 ## Meetup.getEventComments
 This method returns messages that appear under "Talk about this Meetup". To post messages, see the corresponding write method.
 
@@ -526,7 +422,6 @@ This method returns messages that appear under "Talk about this Meetup". To post
 | groupId    | String     | Recomended: Return comments in groups with these ID numbers, separated by commas
 | eventId    | String     | Recomended: Return comments on these events, separated by commas.
 
-<a name="postEventComment"/>
 ## Meetup.postEventComment
 This method posts messages that appear under "Talk about this Meetup".
 
@@ -538,7 +433,6 @@ This method posts messages that appear under "Talk about this Meetup".
 | notifications| String     | Notification control for authorized member on this comment thread. "on" will result in notifications being sent. "off" will opt the member out of notifications for this comment thread. Defaults to "on" unless the member previous opted out of notifications on the thread.
 | eventId      | String     | Recomended: The event related to this comment.
 
-<a name="getSingleEventComment"/>
 ## Meetup.getSingleEventComment
 Retrieve a single event comment or reply
 
@@ -548,7 +442,6 @@ Retrieve a single event comment or reply
 | id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
-<a name="deleteEventComment"/>
 ## Meetup.deleteEventComment
 Delete a single event comment or reply
 
@@ -558,7 +451,6 @@ Delete a single event comment or reply
 | id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
-<a name="postEventCommentFlag"/>
 ## Meetup.postEventCommentFlag
 This method creates a spam report for comment content
 
@@ -568,7 +460,6 @@ This method creates a spam report for comment content
 | commentId  | String     | Recomended: The id of the comment
 | reason     | String     | Reason for flagging the comment. May be one of inappropriate, spam
 
-<a name="deleteEventCommentSubscribe"/>
 ## Meetup.deleteEventCommentSubscribe
 Unsubscribe to notifications for updates to a given comment thread
 
@@ -577,7 +468,6 @@ Unsubscribe to notifications for updates to a given comment thread
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
-<a name="postEventCommentSubscribe"/>
 ## Meetup.postEventCommentSubscribe
 Subscribe to notifications on updates to a given comment thread
 
@@ -586,7 +476,6 @@ Subscribe to notifications on updates to a given comment thread
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
-<a name="postEventCommentLike"/>
 ## Meetup.postEventCommentLike
 Like a given Event comment
 
@@ -595,7 +484,6 @@ Like a given Event comment
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
-<a name="deleteEventCommentLike"/>
 ## Meetup.deleteEventCommentLike
 Unlike a given Event comment
 
@@ -604,7 +492,6 @@ Unlike a given Event comment
 | accessToken| credentials| Required: OAuth2 Access Token
 | id         | String     | Required: Required: Comment id
 
-<a name="getEventCommentLikes"/>
 ## Meetup.getEventCommentLikes
 Api for listing likes of a given event comment
 
@@ -613,7 +500,6 @@ Api for listing likes of a given event comment
 | accessToken| credentials| Required: OAuth2 Access Token
 | commentId  | String     | Recomended: Return likes for a given comment_id
 
-<a name="getPhotoComments"/>
 ## Meetup.getPhotoComments
 This method returns comments on meetup photos. To post messages, see the corresponding write method
 
@@ -624,7 +510,6 @@ This method returns comments on meetup photos. To post messages, see the corresp
 | photoId    | String     | Recomended: Return comments on these photos, separated by commas
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
 
-<a name="postPhotoComment"/>
 ## Meetup.postPhotoComment
 This method posts comments that appear below photos
 
@@ -634,7 +519,6 @@ This method posts comments that appear below photos
 | photoId    | String     | Recomended: The photo related to this comment.
 | comment    | String     | Recomended: The comment text
 
-<a name="getEventRatings"/>
 ## Meetup.getEventRatings
 API method for accessing Meetup comments
 
@@ -644,7 +528,6 @@ API method for accessing Meetup comments
 | memberId   | String     | The ID of a member to filter ratings on
 | eventId    | String     | Recomended: The ID of the event to fetch ratings data for
 
-<a name="postEventRating"/>
 ## Meetup.postEventRating
 This method allows members to posts rating for an event after it's occurred. Only permitted for members who rsvp'd "yes" or "maybe" to the event
 
@@ -655,7 +538,6 @@ This method allows members to posts rating for an event after it's occurred. Onl
 | rating       | String     | Recomended: The member's rating (either 1, 2, 3, 4, or 5)
 | eventId      | String     | Recomended: The ID of the event to fetch ratings data for
 
-<a name="getPhotoAlbums"/>
 ## Meetup.getPhotoAlbums
 This method returns photo albums associated with Meetup groups. To create albums, see the corresponding write method.
 
@@ -666,7 +548,6 @@ This method returns photo albums associated with Meetup groups. To create albums
 | groupId     | String     | Recomended: Return albums in groups with these ID, separated by commas
 | eventId     | String     | Recomended: Return photo albums for these event ids, separated by commas
 
-<a name="postPhotoAlbum"/>
 ## Meetup.postPhotoAlbum
 This method creates photo albums within a Meetup group
 
@@ -676,7 +557,6 @@ This method creates photo albums within a Meetup group
 | groupId    | String     | Recomended: Group to create the album in
 | title      | String     | Recomended:  Title of the new album
 
-<a name="getOpenVenues"/>
 ## Meetup.getOpenVenues
 Searches for public venues within a given geo space. To search for specific venues that your group has used, use the [Venues](http://meetup.com/meetup_api/docs/2/venues) method
 
@@ -694,7 +574,6 @@ Searches for public venues within a given geo space. To search for specific venu
 | radius      | String     | Radius, in miles for geographic requests, default 25.0 -- maximum 100.0
 | fields      | String     | Request that additional fields (separated by commas) be included in the output
 
-<a name="getVenues"/>
 ## Meetup.getVenues
 Search for Meetup venues by one of your groups, events, or venue identifiers. For a full text search on public venues use [OpenVenues](http://meetup.com/meetup_api/docs/2/open_venues).
 
@@ -707,7 +586,6 @@ Search for Meetup venues by one of your groups, events, or venue identifiers. Fo
 | groupUrlName| String     | Recomended: path to group from meetup.com, no slashes
 | eventId     | String     | Recomended: multiple ids may be separated with commas
 
-<a name="getRSVPs"/>
 ## Meetup.getRSVPs
 Query for Event RSVPs by event
 
@@ -718,7 +596,6 @@ Query for Event RSVPs by event
 | rsvp       | String     | Filters response on RSVP status. "yes" if member RSVP'd yes otherwise "no"
 | eventId    | String     | Recomended: Multiple alphanumeric ids may be separated with commas
 
-<a name="postRSVP"/>
 ## Meetup.postRSVP
 Creates or updates an existing RSVP
 
@@ -747,7 +624,6 @@ Value: question text
 }
 ```
 
-<a name="getSingleRSVP"/>
 ## Meetup.getSingleRSVP
 Retrieve a single RSVP
 
@@ -757,7 +633,6 @@ Retrieve a single RSVP
 | id         | String     | Required: RSVP id
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
-<a name="postGroupPhoto"/>
 ## Meetup.postGroupPhoto
 Uploads a new Meetup Group photo. To change other Group settings use the [Group Edit](http://meetup.com/meetup_api/docs/:urlname/#edit) endpoint
 
@@ -770,7 +645,6 @@ Uploads a new Meetup Group photo. To change other Group settings use the [Group 
 | photo       | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
 | groupUrlName| String     | Recomended: Group urlname. This may be used as an alternative to group_id
 
-<a name="postMemberPhoto"/>
 ## Meetup.postMemberPhoto
 Uploads a photo to be associated with a Member
 
@@ -783,7 +657,6 @@ Uploads a photo to be associated with a Member
 | photo            | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
 | syncPhoto        | String     | When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id
 
-<a name="postPhoto"/>
 ## Meetup.postPhoto
 Uploads a photo for a given event
 
@@ -796,7 +669,6 @@ Uploads a photo for a given event
 | photo       | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
 | eventId     | String     | Recomended: Identifier of an event. If there is no album for this event, one will be created.
 
-<a name="getActivity"/>
 ## Meetup.getActivity
 API method for retrieving the activity feed for a member's groups
 
@@ -806,7 +678,6 @@ API method for retrieving the activity feed for a member's groups
 | memberId   | String     | Returns activity from this member's groups. Must be authenticated as this member
 | pageStart  | String     | Starting timestamp for item to return.
 
-<a name="getOEMBed"/>
 ## Meetup.getOEMBed
 oEmbed implementation
 
@@ -816,7 +687,6 @@ oEmbed implementation
 | url        | String     | Recomended: url of resource to be embedded
 | maxWidth   | String     | maximum width to display
 
-<a name="getStatus"/>
 ## Meetup.getStatus
 Returns the current API service status
 
@@ -824,7 +694,6 @@ Returns the current API service status
 |------------|------------|----------
 | accessToken| credentials| Required: OAuth2 Access Token
 
-<a name="membershipApproval"/>
 ## Meetup.membershipApproval
 Approves one or more requests for group membership
 
@@ -836,7 +705,6 @@ Approves one or more requests for group membership
 | welcomeMessage| String     | Optional message to send to the members being approved. If not provided, the groups default welcome message will be sent. Max message size is 2000
 | sendCopy      | String     | Optional boolean value indicating whether or not the org should receive a copy of the message sent to the approved members
 
-<a name="getEventAttendance"/>
 ## Meetup.getEventAttendance
 Lists attendance records for Meetup events. Limited for use by administrative members.
 
@@ -848,7 +716,6 @@ Lists attendance records for Meetup events. Limited for use by administrative me
 | filter     | String     | A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member
 | member     | String     | Raw text used to search for member by name. This may only be applied when the filter parameter is set to 'all'. The provided text must consist of at least 2 characters.
 
-<a name="takeEventAttendance"/>
 ## Meetup.takeEventAttendance
 Takes member attendance for an event. Limited for use by administrative members.
 
@@ -862,7 +729,6 @@ Takes member attendance for an event. Limited for use by administrative members.
 | member     | String     | Recomended: A comma-delimited list of valid ids associated with members RSVP'd to the event
 | status     | String     | Recomended: An attendance status for the provided members. Must be one of: noshow, absent, attended
 
-<a name="getBoards"/>
 ## Meetup.getBoards
 Listings of Group discussion boards
 
@@ -871,7 +737,6 @@ Listings of Group discussion boards
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
-<a name="membershipDecline"/>
 ## Meetup.membershipDecline
 Declines one or more requests for group membership
 
@@ -885,7 +750,6 @@ Declines one or more requests for group membership
 | explanation| String     | Optional explanation to send to the members being declined. Max message size is 2000
 | ban        | String     | Optional Boolean value indicating whether or not to ban the member in the future. Default is false
 
-<a name="getDiscussions"/>
 ## Meetup.getDiscussions
 Listings of group discussions
 
@@ -895,7 +759,6 @@ Listings of group discussions
 | urlname    | String     | Required: Group url name.
 | boardId    | String     | Required: Board ID
 
-<a name="getSingleDiscussion"/>
 ## Meetup.getSingleDiscussion
 Listing Group discussion posts
 
@@ -906,7 +769,6 @@ Listing Group discussion posts
 | boardId     | String     | Required: Board ID
 | discussionId| String     | Required: Discussion ID
 
-<a name="getSelfEvents"/>
 ## Meetup.getSelfEvents
 Gets a listing of all scheduled Meetup Events the authenticated member has RSVP'd to
 that have been announced to the group.
@@ -936,7 +798,6 @@ Valid values are "waitlist" or "yes". The default is "yes"
 | status     | String     | Comma-delimited list of event statuses.
 Valid values are "past" or "upcoming"
 
-<a name="getSingleEvent"/>
 ## Meetup.getSingleEvent
 Fetches a Meetup Event by group urlname and event_id
 
@@ -947,7 +808,6 @@ Fetches a Meetup Event by group urlname and event_id
 | id         | String     | Required: Event id
 | fields     | String     | A comma-delimited list of optional fields to append to the response
 
-<a name="postEventPayments"/>
 ## Meetup.postEventPayments
 Allows organizers of a group to note payments made by members for an event. This is the 'Mark Paid' feature seen in the RSVP listings on event details pages and affects the 'pay_status' response fields in [2/rsvps](http://meetup.com/meetup_api/docs/2/rsvps/#response) for paid events
 
@@ -961,7 +821,6 @@ Allows organizers of a group to note payments made by members for an event. This
 | member     | String     | Recomended: Member Id of member who made a payment
 | paidOn     | String     | The time the payment was made in milliseconds from the epoc. Defaults to now
 
-<a name="findGroups"/>
 ## Meetup.findGroups
 Text, location, category and friend-based group searches
 
@@ -983,7 +842,6 @@ Text, location, category and friend-based group searches
 | selfGroups         | String     | set to 'include' or 'exclude' Meetups the authorized member belongs to; default is 'include'
 | latitude           | String     | Approximate latitude
 
-<a name="getSingleGroup"/>
 ## Meetup.getSingleGroup
 Fetches a Meetup group by urlname
 
@@ -993,7 +851,6 @@ Fetches a Meetup group by urlname
 | urlname    | String     | Required: Group url name.
 | fields     | String     | A comma-delimited list of optional fields to append to the response
 
-<a name="editGroup"/>
 ## Meetup.editGroup
 Allows organizers to edit their Meetup group information. To change group topics, see the [add](http://meetup.com/meetup_api/docs/:urlname/topics/#add) and [remove](http://meetup.com/meetup_api/docs/:urlname/topics/#remove) topics endpoints. To change group photo use the [Group photo upload](http://meetup.com/meetup_api/docs/2/group_photo/#create) endpoint. OAuth authenticated requests require an additional [group_edit](http://meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
@@ -1049,7 +906,6 @@ A URI for a social network service. **Service must be one of facebook, flickr, l
 }
 ```
 
-<a name="postTopics"/>
 ## Meetup.postTopics
 Associates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](http://meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
@@ -1059,7 +915,6 @@ Associates topics with a given Meetup group. Limited to organizers of the group.
 | urlname    | String     | Required: Group url name.
 | topicId    | String     | Recomended: Comma-delimited list of topic ids to associate with group
 
-<a name="deleteTopics"/>
 ## Meetup.deleteTopics
 Disassociates topics with a given Meetup group. Limited to organizers of the group. OAuth authenticated requests require an additional [group_edit](http://meetup.com/meetup_api/auth/#oauth2-scopes) permission.
 
@@ -1069,7 +924,6 @@ Disassociates topics with a given Meetup group. Limited to organizers of the gro
 | urlname    | String     | Required: Group url name.
 | topicId    | String     | Recomended: Comma-delimited list of topic ids to disassociate with group
 
-<a name="getLocations"/>
 ## Meetup.getLocations
 Provides a query interface for finding known locations
 
@@ -1085,7 +939,6 @@ Defaults to 200
 Must be provided with "longitude"
 | query      | String     | Search for locations based on city name or zip code
 
-<a name="getSelfCalendar"/>
 ## Meetup.getSelfCalendar
 Get a listing of all upcoming Meetup events for the authenticated member
 
@@ -1095,7 +948,6 @@ Get a listing of all upcoming Meetup events for the authenticated member
 | fields     | String     | A comma-delimited list of optional fields names which may be appended to the response
 | page       | String     | Number of results to return in a page. Defaults to 200
 
-<a name="getSelfGroups"/>
 ## Meetup.getSelfGroups
 Lists the authenticated member's groups in the order of leadership,
 next upcoming event, then alphabetical order by name
@@ -1107,7 +959,6 @@ next upcoming event, then alphabetical order by name
 | page       | String     | Number of groups to return in a single page of results.
 By default, this is 200
 
-<a name="getPROGroups"/>
 ## Meetup.getPROGroups
 Name and statistics range search for the meetup groups belonging to Pro organization.
 
@@ -1153,7 +1004,6 @@ Name and statistics range search for the meetup groups belonging to Pro organiza
 | category          | String     | List of Integers: the ids of the category of the group
 | desc              | String     | List of Boolean: whether to sort ascending or decending on each attributes in `order`
 
-<a name="getPROMembers"/>
 ## Meetup.getPROMembers
 Name, location, and time based search for the members of the meetups belonging to Pro organization.
 
@@ -1181,7 +1031,6 @@ Name, location, and time based search for the members of the meetups belonging t
 | desc             | String     | Boolean: whether to sort ascending or decending
 | order            | String     | String: attribute to sort on
 
-<a name="getNotifications"/>
 ## Meetup.getNotifications
 Returns all recent Meetup notifications for the authorized member. To mark notifications read use [/notifications/read](http://meetup.com/meetup_api/docs/notifications/read/) endpoint. To get the authenticated Member's current unread count, request it in an [HTTP header](http://meetup.com/meetup_api/docs/#meta-headers).
 
@@ -1190,7 +1039,6 @@ Returns all recent Meetup notifications for the authorized member. To mark notif
 | accessToken| credentials| Required: OAuth2 Access Token
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
 
-<a name="setNotificationsRead"/>
 ## Meetup.setNotificationsRead
 Marks groups of [notifications](http://meetup.com/meetup_api/docs/notifications/) as read.
 
@@ -1200,7 +1048,6 @@ Marks groups of [notifications](http://meetup.com/meetup_api/docs/notifications/
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
 | sinceId    | String     | The id of the newest notification item, typically the first in the list returned by the notifications endpoint
 
-<a name="findTopicCategories"/>
 ## Meetup.findTopicCategories
 Returns a list high level topic categories
 
@@ -1212,7 +1059,6 @@ Returns a list high level topic categories
 | radius     | String     | An radius (in miles) to center a request for "best_topics"
 | latitude   | String     | An optional approximate latitude to center a request for "best_topics"
 
-<a name="getRecommendedGroupTopics"/>
 ## Meetup.getRecommendedGroupTopics
 Recommends suggestions for group topics based on a text search or other topics
 
@@ -1225,7 +1071,6 @@ Recommends suggestions for group topics based on a text search or other topics
 | otherTopics  | String     | A comma-delimited list of topic ids to inform recommendations
 | excludeTopics| String     | A comma-delimited list of topic ids to exclude from the recommendations
 
-<a name="getRecommendedGroups"/>
 ## Meetup.getRecommendedGroups
 Returns groups Meetup finds relevant to you
 
@@ -1243,7 +1088,6 @@ Returns groups Meetup finds relevant to you
 | category       | String     | A valid category id which limits recommended groups to a particular category
 | latitude       | String     | Approximate latitude
 
-<a name="postRecommendedGroupsIgnore"/>
 ## Meetup.postRecommendedGroupsIgnore
 Provides a form of feedback by requesting to remove a group from future recommendations
 
@@ -1252,7 +1096,6 @@ Provides a form of feedback by requesting to remove a group from future recommen
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
-<a name="getRecommendedVenues"/>
 ## Meetup.getRecommendedVenues
 Returns venues Meetup finds relevant to you based on location and category. This method does not yet support sorting or pagination.
 
@@ -1271,7 +1114,6 @@ Returns venues Meetup finds relevant to you based on location and category. This
 | groupUrlName| String     | Comma-delimited list of up to 200 group urlnames to help inform recommendations
 | latitude    | String     | Approximate latitude
 
-<a name="getSimilarGroups"/>
 ## Meetup.getSimilarGroups
 Renders a list of similar groups
 
@@ -1280,7 +1122,6 @@ Renders a list of similar groups
 | accessToken| credentials| Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
-<a name="findTopics"/>
 ## Meetup.findTopics
 Find topics by name
 
