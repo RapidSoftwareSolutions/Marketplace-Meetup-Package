@@ -54,7 +54,7 @@ for(let func in apiHash) {
         method == 'GET' || method == 'DELETE' ? options.query = opts : options.body = opts;
         options.isRawBody = !(method == 'GET' || method == 'DELETE');
         options.parseMultiple = !!(multiprop);
-        options.hasSkip = true;
+        options.hasSkip  = true;
         options.parseUri = true;
         options.method = method;
 
@@ -72,7 +72,6 @@ for(let func in apiHash) {
             r.callback          = 'success';
             r.contextWrites[to] = response;
         } catch(e) {
-            console.log(e);
             r.callback          = 'error';
             r.contextWrites[to] = e.message ? e.message : e;
         }
@@ -80,6 +79,47 @@ for(let func in apiHash) {
         res.status(200).send(r);
     }))
 }
+
+app.post(`/api/${PACKAGE_NAME}/getAccessToken`, _(function* (req, res) {
+    req.body.args = lib.clearArgs(req.body.args);
+
+    let {
+        code,
+        clientId,
+        clientSecret,
+        grantType='authorization_code',
+        redirectUri
+    } = req.body.args;
+
+    let r = {
+        callback     : "",
+        contextWrites: {}
+    };
+    let options = {
+        '$code':          code,
+        '$client_id':     clientId,
+        '$client_secret': clientSecret,
+        '$grant_type':    grantType,
+        '$redirect_uri':  redirectUri
+    }
+
+    let api = new API('https://secure.meetup.com/oauth2/access', {method: 'POST'});
+
+    try{
+        let response = yield api.request({
+            isRawBody: true,
+            body: options
+        });
+
+        r.callback            = 'success';
+        r.contextWrites['to'] = response;
+    } catch(e) {
+        r.callback            = 'error';
+        r.contextWrites['to'] = e.message ? e.message : e;
+    }
+
+    res.status(200).send(r);
+}));
 
 app.listen(PORT);
 module.exports = app;

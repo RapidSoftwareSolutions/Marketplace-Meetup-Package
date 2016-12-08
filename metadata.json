@@ -18,12 +18,12 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Parameter for requesting optional response properties",
+     "info": "Required: Parameter for requesting optional response properties",
      "required": false,
      "name": "fields"
     }
@@ -36,12 +36,12 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     }
@@ -54,30 +54,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Parameter for requesting optional response properties",
+     "info": "Required: Parameter for requesting optional response properties",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
+     "info": "Required: Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
+     "info": "Required: Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
+     "info": "Required: Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon. When present, all three are required.",
      "required": false,
      "name": "latitude"
     }
@@ -90,30 +90,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Return topics a target member is subscribed to",
+     "info": "Required: Return topics a target member is subscribed to",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Return topics that match the specified name (e.g. 'Digital Photography', 'Classical Music')",
+     "info": "Required: Return topics that match the specified name (e.g. 'Digital Photography', 'Classical Music')",
      "required": false,
      "name": "name"
     },
     {
      "type": "String",
-     "info": "Return topics for this topic urlkey",
+     "info": "Required: Return topics for this topic urlkey",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Return topics related to a list of search terms [separate search keywords with +'s]",
+     "info": "Required: Return topics related to a list of search terms [separate search keywords with +'s]",
      "required": false,
      "name": "search"
     }
@@ -126,102 +126,102 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Changes the interpretation of the \"text\" field from OR'd terms to AND'd terms",
+     "info": "Required: Changes the interpretation of the \"text\" field from OR'd terms to AND'd terms",
      "required": false,
      "name": "andText"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid latitude, limits the returned group events to those within radius miles",
+     "info": "Required: Recomended: A valid latitude, limits the returned group events to those within radius miles",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid US zip code, limits the returned groups to those within radius miles",
+     "info": "Required: Recomended: A valid US zip code, limits the returned groups to those within radius miles",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid country code",
+     "info": "Required: Recomended: A valid country code",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Recomended: Return events in the specified topic or topics specified by commas. This is the topic \"urlkey\" returned by the Topics method. If all supplied topics are unknown, a 400 error response is returned with the code \"badtopic\".",
+     "info": "Required: Recomended: Return events in the specified topic or topics specified by commas. This is the topic \"urlkey\" returned by the Topics method. If all supplied topics are unknown, a 400 error response is returned with the code \"badtopic\".",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid city",
+     "info": "Required: Recomended: A valid city",
      "required": false,
      "name": "city"  
     },
     {
      "type": "String",
-     "info": "Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false.",
+     "info": "Required: Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false.",
      "required": false,
      "name": "limitedEvents"
     },
     {
      "type": "String",
-     "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
+     "info": "Required: Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
      "required": false,
      "name": "textFormat"
     },
     {
      "type": "String",
-     "info": "Recomended: If searching in a country with states, a valid 2 character state code",
+     "info": "Required: Recomended: If searching in a country with states, a valid 2 character state code",
      "required": false,
      "name": "state"
     },
     {
      "type": "String",
-     "info": "Recomended: Events that contain the given term or terms somewhere in their content. The terms are OR'd by default. Separate terms with \" AND \" for events that have combined terms. To have terms automatically AND'd, set the \"and_text\" to true",
+     "info": "Required: Recomended: Events that contain the given term or terms somewhere in their content. The terms are OR'd by default. Separate terms with \" AND \" for events that have combined terms. To have terms automatically AND'd, set the \"and_text\" to true",
      "required": false,
      "name": "text"
     },
     {
      "type": "String",
-     "info": "Recomended: Return events in the specified category or categories specified by commas. This is the category id returned by the Categories method.",
+     "info": "Required: Recomended: Return events in the specified category or categories specified by commas. This is the category id returned by the Categories method.",
      "required": false,
      "name": "category"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid longitude, limits the returned group events to those within radius miles",
+     "info": "Required: Recomended: A valid longitude, limits the returned group events to those within radius miles",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
+     "info": "Required: Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
      "required": false,
      "name": "time"
     },
     {
      "type": "String",
-     "info": "Radius, in miles for geographic requests, default 25.0 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area",
+     "info": "Required: Radius, in miles for geographic requests, default 25.0 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Status may be \"upcoming\", \"past\" or both separated by a comma. The default is \"upcoming\" only",
+     "info": "Required: Status may be \"upcoming\", \"past\" or both separated by a comma. The default is \"upcoming\" only",
      "required": false,
      "name": "status"
     }
@@ -234,96 +234,96 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "A valid US zip code, limits the returned groups to those within radius miles",
+     "info": "Required: A valid US zip code, limits the returned groups to those within radius miles",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "A vgetConciergealid country code",
+     "info": "Required: A vgetConciergealid country code",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "A valid city",
+     "info": "Required: A valid city",
      "required": false,
      "name": "city"  
     },
     {
      "type": "String",
-     "info": "A valid longitude, limits the returned group events to those within radius miles",
+     "info": "Required: A valid longitude, limits the returned group events to those within radius miles",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Format of the description text \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\"",
+     "info": "Required: Format of the description text \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\"",
      "required": false,
      "name": "textFormat"
     },
     {
      "type": "String",
-     "info": "Comma delimited list of category ids to limit recommendations to",
+     "info": "Required: Comma delimited list of category ids to limit recommendations to",
      "required": false,
      "name": "categoryId"
     },
     {
      "type": "String",
-     "info": "An opaque string used to page through results. This can be found appended to the 'next' link in the meta section of the response.",
+     "info": "Required: An opaque string used to page through results. This can be found appended to the 'next' link in the meta section of the response.",
      "required": false,
      "name": "pageToken"
     },
     {
      "type": "String",
-     "info": "If searching in a country with states, a valid 2 character state code",
+     "info": "Required: If searching in a country with states, a valid 2 character state code",
      "required": false,
      "name": "state"
     },
     {
      "type": "String",
-     "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
+     "info": "Required: Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
      "required": false,
      "name": "time"
     },
     {
      "type": "String",
-     "info": "Comma delimited list of topics to help inform recommendation",
+     "info": "Required: Comma delimited list of topics to help inform recommendation",
      "required": false,
      "name": "topicId"
     },
     {
      "type": "String",
-     "info": "Radius, in miles for geographic requests, defaults to the member's preferred radius or 0.5 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area",
+     "info": "Required: Radius, in miles for geographic requests, defaults to the member's preferred radius or 0.5 -- maximum 100. May also be specified as \"smart\", a dynamic radius based on the number of active groups in the area",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Boolean parameter. When set to true, events hosted by groups you have friends in will be recommended",
+     "info": "Required: Boolean parameter. When set to true, events hosted by groups you have friends in will be recommended",
      "required": false,
      "name": "withFriends"
     },
     {
      "type": "String",
-     "info": "set to \"include\" or \"exclude\" groups the authorized member belongs to. The default is \"include\". This includes groups in locations that may differ than the provided location",
+     "info": "Required: set to \"include\" or \"exclude\" groups the authorized member belongs to. The default is \"include\". This includes groups in locations that may differ than the provided location",
      "required": false,
      "name": "selfGroups"
     },
     {
      "type": "String",
-     "info": "A valid latitude, limits the returned group events to those within radius miles",
+     "info": "Required: A valid latitude, limits the returned group events to those within radius miles",
      "required": false,
      "name": "latitude"
     }
@@ -336,108 +336,108 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Return the group with this topic and number",
+     "info": "Required: Return the group with this topic and number",
      "required": false,
      "name": "groupNum"
     },
     {
      "type": "String",
-     "info": "Recomended: Return the group with this topic and number",
+     "info": "Required: Recomended: Return the group with this topic and number",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid US zip code, limits the returned groups to those within radius miles.",
+     "info": "Required: Recomended: A valid US zip code, limits the returned groups to those within radius miles.",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "A valid latitude and longitude, limits the returned groups to those within radius miles",
+     "info": "Required: A valid latitude and longitude, limits the returned groups to those within radius miles",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid latitude and longitude, limits the returned groups to those within radius miles",
+     "info": "Required: Recomended: A valid latitude and longitude, limits the returned groups to those within radius miles",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Recomended: one or more separated by commas, includes no slashes",
+     "info": "Required: Recomended: one or more separated by commas, includes no slashes",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: Only return groups in the specified topic [one topic allowed]",
+     "info": "Required: Recomended: Only return groups in the specified topic [one topic allowed]",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Recomended: one or more separated by commas",
+     "info": "Required: Recomended: one or more separated by commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: one or more organizer IDs, separated by commas",
+     "info": "Required: Recomended: one or more organizer IDs, separated by commas",
      "required": false,
      "name": "organizerId"
     },
     {
      "type": "String",
-     "info": "Recomended: one or more custom group domains, separated by commas",
+     "info": "Required: Recomended: one or more custom group domains, separated by commas",
      "required": false,
      "name": "domain"
     },
     {
      "type": "String",
-     "info": "Recomended: one or more separated by commas, for groups this member belongs to",
+     "info": "Required: Recomended: one or more separated by commas, for groups this member belongs to",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Radius, in miles for geographic requests, default 25 -- maximum 100",
+     "info": "Required: Radius, in miles for geographic requests, default 25 -- maximum 100",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "optional result fields, separated by commas.",
+     "info": "Required: optional result fields, separated by commas.",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Recomended: Only return groups in the specified category. [one category allowed]",
+     "info": "Required: Recomended: Only return groups in the specified category. [one category allowed]",
      "required": false,
      "name": "categoryId"
     },
     {
      "type": "String",
-     "info": "A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
+     "info": "Required: A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
      "required": false,
      "name": "state"
     },
     {
      "type": "String",
-     "info": "A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
+     "info": "Required: A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
      "required": false,
      "name": "city"  
     },
     {
      "type": "String",
-     "info": "Recomended: A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
+     "info": "Required: Recomended: A valid country code, city and for the US, State. limits the returned groups to those within radius miles",
      "required": false,
      "name": "country"
     }
@@ -450,78 +450,78 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Filters events by the currently authenticated member's RSVP status. May be a comma delimited list of \"yes\", \"no\", \"waitlist\", \"maybe\" or \"none\"",
+     "info": "Required: Recomended: Filters events by the currently authenticated member's RSVP status. May be a comma delimited list of \"yes\", \"no\", \"waitlist\", \"maybe\" or \"none\"",
      "required": false,
      "name": "rsvp"
     },
     {
      "type": "String",
-     "info": "Recomended: Path to group from meetup.com, no slashes",
+     "info": "Required: Recomended: Path to group from meetup.com, no slashes",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: Multiple ids may be separated with commas",
+     "info": "Required: Recomended: Multiple ids may be separated with commas",
      "required": false,
      "name": "eventId"
     },
     {
      "type": "String",
-     "info": "Recomended: Multiple ids may be separated with commas",
+     "info": "Required: Recomended: Multiple ids may be separated with commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false.",
+     "info": "Required: Include limited event information for private groups that wish to expose only a small amount of information about their events. This includes just: id, name, utc_offset, time, duration, yes_rsvp_count, waitlist_count, group, visibility, timezone. Value must be true or false.",
      "required": false,
      "name": "limitedEvents"
     },
     {
      "type": "String",
-     "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
+     "info": "Required: Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
      "required": false,
      "name": "textFormat"
     },
     {
      "type": "String",
-     "info": "Recomended: Group custom domain",
+     "info": "Required: Recomended: Group custom domain",
      "required": false,
      "name": "groupDomain"
     },
     {
      "type": "String",
-     "info": "Recomended: Multiple ids may be separated with commas",
+     "info": "Required: Recomended: Multiple ids may be separated with commas",
      "required": false,
      "name": "venueId"
     },
     {
      "type": "String",
-     "info": "Recomended: Single member id, to find events in this member's groups",
+     "info": "Required: Recomended: Single member id, to find events in this member's groups",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
+     "info": "Required: Return events scheduled within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above). Note: to retrieve past events you must also update status value",
      "required": false,
      "name": "time"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Status may be \"upcoming\", \"past\", \"proposed\", \"suggested\", \"cancelled\", \"draft\" or multiple separated by a comma. The default is \"upcoming\", which includes Meetups that are happening now according to their **duration**. Meetups that are \"proposed\" or \"suggested\" do not have a date assigned; the former are listed on the site as <i>official</i> while the latter appear as <i>in the making</i>. Drafts are only visible to organizers of groups hosting the events.",
+     "info": "Required: Status may be \"upcoming\", \"past\", \"proposed\", \"suggested\", \"cancelled\", \"draft\" or multiple separated by a comma. The default is \"upcoming\", which includes Meetups that are happening now according to their **duration**. Meetups that are \"proposed\" or \"suggested\" do not have a date assigned; the former are listed on the site as <i>official</i> while the latter appear as <i>in the making</i>. Drafts are only visible to organizers of groups hosting the events.",
      "required": false,
      "name": "status"
     }
@@ -529,119 +529,119 @@
   },
   {
    "name": "postEvent",
-   "description": "Create new Meetup event",
+   "description": "",
    "args": [
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Total number of RSVPs available for the event",
+     "info": "Required: Total number of RSVPs available for the event",
      "required": false,
      "name": "rsvpLimit"
     },
     {
      "type": "String",
-     "info": "Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
+     "info": "Required: Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
      "required": false,
      "name": "rsvpOpen"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the event venue for non members of the hosting group. May be one of \"public\" or \"members\"",
+     "info": "Required: Controls the visibility of the event venue for non members of the hosting group. May be one of \"public\" or \"members\"",
      "required": false,
      "name": "venueVisibility"
     },
     {
      "type": "String",
-     "info": "Up to 5 comma-separated valid member ids to be hosts for the event. If hosts is not provided, the authorized member is the default host",
+     "info": "Required: Up to 5 comma-separated valid member ids to be hosts for the event. If hosts is not provided, the authorized member is the default host",
      "required": false,
      "name": "hosts"
     },
     {
      "type": "JSON",
-     "info": "Those with permission may include up to 6 survey questions for the event with each being up to 250 characters. See the parameter notes section for more information. See postEvent README for more details.",
+     "info": "Required: Those with permission may include up to 6 survey questions for the event with each being up to 250 characters. See the parameter notes section for more information. See postEvent README for more details.",
      "required": false,
      "name": "addNewQuestions"
     },
     {
      "type": "String",
-     "info": "Recomended: URL name of the Group hosting the event",
+     "info": "Required: Recomended: URL name of the Group hosting the event",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "We should do this because... May not be longer than 250 characters.",
+     "info": "Required: We should do this because... May not be longer than 250 characters.",
      "required": false,
      "name": "why"
     },
     {
      "type": "String",
-     "info": "Longer description of the event, in HTML. May not be longer than 50000 characters.",
+     "info": "Required: Longer description of the event, in HTML. May not be longer than 50000 characters.",
      "required": false,
      "name": "description"
     },
     {
      "type": "String",
-     "info": "The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member",
+     "info": "Required: The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member",
      "required": false,
      "name": "howToFindUs"
     },
     {
      "type": "String",
-     "info": "Recomended: Group hosting the event",
+     "info": "Required: Recomended: Group hosting the event",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
+     "info": "Required: Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
      "required": false,
      "name": "rsvpClose"
     },
     {
      "type": "String",
-     "info": "Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0",
+     "info": "Required: Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0",
      "required": false,
      "name": "duration"
     },
     {
      "type": "String",
-     "info": "Recomended: Name of the event. May not be longer than 80 characters.",
+     "info": "Required: Recomended: Name of the event. May not be longer than 80 characters.",
      "required": false,
      "name": "name"
     },
     {
      "type": "String",
-     "info": "Number of guests members may include in their RSVP, 0 or more",
+     "info": "Required: Number of guests members may include in their RSVP, 0 or more",
      "required": false,
      "name": "guestLimit"
     },
     {
      "type": "String",
-     "info": "Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters.",
+     "info": "Required: Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters.",
      "required": false,
      "name": "simpleHtmlDescription"
     },
     {
      "type": "String",
-     "info": "Event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
+     "info": "Required: Event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
      "required": false,
      "name": "time"
     },
     {
      "type": "String",
-     "info": "Numeric identifier of a venue",
+     "info": "Required: Numeric identifier of a venue",
      "required": false,
      "name": "venueId"
     },
     {
      "type": "String",
-     "info": "If you are an organizer of the group, you may set this to \"draft\" to save the event as a draft. Doing so will require a status=draft filter on /2/event queries.",
+     "info": "Required: If you are an organizer of the group, you may set this to \"draft\" to save the event as a draft. Doing so will require a status=draft filter on /2/event queries.",
      "required": false,
      "name": "publishStatus"
     }
@@ -654,138 +654,138 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Updates to the venue's latitude and longitude. When present, both must be provided",
+     "info": "Required: Updates to the venue's latitude and longitude. When present, both must be provided",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Updates to the venue's latitude and longitude. When present, both must be provided",
+     "info": "Required: Updates to the venue's latitude and longitude. When present, both must be provided",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Total number of RSVPs available for the event. To remove this limit, set this to 0",
+     "info": "Required: Total number of RSVPs available for the event. To remove this limit, set this to 0",
      "required": false,
      "name": "rsvpLimit"
     },
     {
      "type": "String",
-     "info": "Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
+     "info": "Required: Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
      "required": false,
      "name": "rsvpOpen"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of venue. May be one of \"public\" or \"members\"",
+     "info": "Required: Controls the visibility of venue. May be one of \"public\" or \"members\"",
      "required": false,
      "name": "venueVisibility"
     },
     {
      "type": "String",
-     "info": "Up to 5 valid member ids to be hosts for the event.",
+     "info": "Required: Up to 5 valid member ids to be hosts for the event.",
      "required": false,
      "name": "hosts"
     },
     {
      "type": "JSON",
-     "info": "Those with permission may include up to 6 survey questions with each being up to 250 characters, including edited questions, for the event. See the parameter notes section for more information. See editEvent README for more details.",
+     "info": "Required: Those with permission may include up to 6 survey questions with each being up to 250 characters, including edited questions, for the event. See the parameter notes section for more information. See editEvent README for more details.",
      "required": false,
      "name": "addNewQuestions"
     },
     {
      "type": "String",
-     "info": "We should do this because... May not be longer than 250 characters.",
+     "info": "Required: We should do this because... May not be longer than 250 characters.",
      "required": false,
      "name": "why"
     },
     {
      "type": "String",
-     "info": "Longer description of the event, in HTML. May not be longer than 50000 characters.",
+     "info": "Required: Longer description of the event, in HTML. May not be longer than 50000 characters.",
      "required": false,
      "name": "description"
     },
     {
      "type": "String",
-     "info": "The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member",
+     "info": "Required: The information provided by the event host for \"How will members find you there?\". Visible when location is visible to the authenticated member",
      "required": false,
      "name": "howToFindUs"
     },
     {
      "type": "String",
-     "info": "Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format. To unset rsvp_close, set this to 0",
+     "info": "Required: Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format. To unset rsvp_close, set this to 0",
      "required": false,
      "name": "rsvpClose"
     },
     {
      "type": "String",
-     "info": "Organizers and hosts may set this to true to announce a Meetup.",
+     "info": "Required: Organizers and hosts may set this to true to announce a Meetup.",
      "required": false,
      "name": "announce"
     },
     {
      "type": "String",
-     "info": "Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0",
+     "info": "Required: Event duration in milliseconds. When not specified, a default of 3 hours may be assumed by applications. To clear event duration, set this to 0",
      "required": false,
      "name": "duration"
     },
     {
      "type": "String",
-     "info": "Group to hold the event",
+     "info": "Required: Group to hold the event",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Event name. May not be longer than 80 characters.",
+     "info": "Required: Event name. May not be longer than 80 characters.",
      "required": false,
      "name": "name"
     },
     {
      "type": "String",
-     "info": "number of guests members may include in their RSVP, 0 or more",
+     "info": "Required: number of guests members may include in their RSVP, 0 or more",
      "required": false,
      "name": "guestLimit"
     },
     {
      "type": "String",
-     "info": "Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters.",
+     "info": "Required: Description of the event, in simple HTML format. This value is translated to HTML to update the description. May not be longer than 50000 characters.",
      "required": false,
      "name": "simpleHtmlDescription"
     },
     {
      "type": "String",
-     "info": "event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
+     "info": "Required: event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format.",
      "required": false,
      "name": "time"
     },
     {
      "type": "JSON",
-     "info": "Those with permission may include up to 6 survey questions with each being up to 250 characters, including new questions. To delete a question submit this parameter with an empty value. See editEvent README for more details.",
+     "info": "Required: Those with permission may include up to 6 survey questions with each being up to 250 characters, including new questions. To delete a question submit this parameter with an empty value. See editEvent README for more details.",
      "required": false,
      "name": "editQuestions"
     },
     {
      "type": "String",
-     "info": "Numeric identifier of a venue. To unset the event's venue, set this to 0",
+     "info": "Required: Numeric identifier of a venue. To unset the event's venue, set this to 0",
      "required": false,
      "name": "venueId"
     },
     {
      "type": "String",
-     "info": "If you are an organizer of the group, you may set this to \"draft\" or \"published\". Setting state to \"draft\" will require a status=draft filter on /2/event queries.",
+     "info": "Required: If you are an organizer of the group, you may set this to \"draft\" or \"published\". Setting state to \"draft\" will require a status=draft filter on /2/event queries.",
      "required": false,
      "name": "publishStatus"
     }
@@ -798,13 +798,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     }
    ]
@@ -816,42 +816,42 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "A valid country code",
+     "info": "Required: A valid country code",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Search term and/or zip to look for (if this is specified, max result size limited to 10)",
+     "info": "Required: Search term and/or zip to look for (if this is specified, max result size limited to 10)",
      "required": false,
      "name": "query"
     },
     {
      "type": "String",
-     "info": "Longitude to search",
+     "info": "Required: Longitude to search",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "A valid state code for the given country, if the country has states",
+     "info": "Required: A valid state code for the given country, if the country has states",
      "required": false,
      "name": "state"
     },
     {
      "type": "String",
-     "info": "When searching by lat/lon only, specify a radius to search (default 50 miles)",
+     "info": "Required: When searching by lat/lon only, specify a radius to search (default 50 miles)",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Latitude to search",
+     "info": "Required: Latitude to search",
      "required": false,
      "name": "latitude"
     }
@@ -864,48 +864,48 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Return members for the group with given topic and number",
+     "info": "Required: Return members for the group with given topic and number",
      "required": false,
      "name": "groupNum"
     },
     {
      "type": "String",
-     "info": "Recomended: Return members for the group with given topic and number",
+     "info": "Required: Recomended: Return members for the group with given topic and number",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Recomended: Return members for the group with the given custom URL path",
+     "info": "Required: Recomended: Return members for the group with the given custom URL path",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: Return the member with this ID",
+     "info": "Required: Recomended: Return the member with this ID",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Recomended: Return members in groups with these ID numbers, separated by commas",
+     "info": "Required: Recomended: Return members in groups with these ID numbers, separated by commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: Match users by the external services they've linked to their member account, specified as \"servicename:identifier\". For example, \"service=twitter:@MeetupAPI\" finds any member account that lists @MeetupAPI as its Twitter name (none, currently). You can query against several at a time by separating them with commas. Facebook identifiers should be provided as numeric values",
+     "info": "Required: Recomended: Match users by the external services they've linked to their member account, specified as \"servicename:identifier\". For example, \"service=twitter:@MeetupAPI\" finds any member account that lists @MeetupAPI as its Twitter name (none, currently). You can query against several at a time by separating them with commas. Facebook identifiers should be provided as numeric values",
      "required": false,
      "name": "service"
     }
@@ -918,18 +918,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "member id.",
+     "info": "Required: member id.",
      "required": false  
     },
     {
      "type": "String",
-     "info": "comma-separate list of optional fields",
+     "info": "Required: comma-separate list of optional fields",
      "required": false,
      "name": "fields"
     }
@@ -942,150 +942,150 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Memeber id",
+     "info": "Required: Memeber id",
      "required": false  
     },
     {
      "type": "String",
-     "info": "Day you were born. Format should be in the form of yyyy or mmddyyyy. A value of -1 indicates that birthday data should be cleared.",
+     "info": "Required: Day you were born. Format should be in the form of yyyy or mmddyyyy. A value of -1 indicates that birthday data should be cleared.",
      "required": false,
      "name": "birthday"
     },
     {
      "type": "String",
-     "info": "Valid zip code for city",
+     "info": "Required: Valid zip code for city",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "Valid country code for your location",
+     "info": "Required: Valid country code for your location",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Hometown of member. Can not be longer than 64 characters",
+     "info": "Required: Hometown of member. Can not be longer than 64 characters",
      "required": false,
      "name": "hometown"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of topic ids to remove from your alert list",
+     "info": "Required: Comma-delimited list of topic ids to remove from your alert list",
      "required": false,
      "name": "removeTopics"
     },
     {
      "type": "String",
-     "info": "Your gender (used for better recommendations). Value may be one of other, none, female, male",
+     "info": "Required: Your gender (used for better recommendations). Value may be one of other, none, female, male",
      "required": false,
      "name": "gender"
     },
     {
      "type": "String",
-     "info": "A valid photo_id from the member's photos to set as the main profile photo. A value of 0 will unset the current photo",
+     "info": "Required: A valid photo_id from the member's photos to set as the main profile photo. A value of 0 will unset the current photo",
      "required": false,
      "name": "photoId"
     },
     {
      "type": "String",
-     "info": "City name for your location",
+     "info": "Required: City name for your location",
      "required": false,
      "name": "city"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the member's topics. May be one of visible, hidden",
+     "info": "Required: Controls the visibility of the member's topics. May be one of visible, hidden",
      "required": false,
      "name": "topicsPrivacy"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the member's facebook connection. May be one of visible, hidden. If the member has not connected their Facebook account, attempts to set this preference will do nothing.",
+     "info": "Required: Controls the visibility of the member's facebook connection. May be one of visible, hidden. If the member has not connected their Facebook account, attempts to set this preference will do nothing.",
      "required": false,
      "name": "facebookPrivacy"
     },
     {
      "type": "String",
-     "info": "Free form text passage about you. must be less than 250 characters",
+     "info": "Required: Free form text passage about you. must be less than 250 characters",
      "required": false,
      "name": "bio"
     },
     {
      "type": "String",
-     "info": "longitude of city",
+     "info": "Required: longitude of city",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the member's groups. May be one of visible, hidden",
+     "info": "Required: Controls the visibility of the member's groups. May be one of visible, hidden",
      "required": false,
      "name": "groupsPrivacy"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of topics ids to add to your alert list",
+     "info": "Required: Comma-delimited list of topics ids to add to your alert list",
      "required": false,
      "name": "addTopics"
     },
     {
      "type": "String",
-     "info": "When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id",
+     "info": "Required: When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id",
      "required": false,
      "name": "syncPhoto"
     },
     {
      "type": "String",
-     "info": "The name of the current member",
+     "info": "Required: The name of the current member",
      "required": false,
      "name": "name"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the member's bio. May be one of visible, hidden",
+     "info": "Required: Controls the visibility of the member's bio. May be one of visible, hidden",
      "required": false,
      "name": "bioPrivacy"
     },
     {
      "type": "String",
-     "info": "Controls the visibility of the member's photos. May be one of visible, hidden",
+     "info": "Required: Controls the visibility of the member's photos. May be one of visible, hidden",
      "required": false,
      "name": "photosPrivacy"
     },
     {
      "type": "String",
-     "info": "Language preference used on the site. Valid values are en-us, en-au, de-de, es, es-es, fr-fr, it-it, pt-br, ja-jp, ko-kr, nl-nl, en_us, en_au, de_de, es, es_es, fr_fr, it_it, pt_br, ja_jp, ko_kr, nl_nl, en, en, de, es, es, fr, it, pt, ja, ko, nl",
+     "info": "Required: Language preference used on the site. Valid values are en-us, en-au, de-de, es, es-es, fr-fr, it-it, pt-br, ja-jp, ko-kr, nl-nl, en_us, en_au, de_de, es, es_es, fr_fr, it_it, pt_br, ja_jp, ko_kr, nl_nl, en, en, de, es, es, fr, it, pt, ja, ko, nl",
      "required": false,
      "name": "lang"
     },
     {
      "type": "String",
-     "info": "radius, in miles to search for city given a lat and lon. default 25.0, max 100.0",
+     "info": "Required: radius, in miles to search for city given a lat and lon. default 25.0, max 100.0",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "latitude of city",
+     "info": "Required: latitude of city",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "This specifies the member's preference for being contacted from members on the site. Possible values are \"orgs_only\" meaning only group organizers can contact you, \"groups_only\" meaning only members of your group can contact you, or \"all_members\" meaning all members may contact you.",
+     "info": "Required: This specifies the member's preference for being contacted from members on the site. Possible values are \"orgs_only\" meaning only group organizers can contact you, \"groups_only\" meaning only members of your group can contact you, or \"all_members\" meaning all members may contact you.",
      "required": false,
      "name": "messagingPref"
     },
     {
      "type": "String",
-     "info": "Valid city id from /2/cities method",
+     "info": "Required: Valid city id from /2/cities method",
      "required": false,
      "name": "cityId"
     }
@@ -1098,54 +1098,54 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Group identification by topic, deprecated",
+     "info": "Required: Group identification by topic, deprecated",
      "required": false,
      "name": "groupNum"
     },
     {
      "type": "String",
-     "info": "Recomended: Group identification by topic, deprecated",
+     "info": "Required: Recomended: Group identification by topic, deprecated",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "if \"leads\", only profiles for members of the leadership team are included",
+     "info": "Required: if \"leads\", only profiles for members of the leadership team are included",
      "required": false,
      "name": "role"
     },
     {
      "type": "String",
-     "info": "Recomended: Return profiles for the group with the given custom URL path",
+     "info": "Required: Recomended: Return profiles for the group with the given custom URL path",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: Return the profiles for members with these IDs, separated by commas",
+     "info": "Required: Recomended: Return the profiles for members with these IDs, separated by commas",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "comma delimited list of optional response properties. A value of \"membership_dues\" will populate membership dues for the authorized user or members of the groups the authorized user organizes",
+     "info": "Required: comma delimited list of optional response properties. A value of \"membership_dues\" will populate membership dues for the authorized user or members of the groups the authorized user organizes",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Recomended: Return profiles in the group with this ID",
+     "info": "Required: Recomended: Return profiles in the group with this ID",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Status filter for members. Only organizers may see pending. Request must also contain a `group_id` or `group_urlname`. Status may be one of active, pending",
+     "info": "Required: Status filter for members. Only organizers may see pending. Request must also contain a `group_id` or `group_urlname`. Status may be one of active, pending",
      "required": false,
      "name": "status"
     }
@@ -1158,54 +1158,54 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Name of member's site. Max length is 32",
+     "info": "Required: Name of member's site. Max length is 32",
      "required": false,
      "name": "siteName"
     },
     {
      "type": "String",
-     "info": "photo_id of the photo to use for this profile",
+     "info": "Required: photo_id of the photo to use for this profile",
      "required": false,
      "name": "photoId"
     },
     {
      "type": "String",
-     "info": "Link to member's site. Max length is 80",
+     "info": "Required: Link to member's site. Max length is 80",
      "required": false,
      "name": "siteUrl"
     },
     {
      "type": "String",
-     "info": "Recomended: Urlname of group to join",
+     "info": "Required: Recomended: Urlname of group to join",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Provides a Member an opportunity to tell the group about themselves",
+     "info": "Required: Provides a Member an opportunity to tell the group about themselves",
      "required": false,
      "name": "intro"
     },
     {
-     "type": "File",
-     "info": "file upload for a new member photo",
+     "type": "String",
+     "info": "Required: file upload for a new member photo",
      "required": false,
      "name": "newPhoto"
     },
     {
      "type": "String",
-     "info": "Recomended: Id of group to join",
+     "info": "Required: Recomended: Id of group to join",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "JSON",
-     "info": "Answers to questions from groups API join_info question fields",
+     "info": "Required: Answers to questions from groups API join_info question fields",
      "required": false,
      "name": "provideAnswer"
     }
@@ -1218,72 +1218,72 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "groupId",
      "type": "String",
-     "info": "Group Id",
+     "info": "Required: Group Id",
      "required": false
     },
     {
      "name": "memberId",
      "type": "String",
-     "info": "Memeber Id",
+     "info": "Required: Memeber Id",
      "required": false
     },
     {
      "type": "String",
-     "info": "Name of member's site. Max length is 32",
+     "info": "Required: Name of member's site. Max length is 32",
      "required": false,
      "name": "siteName"
     },
     {
      "type": "String",
-     "info": "Allows those with permission to assign one of the following roles: coorganizer, event_organizer, assistant_organizer",
+     "info": "Required: Allows those with permission to assign one of the following roles: coorganizer, event_organizer, assistant_organizer",
      "required": false,
      "name": "addRole"
     },
     {
      "type": "String",
-     "info": "photo_id of the photo to use for this profile. set to 0 to unset the current photo",
+     "info": "Required: photo_id of the photo to use for this profile. set to 0 to unset the current photo",
      "required": false,
      "name": "photoId"
     },
     {
      "type": "String",
-     "info": "Link to member's site. Max length is 80",
+     "info": "Required: Link to member's site. Max length is 80",
      "required": false,
      "name": "siteUrl"
     },
     {
      "type": "String",
-     "info": "Provides a Member an opportunity to tell the group about themselves",
+     "info": "Required: Provides a Member an opportunity to tell the group about themselves",
      "required": false,
      "name": "intro"
     },
     {
-     "type": "File",
-     "info": "file upload for a new member photo",
+     "type": "String",
+     "info": "Required: file upload for a new member photo",
      "required": false,
      "name": "newPhoto"
     },
     {
      "type": "String",
-     "info": "An organizer-defined member title.",
+     "info": "Required: An organizer-defined member title.",
      "required": false,
      "name": "title"
     },
     {
      "type": "String",
-     "info": "Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer",
+     "info": "Required: Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer",
      "required": false,
      "name": "removeRole"
     },
     {
      "type": "JSON",
-     "info": "Answers to questions from groups API join_info question fields",
+     "info": "Required: Answers to questions from groups API join_info question fields",
      "required": false,
      "name": "provideAnswer"
     }
@@ -1296,24 +1296,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "groupId",
      "type": "String",
-     "info": "Group Id",
+     "info": "Required: Group Id",
      "required": false
     },
     {
      "name": "memberId",
      "type": "String",
-     "info": "Memeber Id",
+     "info": "Required: Memeber Id",
      "required": false
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     }
@@ -1326,24 +1326,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "groupId",
      "type": "String",
-     "info": "Group Id",
+     "info": "Required: Group Id",
      "required": false
     },
     {
      "name": "memberId",
      "type": "String",
-     "info": "Memeber Id",
+     "info": "Required: Memeber Id",
      "required": false
     },
     {
      "type": "String",
-     "info": "Optional message to the organizer when leaving",
+     "info": "Required: Optional message to the organizer when leaving",
      "required": false,
      "name": "exitComment"
     }
@@ -1356,13 +1356,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Photo id",
+     "info": "Required: Photo id",
      "required": false
     }
    ]
@@ -1374,13 +1374,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Photo id",
+     "info": "Required: Photo id",
      "required": false
     }
    ]
@@ -1392,30 +1392,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Return comments for the group with given topic and number",
+     "info": "Required: Return comments for the group with given topic and number",
      "required": false,
      "name": "groupNum"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments for the group with given topic and number",
+     "info": "Required: Recomended: Return comments for the group with given topic and number",
      "required": false,
      "name": "topic"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments in groups with these ID numbers [separated by commas]",
+     "info": "Required: Recomended: Return comments in groups with these ID numbers [separated by commas]",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments for the group with this custom URL path",
+     "info": "Required: Recomended: Return comments for the group with this custom URL path",
      "required": false,
      "name": "groupUrlName"
     }
@@ -1428,36 +1428,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments for a given set of comment IDs, separated by commas",
+     "info": "Required: Recomended: Return comments for a given set of comment IDs, separated by commas",
      "required": false,
      "name": "commentId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments for the given member_ids, separated by commas",
+     "info": "Required: Recomended: Return comments for the given member_ids, separated by commas",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Optionally accepts the value \"member_photo\" or \"notifications\"",
+     "info": "Required: Optionally accepts the value \"member_photo\" or \"notifications\"",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments in groups with these ID numbers, separated by commas",
+     "info": "Required: Recomended: Return comments in groups with these ID numbers, separated by commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments on these events, separated by commas.",
+     "info": "Required: Recomended: Return comments on these events, separated by commas.",
      "required": false,
      "name": "eventId"
     }
@@ -1470,30 +1470,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The comment text",
+     "info": "Required: Recomended: The comment text",
      "required": false,
      "name": "comment"
     },
     {
      "type": "String",
-     "info": "Recomended: If this comment is a reply, the ID of the comment being replied to",
+     "info": "Required: Recomended: If this comment is a reply, the ID of the comment being replied to",
      "required": false,
      "name": "inReplyTo"
     },
     {
      "type": "String",
-     "info": "Notification control for authorized member on this comment thread. \"on\" will result in notifications being sent. \"off\" will opt the member out of notifications for this comment thread. Defaults to \"on\" unless the member previous opted out of notifications on the thread.",
+     "info": "Required: Notification control for authorized member on this comment thread. \"on\" will result in notifications being sent. \"off\" will opt the member out of notifications for this comment thread. Defaults to \"on\" unless the member previous opted out of notifications on the thread.",
      "required": false,
      "name": "notifications"
     },
     {
      "type": "String",
-     "info": "Recomended: The event related to this comment.",
+     "info": "Required: Recomended: The event related to this comment.",
      "required": false,
      "name": "eventId"
     }
@@ -1506,18 +1506,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Comment id",
+     "info": "Required: Comment id",
      "required": false
     },
     {
      "type": "String",
-     "info": "comma-separate list of optional fields",
+     "info": "Required: comma-separate list of optional fields",
      "required": false,
      "name": "fields"
     }
@@ -1530,18 +1530,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "comma-separate list of optional fields",
+     "info": "Required: comma-separate list of optional fields",
      "required": false,
      "name": "fields"
     }
@@ -1554,18 +1554,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The id of the comment",
+     "info": "Required: Recomended: The id of the comment",
      "required": false,
      "name": "commentId"
     },
     {
      "type": "String",
-     "info": "Reason for flagging the comment. May be one of inappropriate, spam",
+     "info": "Required: Reason for flagging the comment. May be one of inappropriate, spam",
      "required": false,
      "name": "reason"
     }
@@ -1578,13 +1578,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     }
    ]
@@ -1596,13 +1596,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Comment id.",
+     "info": "Required: Comment id.",
      "required": false
     }
    ]
@@ -1614,13 +1614,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Comment id.",
+     "info": "Required: Comment id.",
      "required": false
     }
    ]
@@ -1632,13 +1632,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Comment id.",
+     "info": "Required: Comment id.",
      "required": false
     }
    ]
@@ -1650,12 +1650,12 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Return likes for a given comment_id",
+     "info": "Required: Recomended: Return likes for a given comment_id",
      "required": false,
      "name": "commentId"
     }
@@ -1668,24 +1668,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Return comments for the given member_ids, separated by commas. The member ids must match up with one of the provided photo ids",
+     "info": "Required: Return comments for the given member_ids, separated by commas. The member ids must match up with one of the provided photo ids",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return comments on these photos, separated by commas",
+     "info": "Required: Recomended: Return comments on these photos, separated by commas",
      "required": false,
      "name": "photoId"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     }
@@ -1698,18 +1698,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The photo related to this comment.",
+     "info": "Required: Recomended: The photo related to this comment.",
      "required": false,
      "name": "photoId"
     },
     {
      "type": "String",
-     "info": "Recomended: The comment text",
+     "info": "Required: Recomended: The comment text",
      "required": false,
      "name": "comment"
     }
@@ -1722,18 +1722,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "The ID of a member to filter ratings on",
+     "info": "Required: The ID of a member to filter ratings on",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Recomended: The ID of the event to fetch ratings data for",
+     "info": "Required: Recomended: The ID of the event to fetch ratings data for",
      "required": false,
      "name": "eventId"
     }
@@ -1746,24 +1746,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "DEPRECATED: The number of attendees for the event (organizers/assistant organizers/co-organizers/event organizers/event hosts only)",
+     "info": "Required: DEPRECATED: The number of attendees for the event (organizers/assistant organizers/co-organizers/event organizers/event hosts only)",
      "required": false,
      "name": "attendeeCount"
     },
     {
      "type": "String",
-     "info": "Recomended: The member's rating (either 1, 2, 3, 4, or 5)",
+     "info": "Required: Recomended: The member's rating (either 1, 2, 3, 4, or 5)",
      "required": false,
      "name": "rating"
     },
     {
      "type": "String",
-     "info": "Recomended: The ID of the event to fetch ratings data for",
+     "info": "Required: Recomended: The ID of the event to fetch ratings data for",
      "required": false,
      "name": "eventId"
     }
@@ -1776,24 +1776,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Return albums with these IDs, separated by commas",
+     "info": "Required: Recomended: Return albums with these IDs, separated by commas",
      "required": false,
      "name": "photoAlbumId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return albums in groups with these ID, separated by commas",
+     "info": "Required: Recomended: Return albums in groups with these ID, separated by commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: Return photo albums for these event ids, separated by commas",
+     "info": "Required: Recomended: Return photo albums for these event ids, separated by commas",
      "required": false,
      "name": "eventId"
     }
@@ -1806,18 +1806,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Group to create the album in",
+     "info": "Required: Recomended: Group to create the album in",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: Title of the new album",
+     "info": "Required: Recomended: Title of the new album",
      "required": false,
      "name": "title"
     }
@@ -1830,66 +1830,66 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: A valid latitude, limits the returned venues to those within radius miles",
+     "info": "Required: Recomended: A valid latitude, limits the returned venues to those within radius miles",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Recomended: For the US, a valid 2 character state code",
+     "info": "Required: Recomended: For the US, a valid 2 character state code",
      "required": false,
      "name": "state"
     },
     {
      "type": "String",
-     "info": "Recomended: Venues that contain the given term or terms somewhere in their content. Separate terms with \" AND \" for venues that have combined terms. Append a trailing * to treat this as a prefix search",
+     "info": "Required: Recomended: Venues that contain the given term or terms somewhere in their content. Separate terms with \" AND \" for venues that have combined terms. Append a trailing * to treat this as a prefix search",
      "required": false,
      "name": "text"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid US zip code, limits the returned venues to those within radius miles",
+     "info": "Required: Recomended: A valid US zip code, limits the returned venues to those within radius miles",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid country code.",
+     "info": "Required: Recomended: A valid country code.",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid longitude, limits the returned venues to those within radius miles",
+     "info": "Required: Recomended: A valid longitude, limits the returned venues to those within radius miles",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Recomended: Returns venues with location relative to the group associated with this urlname",
+     "info": "Required: Recomended: Returns venues with location relative to the group associated with this urlname",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: A valid city",
+     "info": "Required: Recomended: A valid city",
      "required": false,
      "name": "city"
     },
     {
      "type": "String",
-     "info": "Radius, in miles for geographic requests, default 25.0 -- maximum 100.0",
+     "info": "Required: Radius, in miles for geographic requests, default 25.0 -- maximum 100.0",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     }
@@ -1902,36 +1902,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: multiple ids may be separated with commas",
+     "info": "Required: Recomended: multiple ids may be separated with commas",
      "required": false,
      "name": "venueId"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Recomended: multiple ids may be separated with commas",
+     "info": "Required: Recomended: multiple ids may be separated with commas",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: path to group from meetup.com, no slashes",
+     "info": "Required: Recomended: path to group from meetup.com, no slashes",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Recomended: multiple ids may be separated with commas",
+     "info": "Required: Recomended: multiple ids may be separated with commas",
      "required": false,
      "name": "eventId"
     }
@@ -1944,24 +1944,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Parameter for requesting optional response properties, set to other_services for a list of third party services",
+     "info": "Required: Parameter for requesting optional response properties, set to other_services for a list of third party services",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Filters response on RSVP status. \"yes\" if member RSVP'd yes otherwise \"no\"",
+     "info": "Required: Filters response on RSVP status. \"yes\" if member RSVP'd yes otherwise \"no\"",
      "required": false,
      "name": "rsvp"
     },
     {
      "type": "String",
-     "info": "Recomended: Multiple alphanumeric ids may be separated with commas",
+     "info": "Required: Recomended: Multiple alphanumeric ids may be separated with commas",
      "required": false,
      "name": "eventId"
     }
@@ -1974,54 +1974,54 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The RSVP setting - value must be either \"yes\", \"no\" or \"waitlist\"",
+     "info": "Required: Recomended: The RSVP setting - value must be either \"yes\", \"no\" or \"waitlist\"",
      "required": false,
      "name": "rsvp"
     },
     {
      "type": "String",
-     "info": "Organizers and event hosts may RSVP on behalf of a member by specifying an ID here. As when editing RSVPs on the site, organizers may enter a \"yes\" for a member even if the event requires payment.",
+     "info": "Required: Organizers and event hosts may RSVP on behalf of a member by specifying an ID here. As when editing RSVPs on the site, organizers may enter a \"yes\" for a member even if the event requires payment.",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "A comment to post along with the RSVP",
+     "info": "Required: A comment to post along with the RSVP",
      "required": false,
      "name": "comments"
     },
     {
      "type": "String",
-     "info": "Recomended: The event that you are RSVP'ing to",
+     "info": "Required: Recomended: The event that you are RSVP'ing to",
      "required": false,
      "name": "eventId"
     },
     {
      "type": "String",
-     "info": "Number of guests also coming to the event.",
+     "info": "Required: Number of guests also coming to the event.",
      "required": false,
      "name": "guests"
     },
     {
      "type": "String",
-     "info": "For events with fees, the authorized member may opt to pay as part of the RSVP request. This may be set to true or false",
+     "info": "Required: For events with fees, the authorized member may opt to pay as part of the RSVP request. This may be set to true or false",
      "required": false,
      "name": "optionToPay"
     },
     {
      "type": "JSON",
-     "info": "Answers to event survey questions. Answers may not be longer than 250 characters. Organizers and hosts my not edit or create answers on behalf of members",
+     "info": "Required: Answers to event survey questions. Answers may not be longer than 250 characters. Organizers and hosts my not edit or create answers on behalf of members",
      "required": false,
      "name": "provideAnswer"
     },
     {
      "type": "String",
-     "info": "For events with fees, the authorized member must agree to the event's refund policy. This must be set to either true or false",
+     "info": "Required: For events with fees, the authorized member must agree to the event's refund policy. This must be set to either true or false",
      "required": false,
      "name": "agreeToRefund"
     }
@@ -2034,18 +2034,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "RSVP id.",
+     "info": "Required: RSVP id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output",
      "required": false,
      "name": "fields"
     }
@@ -2058,36 +2058,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "If true, this ensures a response will not be returned until the upload is accessible",
+     "info": "Required: If true, this ensures a response will not be returned until the upload is accessible",
      "required": false,
      "name": "await"
     },
     {
      "type": "String",
-     "info": "Set to 'true' to have this photo become the group's main photo. Set it to 'false' otherwise. Defaults to true",
+     "info": "Required: Set to 'true' to have this photo become the group's main photo. Set it to 'false' otherwise. Defaults to true",
      "required": false,
      "name": "main"
     },
     {
      "type": "String",
-     "info": "Recomended: Group ID for the target group. This may be used as an alternative to group_urlname",
+     "info": "Required: Recomended: Group ID for the target group. This may be used as an alternative to group_urlname",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
+     "info": "Required: Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
      "required": false,
      "name": "photo"
     },
     {
      "type": "String",
-     "info": "Recomended: Group urlname. This may be used as an alternative to group_id",
+     "info": "Required: Recomended: Group urlname. This may be used as an alternative to group_id",
      "required": false,
      "name": "groupUrlName"
     }
@@ -2100,36 +2100,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "If true, this ensures a response will not be returned until the upload is accessible",
+     "info": "Required: If true, this ensures a response will not be returned until the upload is accessible",
      "required": false,
      "name": "await"
     },
     {
      "type": "String",
-     "info": "Set to \"true\" to have this photo become the member's main profile photo. Otherwise, it will become the main photo only when none other is selected. If the authenticated member does not already have a main profile photo set it will remain so.",
+     "info": "Required: Set to \"true\" to have this photo become the member's main profile photo. Otherwise, it will become the main photo only when none other is selected. If the authenticated member does not already have a main profile photo set it will remain so.",
      "required": false,
      "name": "main"
     },
     {
      "type": "String",
-     "info": "When set to true and main is set to true, this will replace all group profile photos matching the current photo with the provided replacement",
+     "info": "Required: When set to true and main is set to true, this will replace all group profile photos matching the current photo with the provided replacement",
      "required": false,
      "name": "syncMatchingPhoto"
     },
     {
      "type": "String",
-     "info": "Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
+     "info": "Required: Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
      "required": false,
      "name": "photo"
     },
     {
      "type": "String",
-     "info": "When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id",
+     "info": "Required: When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id",
      "required": false,
      "name": "syncPhoto"
     }
@@ -2142,36 +2142,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "If true, this ensures a response will not be returned until the upload is accessible",
+     "info": "Required: If true, this ensures a response will not be returned until the upload is accessible",
      "required": false,
      "name": "await"
     },
     {
      "type": "String",
-     "info": "Caption for the photo",
+     "info": "Required: Caption for the photo",
      "required": false,
      "name": "caption"
     },
     {
      "type": "String",
-     "info": "Recomended: Identifier of an existing photo album, which may be an event or group album",
+     "info": "Required: Recomended: Identifier of an existing photo album, which may be an event or group album",
      "required": false,
      "name": "photoAlbumId"
     },
     {
-     "type": "File",
-     "info": "Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
+     "type": "String",
+     "info": "Required: Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB",
      "required": false,
      "name": "photo"
     },
     {
      "type": "String",
-     "info": "Recomended: Identifier of an event. If there is no album for this event, one will be created.",
+     "info": "Required: Recomended: Identifier of an event. If there is no album for this event, one will be created.",
      "required": false,
      "name": "eventId"
     }
@@ -2184,18 +2184,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Returns activity from this member's groups. Must be authenticated as this member",
+     "info": "Required: Returns activity from this member's groups. Must be authenticated as this member",
      "required": false,
      "name": "memberId"
     },
     {
      "type": "String",
-     "info": "Starting timestamp for item to return.",
+     "info": "Required: Starting timestamp for item to return.",
      "required": false,
      "name": "pageStart"
     }
@@ -2208,18 +2208,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: url of resource to be embedded",
+     "info": "Required: Recomended: url of resource to be embedded",
      "required": false,
      "name": "url"
     },
     {
      "type": "String",
-     "info": "maximum width to display",
+     "info": "Required: maximum width to display",
      "required": false,
      "name": "maxWidth"
     }
@@ -2232,7 +2232,7 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     }
    ]
@@ -2244,30 +2244,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Comma-delimited numeric pending member IDs. The maximum allowed is 200",
+     "info": "Required: Comma-delimited numeric pending member IDs. The maximum allowed is 200",
      "required": false,
      "name": "member"
     },
     {
      "type": "String",
-     "info": "Optional message to send to the members being approved. If not provided, the groups default welcome message will be sent. Max message size is 2000",
+     "info": "Required: Optional message to send to the members being approved. If not provided, the groups default welcome message will be sent. Max message size is 2000",
      "required": false,
      "name": "welcomeMessage"
     },
     {
      "type": "String",
-     "info": "Optional boolean value indicating whether or not the org should receive a copy of the message sent to the approved members",
+     "info": "Required: Optional boolean value indicating whether or not the org should receive a copy of the message sent to the approved members",
      "required": false,
      "name": "sendCopy"
     }
@@ -2280,30 +2280,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member",
+     "info": "Required: A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member",
      "required": false,
      "name": "filter"
     },
     {
      "type": "String",
-     "info": "Raw text used to search for member by name. This may only be applied when the filter parameter is set to 'all'. The provided text must consist of at least 2 characters.",
+     "info": "Required: Raw text used to search for member by name. This may only be applied when the filter parameter is set to 'all'. The provided text must consist of at least 2 characters.",
      "required": false,
      "name": "member"
     }
@@ -2316,42 +2316,42 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "The number of guests accompanying member. Maximum of 99 is allowed. When providing multiple values in the `member` field, this value is ignored",
+     "info": "Required: The number of guests accompanying member. Maximum of 99 is allowed. When providing multiple values in the `member` field, this value is ignored",
      "required": false,
      "name": "guests"
     },
     {
      "type": "String",
-     "info": "Sets the overall headcount for the event. This may not necessarily correlate with the list of attendees in this group if the event is part of a joint Meetup event. When providing multiple values in the `member` field, this value is ignored",
+     "info": "Required: Sets the overall headcount for the event. This may not necessarily correlate with the list of attendees in this group if the event is part of a joint Meetup event. When providing multiple values in the `member` field, this value is ignored",
      "required": false,
      "name": "headCount"
     },
     {
      "type": "String",
-     "info": "Recomended: A comma-delimited list of valid ids associated with members RSVP'd to the event",
+     "info": "Required: Recomended: A comma-delimited list of valid ids associated with members RSVP'd to the event",
      "required": false,
      "name": "member"
     },
     {
      "type": "String",
-     "info": "Recomended: An attendance status for the provided members. Must be one of: noshow, absent, attended",
+     "info": "Required: Recomended: An attendance status for the provided members. Must be one of: noshow, absent, attended",
      "required": false,
      "name": "status"
     }
@@ -2364,13 +2364,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     }
    ]
@@ -2382,42 +2382,42 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Comma-delimited numeric pending member IDs. The maximum allowed is 200",
+     "info": "Required: Comma-delimited numeric pending member IDs. The maximum allowed is 200",
      "required": false,
      "name": "member"
     },
     {
      "type": "String",
-     "info": "Optional Boolean value indicating whether the declining member's email address should be hidden in the resulting response. Default is true.",
+     "info": "Required: Optional Boolean value indicating whether the declining member's email address should be hidden in the resulting response. Default is true.",
      "required": false,
      "name": "anonymous"
     },
     {
      "type": "String",
-     "info": "Optional Boolean value indicating whether or not to send a copy to the member issuing the decline. Default is false",
+     "info": "Required: Optional Boolean value indicating whether or not to send a copy to the member issuing the decline. Default is false",
      "required": false,
      "name": "sendCopy"
     },
     {
      "type": "String",
-     "info": "Optional explanation to send to the members being declined. Max message size is 2000",
+     "info": "Required: Optional explanation to send to the members being declined. Max message size is 2000",
      "required": false,
      "name": "explanation"
     },
     {
      "type": "String",
-     "info": "Optional Boolean value indicating whether or not to ban the member in the future. Default is false",
+     "info": "Required: Optional Boolean value indicating whether or not to ban the member in the future. Default is false",
      "required": false,
      "name": "ban"
     }
@@ -2430,19 +2430,19 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "boardId",
      "type": "String",
-     "info": "Board ID",
+     "info": "Required: Board ID",
      "required": false
     }
    ]
@@ -2454,25 +2454,25 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "boardId",
      "type": "String",
-     "info": "Board ID",
+     "info": "Required: Board ID",
      "required": false
     },
     {
      "name": "discussionId",
      "type": "String",
-     "info": "Discussion ID",
+     "info": "Required: Discussion ID",
      "required": false
     }
    ]
@@ -2484,42 +2484,42 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "A string representing a scroll target.\n\nSupported values are as follows.\n\n__recent_past__: Scroll to the last RSVP'd Meetup Event that has passed.\n If there is no recent RSVP, this defaults to __next_upcoming__\n\n__next_upcoming__: Scroll to the next upcoming Meetup Event the authenticated member\nRSVP'd to.\n\nAlternatively the server may generate a scroll value used for pagination Link headers.\nClients should treat the contents of those as a transparent string. Its\ncontents are subject to change in the future",
+     "info": "Required: A string representing a scroll target.\n\nSupported values are as follows.\n\n__recent_past__: Scroll to the last RSVP'd Meetup Event that has passed.\n If there is no recent RSVP, this defaults to __next_upcoming__\n\n__next_upcoming__: Scroll to the next upcoming Meetup Event the authenticated member\nRSVP'd to.\n\nAlternatively the server may generate a scroll value used for pagination Link headers.\nClients should treat the contents of those as a transparent string. Its\ncontents are subject to change in the future",
      "required": false,
      "name": "scroll"
     },
     {
      "type": "String",
-     "info": "Number of results to return. Defaults to 200.",
+     "info": "Required: Number of results to return. Defaults to 200.",
      "required": false,
      "name": "page"
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of optional fields names which may be appended to the response",
+     "info": "Required: A comma-delimited list of optional fields names which may be appended to the response",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of RSVP responses.\nValid values are \"waitlist\" or \"yes\". The default is \"yes\"",
+     "info": "Required: Comma-delimited list of RSVP responses.\nValid values are \"waitlist\" or \"yes\". The default is \"yes\"",
      "required": false,
      "name": "rsvp"
     },
     {
      "type": "String",
-     "info": "When true, sorts results in descending order. Defaults to false",
+     "info": "Required: When true, sorts results in descending order. Defaults to false",
      "required": false,
      "name": "desc"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of event statuses.\nValid values are \"past\" or \"upcoming\"",
+     "info": "Required: Comma-delimited list of event statuses.\nValid values are \"past\" or \"upcoming\"",
      "required": false,
      "name": "status"
     }
@@ -2532,24 +2532,24 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of optional fields to append to the response",
+     "info": "Required: A comma-delimited list of optional fields to append to the response",
      "required": false,
      "name": "fields"
     }
@@ -2562,42 +2562,42 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "name": "id",
      "type": "String",
-     "info": "Event id.",
+     "info": "Required: Event id.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The monetary amount of money the member submitted",
+     "info": "Required: Recomended: The monetary amount of money the member submitted",
      "required": false,
      "name": "amount"
     },
     {
      "type": "String",
-     "info": "The number of payments made. Defaults to 1",
+     "info": "Required: The number of payments made. Defaults to 1",
      "required": false,
      "name": "quantity"
     },
     {
      "type": "String",
-     "info": "Recomended: Member Id of member who made a payment",
+     "info": "Required: Recomended: Member Id of member who made a payment",
      "required": false,
      "name": "member"
     },
     {
      "type": "String",
-     "info": "The time the payment was made in milliseconds from the epoc. Defaults to now",
+     "info": "Required: The time the payment was made in milliseconds from the epoc. Defaults to now",
      "required": false,
      "name": "paidOn"
     }
@@ -2610,90 +2610,90 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Zipcode of location to limit search to",
+     "info": "Required: Zipcode of location to limit search to",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "A valid two character country code, defaults to US",
+     "info": "Required: A valid two character country code, defaults to US",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "If true, filters text and category based searches on groups that have upcoming events. Defaults to false",
+     "info": "Required: If true, filters text and category based searches on groups that have upcoming events. Defaults to false",
      "required": false,
      "name": "upcomingEvents"
     },
     {
      "type": "String",
-     "info": "Approximate longitude",
+     "info": "Required: Approximate longitude",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Determines which groups are returned. If 'all' (default), the text and category parameters are applied. If 'friends', groups your friends are in are returned. The value of this parameter may be one of all, friends",
+     "info": "Required: Determines which groups are returned. If 'all' (default), the text and category parameters are applied. If 'friends', groups your friends are in are returned. The value of this parameter may be one of all, friends",
      "required": false,
      "name": "filter"
     },
     {
      "type": "String",
-     "info": "boolean indicator of whether or not to return a list of curated suggestions for groups if we can't find groups matching your criteria",
+     "info": "Required: boolean indicator of whether or not to return a list of curated suggestions for groups if we can't find groups matching your criteria",
      "required": false,
      "name": "fallbackSuggestions"
     },
     {
      "type": "String",
-     "info": "Raw text location query",
+     "info": "Required: Raw text location query",
      "required": false,
      "name": "location"
     },
     {
      "type": "String",
-     "info": "Raw full text search query",
+     "info": "Required: Raw full text search query",
      "required": false,
      "name": "text"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of numeric topic ids",
+     "info": "Required: Comma-delimited list of numeric topic ids",
      "required": false,
      "name": "topicId"
     },
     {
      "type": "String",
-     "info": "Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius",
+     "info": "Required: Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of numeric category ids",
+     "info": "Required: Comma-delimited list of numeric category ids",
      "required": false,
      "name": "category"
     },
     {
      "type": "String",
-     "info": "set to 'include' or 'exclude' Meetups the authorized member belongs to; default is 'include'",
+     "info": "Required: set to 'include' or 'exclude' Meetups the authorized member belongs to; default is 'include'",
      "required": false,
      "name": "selfGroups"
     },
     {
      "type": "String",
-     "info": "Approximate latitude",
+     "info": "Required: Approximate latitude",
      "required": false,
      "name": "latitude"
     }
@@ -2706,18 +2706,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of optional fields to append to the response",
+     "info": "Required: A comma-delimited list of optional fields to append to the response",
      "required": false,
      "name": "fields"
     }
@@ -2730,138 +2730,138 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "The ZIP code of the city",
+     "info": "Required: The ZIP code of the city",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "The ISO_3166-1 country code for the country which contains the city",
+     "info": "Required: The ISO_3166-1 country code for the country which contains the city",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Defines policy for who can post to the group mailing list. May be one of 'open' meaning any member can post, 'off' meaning no one can post, 'moderated' meaning messages must be approved, or 'orgs_only' meaning only organizers may post to the list",
+     "info": "Required: Defines policy for who can post to the group mailing list. May be one of 'open' meaning any member can post, 'off' meaning no one can post, 'moderated' meaning messages must be approved, or 'orgs_only' meaning only organizers may post to the list",
      "required": false,
      "name": "listMode"
     },
     {
      "type": "String",
-     "info": "Boolean parameter that will cause this endpoint to apply all validation rules without actually saving changes in which case the response will only reflect the group's current attributes",
+     "info": "Required: Boolean parameter that will cause this endpoint to apply all validation rules without actually saving changes in which case the response will only reflect the group's current attributes",
      "required": false,
      "name": "dryrun"
     },
     {
      "type": "String",
-     "info": "Google Analytics code for group",
+     "info": "Required: Google Analytics code for group",
      "required": false,
      "name": "gaCode"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of topic ids to disassociate with group",
+     "info": "Required: Comma-delimited list of topic ids to disassociate with group",
      "required": false,
      "name": "removeTopics"
     },
     {
      "type": "String",
-     "info": "Restricts group visibility for non-members. May be one of 'public', 'public_limited' or 'members'. Note, the 'members' option is only available to groups that already have 'members' visibility",
+     "info": "Required: Restricts group visibility for non-members. May be one of 'public', 'public_limited' or 'members'. Note, the 'members' option is only available to groups that already have 'members' visibility",
      "required": false,
      "name": "visibility"
     },
     {
      "type": "JSON",
-     "info": "A new profile question defined in the order of index provided in the request parameter name. See editGroup README for more details.",
+     "info": "Required: A new profile question defined in the order of index provided in the request parameter name. See editGroup README for more details.",
      "required": false,
      "name": "addNewQuestions"
     },
     {
      "type": "String",
-     "info": "Group's primary photo. Must be ID of an existing album photo",
+     "info": "Required: Group's primary photo. Must be ID of an existing album photo",
      "required": false,
      "name": "keyPhoto"
     },
     {
      "type": "String",
-     "info": "Indicates that a member must provide a photo before joining. Expects true or false values",
+     "info": "Required: Indicates that a member must provide a photo before joining. Expects true or false values",
      "required": false,
      "name": "photoReq"
     },
     {
      "type": "String",
-     "info": "Summary of what the Meetup group is about in simple HTML format",
+     "info": "Required: Summary of what the Meetup group is about in simple HTML format",
      "required": false,
      "name": "description"
     },
     {
      "type": "String",
-     "info": "Indicates that provided questions are required before joining. Expects true or false values",
+     "info": "Required: Indicates that provided questions are required before joining. Expects true or false values",
      "required": false,
      "name": "questionsReq"
     },
     {
      "type": "String",
-     "info": "Message sent to members after they join. Can be at most 2000 characters",
+     "info": "Required: Message sent to members after they join. Can be at most 2000 characters",
      "required": false,
      "name": "welcomeMessage"
     },
     {
      "type": "String",
-     "info": "Controls how member's are let into the group. May be one of 'open' meaning any Meetup member my join, 'closed' meaning group is not currently accepting new members, or 'approval' meaning members must be approved by an organizer. Note, the 'closed' options is only available to groups that already have a 'closed' join_mode",
+     "info": "Required: Controls how member's are let into the group. May be one of 'open' meaning any Meetup member my join, 'closed' meaning group is not currently accepting new members, or 'approval' meaning members must be approved by an organizer. Note, the 'closed' options is only available to groups that already have a 'closed' join_mode",
      "required": false,
      "name": "joinMode"
     },
     {
      "type": "String",
-     "info": "Mailing list prefix. By default this is the group's urlname.",
+     "info": "Required: Mailing list prefix. By default this is the group's urlname.",
      "required": false,
      "name": "listAddr"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of topic ids to associate with group",
+     "info": "Required: Comma-delimited list of topic ids to associate with group",
      "required": false,
      "name": "addTopics"
     },
     {
      "type": "JSON",
-     "info": "A URI for a social network service. Service must be one of facebook, flickr, linkedin, other, tumblr, twitter",
+     "info": "Required: A URI for a social network service. Service must be one of facebook, flickr, linkedin, other, tumblr, twitter",
      "required": false,
      "name": "serviceUri"
     },
     {
      "type": "String",
-     "info": "Display name of the group. Can be at most 60 characters",
+     "info": "Required: Display name of the group. Can be at most 60 characters",
      "required": false,
      "name": "name"
     },
     {
      "type": "JSON",
-     "info": "Edits a current profile question identified by an id in the parameter name. The index updated index should also be encoded in the parameter name. To delete a question, set this to an empty string. Groups that require profile questions must have at least one question",
+     "info": "Required: Edits a current profile question identified by an id in the parameter name. The index updated index should also be encoded in the parameter name. To delete a question, set this to an empty string. Groups that require profile questions must have at least one question",
      "required": false,
      "name": "editQuestions"
     },
     {
      "type": "String",
-     "info": "Name used for the groups web address on meetup.com. Must be between 6 and 60 characters",
+     "info": "Required: Name used for the groups web address on meetup.com. Must be between 6 and 60 characters",
      "required": false,
      "name": "urlname"
     },
     {
      "type": "String",
-     "info": "What members of the group will be called. Can be at most 32 characters",
+     "info": "Required: What members of the group will be called. Can be at most 32 characters",
      "required": false,
      "name": "who"
     }
@@ -2874,18 +2874,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Comma-delimited list of topic ids to associate with group",
+     "info": "Required: Recomended: Comma-delimited list of topic ids to associate with group",
      "required": false,
      "name": "topicId"
     }
@@ -2898,18 +2898,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: Comma-delimited list of topic ids to disassociate with group",
+     "info": "Required: Recomended: Comma-delimited list of topic ids to disassociate with group",
      "required": false,
      "name": "topicId"
     }
@@ -2922,36 +2922,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Search for locations based on location longitude.\nMust be provided with \"latitude\"",
+     "info": "Required: Search for locations based on location longitude.\nMust be provided with \"latitude\"",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "The desired number of locations to return in a single set of results.\nDefaults to 200",
+     "info": "Required: The desired number of locations to return in a single set of results.\nDefaults to 200",
      "required": false,
      "name": "page"
     },
     {
      "type": "String",
-     "info": "The current offset in the paginated set, represented as an incrementing value",
+     "info": "Required: The current offset in the paginated set, represented as an incrementing value",
      "required": false,
      "name": "offset"
     },
     {
      "type": "String",
-     "info": "Search for locations based on location latitude.\nMust be provided with \"longitude\"",
+     "info": "Required: Search for locations based on location latitude.\nMust be provided with \"longitude\"",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Search for locations based on city name or zip code",
+     "info": "Required: Search for locations based on city name or zip code",
      "required": false,
      "name": "query"
     }
@@ -2964,18 +2964,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of optional fields names which may be appended to the response",
+     "info": "Required: A comma-delimited list of optional fields names which may be appended to the response",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Number of results to return in a page. Defaults to 200",
+     "info": "Required: Number of results to return in a page. Defaults to 200",
      "required": false,
      "name": "page"
     }
@@ -2988,18 +2988,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of optional fields to append to the response",
+     "info": "Required: A comma-delimited list of optional fields to append to the response",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "Number of groups to return in a single page of results.\nBy default, this is 200",
+     "info": "Required: Number of groups to return in a single page of results.\nBy default, this is 200",
      "required": false,
      "name": "page"
     }
@@ -3012,234 +3012,234 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "String: Country",
+     "info": "Required: String: Country",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the total number of past RSVPs",
+     "info": "Required: Positive Integer: Minumum range of the total number of past RSVPs",
      "required": false,
      "name": "pastRsvpsMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the number of the past events held",
+     "info": "Required: Positive Integer: Minumum range of the number of the past events held",
      "required": false,
      "name": "pastEventsMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the number of members",
+     "info": "Required: Positive Integer: Maximum range of the number of members",
      "required": false,
      "name": "memberCountMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the number of the upcoming events",
+     "info": "Required: Positive Integer: Minumum range of the number of the upcoming events",
      "required": false,
      "name": "upcomingEventsMin"
     },
     {
      "type": "String",
-     "info": "Float: Longitude",
+     "info": "Required: Float: Longitude",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Minumum range of the date that the last meetup happened",
+     "info": "Required: Milliseconds since epoch: Minumum range of the date that the last meetup happened",
      "required": false,
      "name": "lastEventMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the average number of repeat rsvpers",
+     "info": "Required: Positive Integer: Minumum range of the average number of repeat rsvpers",
      "required": false,
      "name": "repeatRsvpersMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the average age of the members",
+     "info": "Required: Positive Integer: Minumum range of the average age of the members",
      "required": false,
      "name": "averageAgeMin"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Maximum range of the date that the last meetup happened",
+     "info": "Required: Milliseconds since epoch: Maximum range of the date that the last meetup happened",
      "required": false,
      "name": "lastEventMax"
     },
     {
      "type": "String",
-     "info": "String: `global`, `smart`, or search radius in Float",
+     "info": "Required: String: `global`, `smart`, or search radius in Float",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Float: Latitude",
+     "info": "Required: Float: Latitude",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Minumum range of the founded dates of the groups",
+     "info": "Required: Milliseconds since epoch: Minumum range of the founded dates of the groups",
      "required": false,
      "name": "foundedDateMin"
     },
     {
      "type": "String",
-     "info": "List of String: attributes to sort on",
+     "info": "Required: List of String: attributes to sort on",
      "required": false,
      "name": "order"
     },
     {
      "type": "String",
-     "info": "String: Zip code",
+     "info": "Required: String: Zip code",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "Positive Integer: including only those groups that did not have event in the last specified days",
+     "info": "Required: Positive Integer: including only those groups that did not have event in the last specified days",
      "required": false,
      "name": "inactiveWithinDays"
     },
     {
      "type": "String",
-     "info": "Positive Integer: the page offset",
+     "info": "Required: Positive Integer: the page offset",
      "required": false,
      "name": "offset"
     },
     {
      "type": "String",
-     "info": "List of Integers: the ids of topic of the group",
+     "info": "Required: List of Integers: the ids of topic of the group",
      "required": false,
      "name": "topics"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the number of the upcoming events",
+     "info": "Required: Positive Integer: Maximum range of the number of the upcoming events",
      "required": false,
      "name": "upcomingEventsMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the average age of the members",
+     "info": "Required: Positive Integer: Maximum range of the average age of the members",
      "required": false,
      "name": "averageAgeMax"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Maximum range of the dates the groups joined Pro organization",
+     "info": "Required: Milliseconds since epoch: Maximum range of the dates the groups joined Pro organization",
      "required": false,
      "name": "proJoinDateMax"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Minumum range of the date that the next meetup is scheduled",
+     "info": "Required: Milliseconds since epoch: Minumum range of the date that the next meetup is scheduled",
      "required": false,
      "name": "nextEventMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the total number of past RSVPs",
+     "info": "Required: Positive Integer: Maximum range of the total number of past RSVPs",
      "required": false,
      "name": "pastRsvpsMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: including only those groups that had event in the last specified days",
+     "info": "Required: Positive Integer: including only those groups that had event in the last specified days",
      "required": false,
      "name": "activeWithinDays"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minumum range of the average number of RSVPs per event",
+     "info": "Required: Positive Integer: Minumum range of the average number of RSVPs per event",
      "required": false,
      "name": "rsvpsPerEventMin"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Maximum range of the founded dates of the groups",
+     "info": "Required: Milliseconds since epoch: Maximum range of the founded dates of the groups",
      "required": false,
      "name": "foundedDateMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minimum range of the number of members",
+     "info": "Required: Positive Integer: Minimum range of the number of members",
      "required": false,
      "name": "memberCountMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the number of the past events held",
+     "info": "Required: Positive Integer: Maximum range of the number of the past events held",
      "required": false,
      "name": "pastEventsMax"
     },
     {
      "type": "String",
-     "info": "String: Name of the group looking for",
+     "info": "Required: String: Name of the group looking for",
      "required": false,
      "name": "name"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Maximum range of the date that the next meetup is scheduled",
+     "info": "Required: Milliseconds since epoch: Maximum range of the date that the next meetup is scheduled",
      "required": false,
      "name": "nextEventMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the average number of repeat rsvpers",
+     "info": "Required: Positive Integer: Maximum range of the average number of repeat rsvpers",
      "required": false,
      "name": "repeatRsvpersMax"
     },
     {
      "type": "String",
-     "info": "String: Raw location",
+     "info": "Required: String: Raw location",
      "required": false,
      "name": "location"
     },
     {
      "type": "String",
-     "info": "Positive Integer: the size of page window",
+     "info": "Required: Positive Integer: the size of page window",
      "required": false,
      "name": "page"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: Minumum range of the dates the groups joined Pro organization",
+     "info": "Required: Milliseconds since epoch: Minumum range of the dates the groups joined Pro organization",
      "required": false,
      "name": "proJoinDateMin"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum range of the average number of RSVPs per event",
+     "info": "Required: Positive Integer: Maximum range of the average number of RSVPs per event",
      "required": false,
      "name": "rsvpsPerEventMax"
     },
     {
      "type": "String",
-     "info": "List of Integers: the ids of the category of the group",
+     "info": "Required: List of Integers: the ids of the category of the group",
      "required": false,
      "name": "category"
     },
     {
      "type": "String",
-     "info": "List of Boolean: whether to sort ascending or decending on each attributes in `order`",
+     "info": "Required: List of Boolean: whether to sort ascending or decending on each attributes in `order`",
      "required": false,
      "name": "desc"
     }
@@ -3252,126 +3252,126 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     },
     {
      "type": "String",
-     "info": "String: Zip code",
+     "info": "Required: String: Zip code",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "String: Country",
+     "info": "Required: String: Country",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Maximum number of attended events",
+     "info": "Required: Positive Integer: Maximum number of attended events",
      "required": false,
      "name": "eventsAttendedMax"
     },
     {
      "type": "String",
-     "info": "Positive Integer: the page offset",
+     "info": "Required: Positive Integer: the page offset",
      "required": false,
      "name": "offset"
     },
     {
      "type": "String",
-     "info": "List of Integers: The chapters which the member belongs to",
+     "info": "Required: List of Integers: The chapters which the member belongs to",
      "required": false,
      "name": "chapters"
     },
     {
      "type": "String",
-     "info": "Boolean: To limit to only organizers or non-organizers",
+     "info": "Required: Boolean: To limit to only organizers or non-organizers",
      "required": false,
      "name": "isOrganizer"
     },
     {
      "type": "String",
-     "info": "Float: Longitude",
+     "info": "Required: Float: Longitude",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "String: Name of the member",
+     "info": "Required: String: Name of the member",
      "required": false,
      "name": "memberName"
     },
     {
      "type": "String",
-     "info": "Positive Integer: The range of date from the past until today, for the recent activity",
+     "info": "Required: Positive Integer: The range of date from the past until today, for the recent activity",
      "required": false,
      "name": "activeWithinDays"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: The oldest time limit for member join",
+     "info": "Required: Milliseconds since epoch: The oldest time limit for member join",
      "required": false,
      "name": "joinTimeMin"
     },
     {
      "type": "String",
-     "info": "Integers: The id of a previous emails that the member received",
+     "info": "Required: Integers: The id of a previous emails that the member received",
      "required": false,
      "name": "emailReceived"
     },
     {
      "type": "String",
-     "info": "Positive Integer: Minimum number of attended events",
+     "info": "Required: Positive Integer: Minimum number of attended events",
      "required": false,
      "name": "eventsAttendedMin"
     },
     {
      "type": "String",
-     "info": "String: Raw location",
+     "info": "Required: String: Raw location",
      "required": false,
      "name": "location"
     },
     {
      "type": "String",
-     "info": "Positive Integer: the size of page window",
+     "info": "Required: Positive Integer: the size of page window",
      "required": false,
      "name": "page"
     },
     {
      "type": "String",
-     "info": "String: `global`, `smart`, or search radius in Float",
+     "info": "Required: String: `global`, `smart`, or search radius in Float",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Milliseconds since epoch: The latest time limit for member join",
+     "info": "Required: Milliseconds since epoch: The latest time limit for member join",
      "required": false,
      "name": "joinTimeMax"
     },
     {
      "type": "String",
-     "info": "Float: Latitude",
+     "info": "Required: Float: Latitude",
      "required": false,
      "name": "latitude"
     },
     {
      "type": "String",
-     "info": "Boolean: whether to sort ascending or decending",
+     "info": "Required: Boolean: whether to sort ascending or decending",
      "required": false,
      "name": "desc"
     },
     {
      "type": "String",
-     "info": "String: attribute to sort on",
+     "info": "Required: String: attribute to sort on",
      "required": false,
      "name": "order"
     }
@@ -3384,12 +3384,12 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     }
@@ -3402,18 +3402,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "The id of the newest notification item, typically the first in the list returned by the notifications endpoint",
+     "info": "Required: The id of the newest notification item, typically the first in the list returned by the notifications endpoint",
      "required": false,
      "name": "sinceId"
     }
@@ -3426,30 +3426,30 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "An optional approximate longitude to center a request for \"best_topics\"",
+     "info": "Required: An optional approximate longitude to center a request for \"best_topics\"",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "A comma-limited list of optional fields to append to the response",
+     "info": "Required: A comma-limited list of optional fields to append to the response",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "An radius (in miles) to center a request for \"best_topics\"",
+     "info": "Required: An radius (in miles) to center a request for \"best_topics\"",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "An optional approximate latitude to center a request for \"best_topics\"",
+     "info": "Required: An optional approximate latitude to center a request for \"best_topics\"",
      "required": false,
      "name": "latitude"
     }
@@ -3462,36 +3462,36 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Target number of recommendations to return. Defaults to 36.",
+     "info": "Required: Target number of recommendations to return. Defaults to 36.",
      "required": false,
      "name": "page"
     },
     {
      "type": "String",
-     "info": "Free form text search",
+     "info": "Required: Free form text search",
      "required": false,
      "name": "text"
     },
     {
      "type": "String",
-     "info": "Defines a language preference for ordering results. Valid values are en-USen-AUde-DEeses-ESfr-FRit-ITpt-BRja-JPko-KRnl-NLen-aude-dept-bren-uses-esnl-nlit-itfr-frko-krja-jpendefritptjakonl. You may also substitute this with the Accept-Language header",
+     "info": "Required: Defines a language preference for ordering results. Valid values are en-USen-AUde-DEeses-ESfr-FRit-ITpt-BRja-JPko-KRnl-NLen-aude-dept-bren-uses-esnl-nlit-itfr-frko-krja-jpendefritptjakonl. You may also substitute this with the Accept-Language header",
      "required": false,
      "name": "lang"
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of topic ids to inform recommendations",
+     "info": "Required: A comma-delimited list of topic ids to inform recommendations",
      "required": false,
      "name": "otherTopics"
     },
     {
      "type": "String",
-     "info": "A comma-delimited list of topic ids to exclude from the recommendations",
+     "info": "Required: A comma-delimited list of topic ids to exclude from the recommendations",
      "required": false,
      "name": "excludeTopics"
     }
@@ -3504,66 +3504,66 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Zip code you are searching for recommendations in",
+     "info": "Required: Zip code you are searching for recommendations in",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "A valid two character country code, defaults to US",
+     "info": "Required: A valid two character country code, defaults to US",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Recommend only groups without join requirements and that can be joined instantly",
+     "info": "Required: Recommend only groups without join requirements and that can be joined instantly",
      "required": false,
      "name": "instantJoinOnly"
     },
     {
      "type": "String",
-     "info": "Raw text location query",
+     "info": "Required: Raw text location query",
      "required": false,
      "name": "location"
     },
     {
      "type": "String",
-     "info": "Approximate longitude",
+     "info": "Required: Approximate longitude",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Comma delimited list of up to 100 topic ids to help inform recommendations",
+     "info": "Required: Comma delimited list of up to 100 topic ids to help inform recommendations",
      "required": false,
      "name": "topicId"
     },
     {
      "type": "String",
-     "info": "Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius",
+     "info": "Required: Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic radius based on the number of active groups in the area. Defaults to member's preferred radius",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Request that additional fields (separated by commas) be included in the output.",
+     "info": "Required: Request that additional fields (separated by commas) be included in the output.",
      "required": false,
      "name": "fields"
     },
     {
      "type": "String",
-     "info": "A valid category id which limits recommended groups to a particular category",
+     "info": "Required: A valid category id which limits recommended groups to a particular category",
      "required": false,
      "name": "category"
     },
     {
      "type": "String",
-     "info": "Approximate latitude",
+     "info": "Required: Approximate latitude",
      "required": false,
      "name": "latitude"
     }
@@ -3576,13 +3576,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     }
    ]
@@ -3594,72 +3594,72 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Zip code you are searching for recommendations in",
+     "info": "Required: Zip code you are searching for recommendations in",
      "required": false,
      "name": "zip"
     },
     {
      "type": "String",
-     "info": "A valid two character country code, defaults to US",
+     "info": "Required: A valid two character country code, defaults to US",
      "required": false,
      "name": "country"
     },
     {
      "type": "String",
-     "info": "Return venues that have been used within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above).",
+     "info": "Required: Return venues that have been used within the given time range, defined by two times separated with a single comma. Each end of the range may be specified with relative dates, such as \"1m\" for one month from now, or by absolute time in milliseconds since the epoch. If an endpoint is omitted, the range is unbounded on that end. The default value is unbounded on both ends (though restricted to the search window described above).",
      "required": false,
      "name": "usedBetween"
     },
     {
      "type": "String",
-     "info": "The minimum number of groups that have hosted events at this venue",
+     "info": "Required: The minimum number of groups that have hosted events at this venue",
      "required": false,
      "name": "minGroups"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of up to 200 group ids to help inform recommendations",
+     "info": "Required: Comma-delimited list of up to 200 group ids to help inform recommendations",
      "required": false,
      "name": "groupId"
     },
     {
      "type": "String",
-     "info": "Raw text location query",
+     "info": "Required: Raw text location query",
      "required": false,
      "name": "location"
     },
     {
      "type": "String",
-     "info": "Approximate longitude",
+     "info": "Required: Approximate longitude",
      "required": false,
      "name": "longitude"
     },
     {
      "type": "String",
-     "info": "Radius in miles. Defaults to member's preferred radius",
+     "info": "Required: Radius in miles. Defaults to member's preferred radius",
      "required": false,
      "name": "radius"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of up to 200 category ids to help inform recommendations",
+     "info": "Required: Comma-delimited list of up to 200 category ids to help inform recommendations",
      "required": false,
      "name": "category"
     },
     {
      "type": "String",
-     "info": "Comma-delimited list of up to 200 group urlnames to help inform recommendations",
+     "info": "Required: Comma-delimited list of up to 200 group urlnames to help inform recommendations",
      "required": false,
      "name": "groupUrlName"
     },
     {
      "type": "String",
-     "info": "Approximate latitude",
+     "info": "Required: Approximate latitude",
      "required": false,
      "name": "latitude"
     }
@@ -3672,13 +3672,13 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "name": "urlname",
      "type": "String",
-     "info": "Group url name.",
+     "info": "Required: Group url name.",
      "required": false
     }
    ]
@@ -3690,18 +3690,18 @@
     {
      "name": "accessToken",
      "type": "credentials",
-     "info": "OAuth2 Access Token",
+     "info": "Required: OAuth2 Access Token",
      "required": false
     },
     {
      "type": "String",
-     "info": "Recomended: The text to topic text search for",
+     "info": "Required: Recomended: The text to topic text search for",
      "required": false,
      "name": "query"
     },
     {
      "type": "String",
-     "info": "Number of results to return in a single set of results",
+     "info": "Required: Number of results to return in a single set of results",
      "required": false,
      "name": "page"
     }
