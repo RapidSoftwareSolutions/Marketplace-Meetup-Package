@@ -332,7 +332,7 @@ This method allows an authenticated member to join a group by creating a profile
 | siteUrl      | String     | Link to member's site. Max length is 80
 | groupUrlName | String     | Recomended: Urlname of group to join
 | intro        | String     | Provides a Member an opportunity to tell the group about themselves
-| newPhoto     | String     | file upload for a new member photo
+| newPhoto     | File       | File upload for a new member photo
 | groupId      | String     | Recomended: Id of group to join
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
 
@@ -362,7 +362,7 @@ Update a member's group profile
 | photoId      | String     | photo_id of the photo to use for this profile. set to 0 to unset the current photo
 | siteUrl      | String     | Link to member's site. Max length is 80
 | intro        | String     | Provides a Member an opportunity to tell the group about themselves
-| newPhoto     | String     | file upload for a new member photo
+| newPhoto     | File       | File upload for a new member photo
 | title        | String     | An organizer-defined member title.
 | removeRole   | String     | Allows those with permission to remove one of the following roles: coorganizer, event_organizer, assistant_organizer
 | provideAnswer| JSON       | Answers to questions from groups API join_info question fields
@@ -659,7 +659,7 @@ Uploads a new Meetup Group photo. To change other Group settings use the [Group 
 | await       | String     | If true, this ensures a response will not be returned until the upload is accessible
 | main        | String     | Set to 'true' to have this photo become the group's main photo. Set it to 'false' otherwise. Defaults to true
 | groupId     | String     | Recomended: Group ID for the target group. This may be used as an alternative to group_urlname
-| photo       | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
+| photo       | File       | Recomended: The photo. The maximum file size allowed is 10MB
 | groupUrlName| String     | Recomended: Group urlname. This may be used as an alternative to group_id
 
 ## Meetup.postMemberPhoto
@@ -671,7 +671,7 @@ Uploads a photo to be associated with a Member
 | await            | String     | If true, this ensures a response will not be returned until the upload is accessible
 | main             | String     | Set to "true" to have this photo become the member's main profile photo. Otherwise, it will become the main photo only when none other is selected. If the authenticated member does not already have a main profile photo set it will remain so.
 | syncMatchingPhoto| String     | When set to true and main is set to true, this will replace all group profile photos matching the current photo with the provided replacement
-| photo            | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
+| photo            | File       | Recomended: The photo. The maximum file size allowed is 10MB
 | syncPhoto        | String     | When set to true, this parameter will sync all of the group profile photos for the member with the provided photo_id
 
 ## Meetup.postPhoto
@@ -683,7 +683,7 @@ Uploads a photo for a given event
 | await       | String     | If true, this ensures a response will not be returned until the upload is accessible
 | caption     | String     | Caption for the photo
 | photoAlbumId| String     | Recomended: Identifier of an existing photo album, which may be an event or group album
-| photo       | String     | Recomended: The photo, encoded as multipart/form-data. The maximum file size allowed is 10MB
+| photo       | File       | Recomended: The photo. The maximum file size allowed is 10MB
 | eventId     | String     | Recomended: Identifier of an event. If there is no album for this event, one will be created.
 
 ## Meetup.getActivity
