@@ -1,6 +1,7 @@
 {
   "package": "Meetup",
   "tagline": "Meetup Package",
+  "keywords": ["API", "concert", "event", "events", "group", "local", "meet", "social"],
   "accounts": {
     "domain": "meetup.com",
     "credentials": [
