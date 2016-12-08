@@ -8,13 +8,30 @@ The Meetup API provides support for OAuth 2, the superseding specification for O
 
 Read more about [Meetup OAuth2 authenticating](https://www.meetup.com/meetup_api/auth/#oauth2).
 
+## Meetup.getAccessToken
+OAuth2
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| clientId    | credentials| Required: App key from meetup developer console
+| clientSecret| credentials| Required: App secret from meetup developer console
+| code        | String     | Required: Ouath code
+| redirectUri | String     | Required: App redirect URI
 
 ## Meetup.getCategories
 Returns a list of Meetup group categories
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
+| fields     | String     | Parameter for requesting optional response properties
+
+## Meetup.getCategories
+Returns a list of Meetup group categories
+
+| Field      | Type       | Description
+|------------|------------|----------
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Parameter for requesting optional response properties
 
 ## Meetup.getDashboard
@@ -22,7 +39,7 @@ A dashboard of aggregated Meetup information for the authorized member
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
 ## Meetup.getTopicCategories
@@ -30,7 +47,7 @@ Returns a list of Meetup topic categories
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Parameter for requesting optional response properties
 | radius     | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
 | longitude  | String     | Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.
@@ -41,7 +58,7 @@ API method for accessing meetup topics
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | memberId   | String     | Return topics a target member is subscribed to
 | name       | String     | Return topics that match the specified name (e.g. 'Digital Photography', 'Classical Music')
 | topic      | String     | Return topics for this topic urlkey
@@ -75,7 +92,7 @@ Recommends upcoming meetups for the authorized member in a given location and in
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | zip        | String     | A valid US zip code, limits the returned groups to those within radius miles
 | country    | String     | A valid country code
 | city       | String     | A valid city
@@ -219,7 +236,7 @@ Deletes a specified meetup
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Event id.
 
 ## Meetup.getCities
@@ -227,7 +244,7 @@ Returns Meetup cities. This method supports search by latitude/longitude/radius,
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | country    | String     | A valid country code
 | query      | String     | Search term and/or zip to look for (if this is specified, max result size limited to 10)
 | longitude  | String     | Longitude to search
@@ -254,7 +271,7 @@ Retrieve a single member
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: member id.
 | fields     | String     | comma-separate list of optional fields
 
@@ -368,7 +385,7 @@ Retrieves a single group profile
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | groupId    | String     | Required: Group Id
 | memberId   | String     | Required: Memeber Id
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
@@ -378,7 +395,7 @@ Deletes a member's group profile
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | groupId    | String     | Required: Group Id
 | memberId   | String     | Required: Memeber Id
 | exitComment| String     | Optional message to the organizer when leaving
@@ -388,7 +405,7 @@ Deletes a specified event photo
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Photo id
 
 ## Meetup.deleteMemberPhoto
@@ -396,7 +413,7 @@ Delete the specified member photo
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Photo id
 
 ## Meetup.getGroupComments
@@ -415,7 +432,7 @@ This method returns messages that appear under "Talk about this Meetup". To post
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | commentId  | String     | Recomended: Return comments for a given set of comment IDs, separated by commas
 | memberId   | String     | Recomended: Return comments for the given member_ids, separated by commas
 | fields     | String     | Optionally accepts the value "member_photo" or "notifications"
@@ -438,7 +455,7 @@ Retrieve a single event comment or reply
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
@@ -447,7 +464,7 @@ Delete a single event comment or reply
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 | fields     | String     | comma-separate list of optional fields
 
@@ -456,7 +473,7 @@ This method creates a spam report for comment content
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | commentId  | String     | Recomended: The id of the comment
 | reason     | String     | Reason for flagging the comment. May be one of inappropriate, spam
 
@@ -465,7 +482,7 @@ Unsubscribe to notifications for updates to a given comment thread
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
 ## Meetup.postEventCommentSubscribe
@@ -473,7 +490,7 @@ Subscribe to notifications on updates to a given comment thread
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
 ## Meetup.postEventCommentLike
@@ -481,7 +498,7 @@ Like a given Event comment
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Comment id
 
 ## Meetup.deleteEventCommentLike
@@ -489,7 +506,7 @@ Unlike a given Event comment
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: Required: Comment id
 
 ## Meetup.getEventCommentLikes
@@ -497,7 +514,7 @@ Api for listing likes of a given event comment
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | commentId  | String     | Recomended: Return likes for a given comment_id
 
 ## Meetup.getPhotoComments
@@ -505,7 +522,7 @@ This method returns comments on meetup photos. To post messages, see the corresp
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | memberId   | String     | Return comments for the given member_ids, separated by commas. The member ids must match up with one of the provided photo ids
 | photoId    | String     | Recomended: Return comments on these photos, separated by commas
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
@@ -515,7 +532,7 @@ This method posts comments that appear below photos
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | photoId    | String     | Recomended: The photo related to this comment.
 | comment    | String     | Recomended: The comment text
 
@@ -524,7 +541,7 @@ API method for accessing Meetup comments
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | memberId   | String     | The ID of a member to filter ratings on
 | eventId    | String     | Recomended: The ID of the event to fetch ratings data for
 
@@ -553,7 +570,7 @@ This method creates photo albums within a Meetup group
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | groupId    | String     | Recomended: Group to create the album in
 | title      | String     | Recomended:  Title of the new album
 
@@ -591,7 +608,7 @@ Query for Event RSVPs by event
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Parameter for requesting optional response properties, set to other_services for a list of third party services
 | rsvp       | String     | Filters response on RSVP status. "yes" if member RSVP'd yes otherwise "no"
 | eventId    | String     | Recomended: Multiple alphanumeric ids may be separated with commas
@@ -629,7 +646,7 @@ Retrieve a single RSVP
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | id         | String     | Required: RSVP id
 | fields     | String     | Request that additional fields (separated by commas) be included in the output
 
@@ -674,7 +691,7 @@ API method for retrieving the activity feed for a member's groups
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | memberId   | String     | Returns activity from this member's groups. Must be authenticated as this member
 | pageStart  | String     | Starting timestamp for item to return.
 
@@ -683,7 +700,7 @@ oEmbed implementation
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | url        | String     | Recomended: url of resource to be embedded
 | maxWidth   | String     | maximum width to display
 
@@ -692,7 +709,7 @@ Returns the current API service status
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 
 ## Meetup.membershipApproval
 Approves one or more requests for group membership
@@ -710,7 +727,7 @@ Lists attendance records for Meetup events. Limited for use by administrative me
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | id         | String     | Required: Event id
 | filter     | String     | A named filter to apply to the attendance list. These are roughly equivalent to the set of filters you will see in the attendance tool on the site. These filters correspond with attendance records as well as each member's original RSVP status. The filter value be one of: legacy, maybe, waitlist, yes, absent, all, attended, noshow, excused, relevant, no. The default is 'attended'. The 'absent' filter represents all members not in attendance including members with a 'noshow' status. An 'excused' absence is an absent member marked as such by an administrative member
@@ -721,7 +738,7 @@ Takes member attendance for an event. Limited for use by administrative members.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | id         | String     | Required: Event id.
 | guests     | String     | The number of guests accompanying member. Maximum of 99 is allowed. When providing multiple values in the `member` field, this value is ignored
@@ -734,7 +751,7 @@ Listings of Group discussion boards
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
 ## Meetup.membershipDecline
@@ -742,7 +759,7 @@ Declines one or more requests for group membership
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | member     | String     | Comma-delimited numeric pending member IDs. The maximum allowed is 200
 | anonymous  | String     | Optional Boolean value indicating whether the declining member's email address should be hidden in the resulting response. Default is true.
@@ -755,7 +772,7 @@ Listings of group discussions
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | boardId    | String     | Required: Board ID
 
@@ -776,7 +793,7 @@ This listing is ordered from oldest to most recent by default
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | scroll     | String     | A string representing a scroll target.
 
 Supported values are as follows.
@@ -803,7 +820,7 @@ Fetches a Meetup Event by group urlname and event_id
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | id         | String     | Required: Event id
 | fields     | String     | A comma-delimited list of optional fields to append to the response
@@ -813,7 +830,7 @@ Allows organizers of a group to note payments made by members for an event. This
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | id         | String     | Required: Event id
 | amount     | String     | Recomended: The monetary amount of money the member submitted
@@ -847,7 +864,7 @@ Fetches a Meetup group by urlname
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | fields     | String     | A comma-delimited list of optional fields to append to the response
 
@@ -911,7 +928,7 @@ Associates topics with a given Meetup group. Limited to organizers of the group.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | topicId    | String     | Recomended: Comma-delimited list of topic ids to associate with group
 
@@ -920,7 +937,7 @@ Disassociates topics with a given Meetup group. Limited to organizers of the gro
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 | topicId    | String     | Recomended: Comma-delimited list of topic ids to disassociate with group
 
@@ -929,7 +946,7 @@ Provides a query interface for finding known locations
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | longitude  | String     | Search for locations based on location longitude.
 Must be provided with "latitude"
 | page       | String     | The desired number of locations to return in a single set of results.
@@ -944,7 +961,7 @@ Get a listing of all upcoming Meetup events for the authenticated member
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | A comma-delimited list of optional fields names which may be appended to the response
 | page       | String     | Number of results to return in a page. Defaults to 200
 
@@ -954,7 +971,7 @@ next upcoming event, then alphabetical order by name
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | A comma-delimited list of optional fields to append to the response
 | page       | String     | Number of groups to return in a single page of results.
 By default, this is 200
@@ -1036,7 +1053,7 @@ Returns all recent Meetup notifications for the authorized member. To mark notif
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
 
 ## Meetup.setNotificationsRead
@@ -1044,7 +1061,7 @@ Marks groups of [notifications](http://meetup.com/meetup_api/docs/notifications/
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | fields     | String     | Request that additional fields (separated by commas) be included in the output.
 | sinceId    | String     | The id of the newest notification item, typically the first in the list returned by the notifications endpoint
 
@@ -1053,7 +1070,7 @@ Returns a list high level topic categories
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | longitude  | String     | An optional approximate longitude to center a request for "best_topics"
 | fields     | String     | A comma-limited list of optional fields to append to the response
 | radius     | String     | An radius (in miles) to center a request for "best_topics"
@@ -1093,7 +1110,7 @@ Provides a form of feedback by requesting to remove a group from future recommen
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
 ## Meetup.getRecommendedVenues
@@ -1119,7 +1136,7 @@ Renders a list of similar groups
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | urlname    | String     | Required: Group url name.
 
 ## Meetup.findTopics
@@ -1127,7 +1144,7 @@ Find topics by name
 
 | Field      | Type       | Description
 |------------|------------|----------
-| accessToken| credentials| Required: OAuth2 Access Token
+| accessToken| String     | Required: OAuth2 Access Token
 | query      | String     | Recomended: The text to topic text search for
 | page       | String     | Number of results to return in a single set of results
 
