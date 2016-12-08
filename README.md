@@ -15,7 +15,7 @@ OAuth2
 |-------------|------------|----------
 | clientId    | credentials| Required: App key from meetup developer console
 | clientSecret| credentials| Required: App secret from meetup developer console
-| code        | String     | Required: Ouath code
+| code        | String     | Required: OAuth code
 | redirectUri | String     | Required: App redirect URI
 
 ## Meetup.getCategories
