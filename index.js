@@ -45,6 +45,11 @@ for(let func in apiHash) {
 
         req.body.args = lib.clearArgs(req.body.args);
 
+        if(req.body.args.coordinates!=undefined){
+            req.body.args.latitude = req.body.args.coordinates.split(',')[0];
+            req.body.args.longitude = req.body.args.coordinates.split(',')[1];
+        }
+
         for (var i = args.length - 1; i >= 0; i--) {
             opts[args[i]] = req.body.args[cargs[i]];
         }

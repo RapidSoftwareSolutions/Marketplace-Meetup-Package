@@ -95,16 +95,10 @@
           "name": "radius"
         },
         {
-          "type": "String",
-          "info": "Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
-          "info": "Use a given latitude/longitude/radius (miles) to search best_topics for instead of using the member's lat/lon.  When present, all three are required.",
-          "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -161,10 +155,10 @@
           "name": "andText"
         },
         {
-          "type": "String",
-          "info": "Recomended: A valid latitude, limits the returned group events to those within radius miles",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -198,7 +192,8 @@
           "name": "limitedEvents"
         },
         {
-          "type": "String",
+          "type": "Select",
+          "options": ["html","plain"],
           "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
           "required": false,
           "name": "textFormat"
@@ -220,12 +215,6 @@
           "info": "Recomended: Return events in the specified category or categories specified by commas. This is the category id returned by the Categories method.",
           "required": false,
           "name": "category"
-        },
-        {
-          "type": "String",
-          "info": "Recomended: A valid longitude, limits the returned group events to those within radius miles",
-          "required": false,
-          "name": "longitude"
         },
         {
           "type": "String",
@@ -283,13 +272,8 @@
           "test": "Kiev"
         },
         {
-          "type": "String",
-          "info": "A valid longitude, limits the returned group events to those within radius miles",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
+          "type": "Select",
+          "options": ["html","plain"],
           "info": "Format of the description text \"html\", \"plain\", or \"simplehtml\". Defaults to \"html\"",
           "required": false,
           "name": "textFormat"
@@ -349,10 +333,10 @@
           "name": "selfGroups"
         },
         {
-          "type": "String",
-          "info": "A valid latitude, limits the returned group events to those within radius miles",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -385,16 +369,10 @@
           "name": "zip"
         },
         {
-          "type": "String",
-          "info": "A valid latitude and longitude, limits the returned groups to those within radius miles",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
-          "info": "Recomended: A valid latitude and longitude, limits the returned groups to those within radius miles",
-          "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -512,7 +490,8 @@
           "name": "limitedEvents"
         },
         {
-          "type": "String",
+          "type": "Select",
+          "options": ["html","plain"],
           "info": "Format of the description text, \"html\" or \"plain\". Defaults to \"html\"",
           "required": false,
           "name": "textFormat"
@@ -578,7 +557,8 @@
           "name": "rsvpOpen"
         },
         {
-          "type": "String",
+          "type": "Select",
+          "options": ["public","members"],
           "info": "Controls the visibility of the event venue for non members of the hosting group. May be one of \"public\" or \"members\"",
           "required": false,
           "name": "venueVisibility"
@@ -692,16 +672,10 @@
           "required": true
         },
         {
-          "type": "String",
-          "info": "Updates to the venue's latitude and longitude. When present, both must be provided",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
-          "info": "Updates to the venue's latitude and longitude. When present, both must be provided",
-          "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -716,7 +690,8 @@
           "name": "rsvpOpen"
         },
         {
-          "type": "String",
+          "type": "Select",
+          "options": ["public","members"],
           "info": "Controls the visibility of venue. May be one of \"public\" or \"members\"",
           "required": false,
           "name": "venueVisibility"
@@ -861,12 +836,6 @@
         },
         {
           "type": "String",
-          "info": "Longitude to search",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "A valid state code for the given country, if the country has states",
           "required": false,
           "name": "state"
@@ -878,10 +847,10 @@
           "name": "radius"
         },
         {
-          "type": "String",
-          "info": "Latitude to search",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -1049,12 +1018,6 @@
         },
         {
           "type": "String",
-          "info": "longitude of city",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "Controls the visibility of the member's groups. May be one of visible, hidden",
           "required": false,
           "name": "groupsPrivacy"
@@ -1102,10 +1065,10 @@
           "name": "radius"
         },
         {
-          "type": "String",
-          "info": "latitude of city",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -1864,10 +1827,10 @@
           "required": true
         },
         {
-          "type": "String",
-          "info": "Recomended: A valid latitude, limits the returned venues to those within radius miles",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -1892,12 +1855,6 @@
           "info": "Recomended: A valid country code.",
           "required": false,
           "name": "country"
-        },
-        {
-          "type": "String",
-          "info": "Recomended: A valid longitude, limits the returned venues to those within radius miles",
-          "required": false,
-          "name": "longitude"
         },
         {
           "type": "String",
@@ -2008,7 +1965,8 @@
           "required": true
         },
         {
-          "type": "String",
+          "type": "Select",
+          "options": ["yes","no","waitlist"],
           "info": "Recomended: The RSVP setting - value must be either \"yes\", \"no\" or \"waitlist\"",
           "required": false,
           "name": "rsvp"
@@ -2663,12 +2621,6 @@
         },
         {
           "type": "String",
-          "info": "Approximate longitude",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "Determines which groups are returned. If 'all' (default), the text and category parameters are applied. If 'friends', groups your friends are in are returned. The value of this parameter may be one of all, friends",
           "required": false,
           "name": "filter"
@@ -2722,10 +2674,10 @@
           "name": "selfGroups"
         },
         {
-          "type": "String",
-          "info": "Approximate latitude",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -2957,12 +2909,6 @@
         },
         {
           "type": "String",
-          "info": "Search for locations based on location longitude.\nMust be provided with \"latitude\"",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "The desired number of locations to return in a single set of results.\nDefaults to 200",
           "required": false,
           "name": "page"
@@ -2974,10 +2920,10 @@
           "name": "offset"
         },
         {
-          "type": "String",
-          "info": "Search for locations based on location latitude.\nMust be provided with \"longitude\"",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -3083,12 +3029,6 @@
         },
         {
           "type": "String",
-          "info": "Float: Longitude",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "Milliseconds since epoch: Minumum range of the date that the last meetup happened",
           "required": false,
           "name": "lastEventMin"
@@ -3118,10 +3058,10 @@
           "name": "radius"
         },
         {
-          "type": "String",
-          "info": "Float: Latitude",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -3329,12 +3269,6 @@
         },
         {
           "type": "String",
-          "info": "Float: Longitude",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "String: Name of the member",
           "required": false,
           "name": "memberName"
@@ -3388,10 +3322,10 @@
           "name": "joinTimeMax"
         },
         {
-          "type": "String",
-          "info": "Float: Latitude",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         },
         {
           "type": "String",
@@ -3461,12 +3395,6 @@
         },
         {
           "type": "String",
-          "info": "An optional approximate longitude to center a request for \"best_topics\"",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "A comma-limited list of optional fields to append to the response",
           "required": false,
           "name": "fields"
@@ -3478,10 +3406,10 @@
           "name": "radius"
         },
         {
-          "type": "String",
-          "info": "An optional approximate latitude to center a request for \"best_topics\"",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -3563,12 +3491,6 @@
         },
         {
           "type": "String",
-          "info": "Approximate longitude",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "Comma delimited list of up to 100 topic ids to help inform recommendations",
           "required": false,
           "name": "topicId"
@@ -3592,10 +3514,10 @@
           "name": "category"
         },
         {
-          "type": "String",
-          "info": "Approximate latitude",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
@@ -3665,12 +3587,6 @@
         },
         {
           "type": "String",
-          "info": "Approximate longitude",
-          "required": false,
-          "name": "longitude"
-        },
-        {
-          "type": "String",
           "info": "Radius in miles. Defaults to member's preferred radius",
           "required": false,
           "name": "radius"
@@ -3688,10 +3604,10 @@
           "name": "groupUrlName"
         },
         {
-          "type": "String",
-          "info": "Approximate latitude",
+          "type": "Map",
+          "info": "Coordinates. Latitude and longitude.",
           "required": false,
-          "name": "latitude"
+          "name": "coordinates"
         }
       ]
     },
